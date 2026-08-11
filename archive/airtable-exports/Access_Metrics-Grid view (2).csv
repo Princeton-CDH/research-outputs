@@ -1,0 +1,197 @@
+﻿ID,Outputs,Project (from Outputs),Type (from Outputs),Link (from Outputs),Start Date,End Date,Year,Count,Metric Type
+1,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,7/1/2025,2025,67,Views
+2,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,7/1/2025,2025,9,Downloads
+3, Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Dataset,https://doi.org/10.34770/8nc6-4418,,7/1/2025,2025,8,Views
+4,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,https://doi.org/10.5281/zenodo.3359144,,7/1/2025,2025,560,Views
+5,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,https://doi.org/10.5281/zenodo.3359144,,7/1/2025,2025,336,Downloads
+6,geniza,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.7347726,,7/1/2025,2025,213,Views
+7,geniza,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.7347726,,7/1/2025,2025,41,Downloads
+8,Derrida's Margins website,🌐Derrida’s Margins,Website,https://derridas-margins.princeton.edu/,7/1/2024,6/30/2025,2025,4300,Active Users
+9,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,https://prosody.princeton.edu/,7/1/2024,6/30/2025,2025,2300,Active Users
+10,Shakespeare and Company Website,🌐Shakespeare and Company,Website,https://shakespeareandco.princeton.edu/,7/1/2024,6/30/2025,2025,9500,Active Users
+11,Princeton Geniza Website,🌐Geniza,Website,https://geniza.princeton.edu/en/,7/1/2024,6/30/2025,2025,12000,Active Users
+12,annotorious-tahqiq,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.14888965,,7/1/2025,2025,186,Views
+13,annotorious-tahqiq,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.14888965,,7/1/2025,2025,58,Downloads
+14,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.7841822,,7/1/2025,2025,160,Views
+15,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.7841822,,7/1/2025,2025,113,Downloads
+16,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.4081714,,7/1/2025,2025,662,Views
+17,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.4081714,,7/1/2025,2025,559,Downloads
+18,corppa,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.15312547,,7/1/2025,2025,12,Views
+19,corppa,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.15312547,,7/1/2025,2025,12,Downloads
+20,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,https://doi.org/10.5281/zenodo.3255052,,7/1/2025,2025,612,Views
+21,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,https://doi.org/10.5281/zenodo.3255052,,7/1/2025,2025,207,Downloads
+22,ppa-django,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.2400704,,7/1/2025,2025,355,Views
+23,ppa-django,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.2400704,,7/1/2025,2025,54,Downloads
+24,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.13850967,,7/1/2025,2025,115,Views
+25,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.13850967,,7/1/2025,2025,53,Downloads
+26,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.12575879,,7/1/2025,2025,105,Views
+27,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.12575879,,7/1/2025,2025,60,Downloads
+28,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,http://doi.org/10.5281/zenodo.8292322,,7/1/2025,2025,50,Views
+29,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,https://doi.org/10.5281/zenodo.8292370,,7/1/2025,2025,63,Views
+30,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,https://doi.org/10.5281/zenodo.3359171,,7/1/2025,2025,686,Views
+31,mep-django,🌐Shakespeare and Company,Software Release,https://doi.org/10.5281/zenodo.3834178,,7/8/2025,2025,509,Views
+32, Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/kf6c-b079,,7/8/2025,2025,191,Views
+33,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/dtqa-2981,,7/8/2025,2025,83,Views
+34,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/8c2s-a169,,7/8/2025,2025,71,Views
+35,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/nz90-ym25,,7/8/2025,2025,41,Views
+36,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/yj5r-0m59,,7/8/2025,2025,84,Views
+38,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116905,,7/8/2025,2025,618,Views
+39,"""Missing Data, Speculative Reading""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116926,,7/8/2025,2025,601,Views
+40,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.32551,,7/8/2025,2025,2419,Views
+41,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,https://doi.org/10.21428/51bee781.13f8c789,,7/8/2025,2025,0,Citation Count
+42,A Counterfactual Canon,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116915,,7/8/2025,2025,510,Views
+43,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,https://doi.org/10.5281/zenodo.3277319,,7/8/2025,2025,215,Views
+44,bitKlavier,bitKlavier,Software Release,https://doi.org/10.5281/zenodo.3667650,,7/8/2025,2025,348,Views
+45,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,https://doi.org/10.5281/zenodo.3359175,,7/8/2025,2025,396,Views
+46,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00518,,7/8/2025,2025,197,Downloads
+47,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00519,,7/8/2025,2025,76,Downloads
+48,djiffy,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.15587021,,7/8/2025,2025,78,Views
+49,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Grey Literature,https://doi.org/10.5281/zenodo.3359202,,7/8/2025,2025,245,Views
+50,Project Management 101,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14907039,,7/8/2025,2025,53,Views
+51,piffle,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13256210,,7/8/2025,2025,38,Views
+52,Modeling Project Management through Charters,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14516760,,7/8/2025,2025,40,Views
+53,django-pucas,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13905619,,7/8/2025,2025,19,Views
+54,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,7/8/2025,2025,503,Views
+56,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,7/8/2025,2025,503,Views
+57,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,https://doi.org/10.5281/zenodo.14861082,,7/8/2025,2025,72,Views
+58,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Dataset,https://doi.org/10.5281/zenodo.6909568,,7/8/2025,2025,1359,Views
+59,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Grey Literature,https://doi.org/10.5281/zenodo.3359177,,7/8/2025,2025,1262,Views
+60,undate,R&D,Software Release,https://doi.org/10.5281/zenodo.11068867,,7/8/2025,2025,107,Views
+62,Simulating Risk Project Charter,Simulating Risks,Grey Literature,https://doi.org/10.5281/zenodo.8087661,,7/8/2025,2025,306,Views
+63,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516700,,7/8/2025,2025,50,Views
+64,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516240,,7/8/2025,2025,128,Views
+65,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,http://doi.org/10.5281/zenodo.8292322,,7/1/2025,2025,80,Downloads
+66,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,https://doi.org/10.5281/zenodo.8292370,,7/1/2025,2025,61,Downloads
+67,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,https://doi.org/10.5281/zenodo.3359171,,7/1/2025,2025,369,Downloads
+68,mep-django,🌐Shakespeare and Company,Software Release,https://doi.org/10.5281/zenodo.3834178,,7/8/2025,2025,99,Downloads
+69, Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/kf6c-b079,,7/8/2025,2025,6,Downloads
+70,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/8c2s-a169,,7/8/2025,2025,22,Downloads
+71,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/nz90-ym25,,7/8/2025,2025,12,Downloads
+72,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116905,,7/8/2025,2025,36,Downloads
+73,"""Missing Data, Speculative Reading""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116926,,7/8/2025,2025,39,Downloads
+74,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.32551,,7/8/2025,2025,215,Downloads
+75,A Counterfactual Canon,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116915,,7/8/2025,2025,29,Downloads
+76,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,https://doi.org/10.5281/zenodo.3277319,,7/8/2025,2025,174,Downloads
+77,bitKlavier,bitKlavier,Software Release,https://doi.org/10.5281/zenodo.3667650,,7/8/2025,2025,46,Downloads
+78,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,https://doi.org/10.5281/zenodo.3359175,,7/8/2025,2025,197,Downloads
+79,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00518,,7/8/2025,2025,4,Citation Count
+80,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00519,,7/8/2025,2025,1,Citation Count
+81,djiffy,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.15587021,,7/8/2025,2025,16,Downloads
+82,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Grey Literature,https://doi.org/10.5281/zenodo.3359202,,7/8/2025,2025,119,Downloads
+83,Project Management 101,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14907039,,7/8/2025,2025,58,Downloads
+84,piffle,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13256210,,7/8/2025,2025,11,Downloads
+85,Modeling Project Management through Charters,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14516760,,7/8/2025,2025,78,Downloads
+86,django-pucas,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13905619,,7/8/2025,2025,5,Downloads
+87,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,7/8/2025,2025,697,Downloads
+89,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,https://doi.org/10.5281/zenodo.14861082,,7/8/2025,2025,64,Downloads
+90,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Dataset,https://doi.org/10.5281/zenodo.6909568,,7/8/2025,2025,849,Downloads
+91,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Grey Literature,https://doi.org/10.5281/zenodo.3359177,,7/8/2025,2025,830,Downloads
+92,undate,R&D,Software Release,https://doi.org/10.5281/zenodo.11068867,,7/8/2025,2025,28,Downloads
+93,Simulating Risk Project Charter,Simulating Risks,Grey Literature,https://doi.org/10.5281/zenodo.8087661,,7/8/2025,2025,236,Downloads
+94,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516700,,7/8/2025,2025,42,Downloads
+95,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516240,,7/8/2025,2025,116,Downloads
+96,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/dtqa-2981,,7/8/2025,2025,11,Downloads
+97,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/yj5r-0m59,,7/8/2025,2025,29,Downloads
+98,Princeton Geniza Website,🌐Geniza,Website,https://geniza.princeton.edu/en/,7/1/2023,6/30/2024,2024,8000,Active Users
+99,Shakespeare and Company Website,🌐Shakespeare and Company,Website,https://shakespeareandco.princeton.edu/,7/1/2023,6/30/2024,2024,5800,Active Users
+100,Derrida's Margins website,🌐Derrida’s Margins,Website,https://derridas-margins.princeton.edu/,7/1/2023,6/30/2024,2024,4400,Active Users
+101,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,https://prosody.princeton.edu/,7/1/2023,6/30/2024,2024,1900,Active Users
+102,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Dataset,https://doi.org/10.5281/zenodo.6909568,,8/11/2026,2026,2059,Views
+103,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,https://prosody.princeton.edu/,7/1/2025,6/30/2026,2026,65000,Active Users
+104,Derrida's Margins website,🌐Derrida’s Margins,Website,https://derridas-margins.princeton.edu/,7/1/2025,6/30/2026,2026,13000,Active Users
+105,Princeton Geniza Website,🌐Geniza,Website,https://geniza.princeton.edu/en/,7/1/2025,6/30/2026,2026,898000,Active Users
+106,Shakespeare and Company Website,🌐Shakespeare and Company,Website,https://shakespeareandco.princeton.edu/,7/1/2025,6/30/2026,2026,394000,Active Users
+107,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,7/1/2026,2026,88,Views
+108,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,7/1/2026,2026,9,Downloads
+109,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Dataset,https://doi.org/10.5281/zenodo.6909568,,8/11/2026,2026,2735,Downloads
+110,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,https://doi.org/10.5281/zenodo.3255052,,8/11/2026,2026,819,Views
+111,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,https://doi.org/10.5281/zenodo.3255052,,8/11/2026,2026,401,Downloads
+112,,,,,,8/11/2026,2026,616,Views
+113,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/yj5r-0m59,,8/11/2026,2026,80,Views
+114,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/dtqa-2981,,8/11/2026,2026,69,Views
+115,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/8c2s-a169,,8/11/2026,2026,61,Views
+116,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/nz90-ym25,,8/11/2026,2026,29,Views
+117,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/yj5r-0m59,,8/11/2026,2026,29,Downloads
+118,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/8c2s-a169,,8/11/2026,2026,21,Downloads
+119,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/nz90-ym25,,8/11/2026,2026,11,Downloads
+120,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Dataset,https://doi.org/10.34770/dtqa-2981,,8/11/2026,2026,12,Downloads
+121,,,,,,8/11/2026,2026,14,Views
+122,,,,,,8/11/2026,2026,24,Downloads
+123,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Grey Literature,https://doi.org/10.5281/zenodo.3359177,,8/11/2026,2026,1587,Views
+124,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Grey Literature,https://doi.org/10.5281/zenodo.3359177,,8/11/2026,2026,994,Downloads
+125,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,https://doi.org/10.5281/zenodo.3359171,,8/11/2026,2026,839,Views
+126,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.4081714,,8/11/2026,2026,860,Views
+127,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,https://doi.org/10.5281/zenodo.3359144,,8/11/2026,2026,709,Views
+128,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.4081714,,8/11/2026,2026,703,Downloads
+129,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,https://doi.org/10.5281/zenodo.3359175,,8/11/2026,2026,515,Views
+130,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,https://doi.org/10.5281/zenodo.3359171,,8/11/2026,2026,476,Downloads
+131,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,https://doi.org/10.5281/zenodo.3359144,,8/11/2026,2026,412,Downloads
+132,Simulating Risk Project Charter,Simulating Risks,Grey Literature,https://doi.org/10.5281/zenodo.8087661,,8/11/2026,2026,454,Views
+133,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Grey Literature,https://doi.org/10.5281/zenodo.3359202,,8/11/2026,2026,329,Views
+134,Simulating Risk Project Charter,Simulating Risks,Grey Literature,https://doi.org/10.5281/zenodo.8087661,,8/11/2026,2026,345,Downloads
+135,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,https://doi.org/10.5281/zenodo.3359175,,8/11/2026,2026,261,Downloads
+136,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.7841822,,8/11/2026,2026,288,Views
+137,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Grey Literature,https://doi.org/10.5281/zenodo.3359202,,8/11/2026,2026,171,Downloads
+138,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Grey Literature,https://doi.org/10.5281/zenodo.7841822,,8/11/2026,2026,217,Downloads
+139,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,https://doi.org/10.5281/zenodo.14861082,,8/11/2026,2026,308,Views
+140,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,https://doi.org/10.5281/zenodo.14861082,,8/11/2026,2026,250,Downloads
+141,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,https://doi.org/10.5281/zenodo.3277319,,8/11/2026,2026,332,Views
+142,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,https://doi.org/10.5281/zenodo.3277319,,8/11/2026,2026,224,Downloads
+143,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516240,,8/11/2026,2026,215,Views
+144,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516240,,8/11/2026,2026,321,Downloads
+145,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.13850967,,8/11/2026,2026,261,Views
+146,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.12575879,,8/11/2026,2026,230,Views
+147,Modeling Project Management through Charters,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14516760,,8/11/2026,2026,559,Downloads
+148,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.12575879,,8/11/2026,2026,208,Downloads
+149,Project Management 101,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14907039,,8/11/2026,2026,582,Downloads
+150,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,https://doi.org/10.5281/zenodo.13850967,,8/11/2026,2026,196,Downloads
+151,Project Management 101,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14907039,,8/11/2026,2026,195,Views
+152,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516700,,8/11/2026,2026,108,Views
+153,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,https://doi.org/10.5281/zenodo.14516700,,8/11/2026,2026,169,Downloads
+154,Modeling Project Management through Charters,Internal Projects / PM and Process,Presentation / Poster,https://doi.org/10.5281/zenodo.14516760,,8/11/2026,2026,119,Views
+155,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.32551,,8/11/2026,2026,3421,Views
+156,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,8/11/2026,2026,1105,Downloads
+157,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116905,,8/11/2026,2026,1904,Views
+158,"""Missing Data, Speculative Reading""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116926,,8/11/2026,2026,2697,Views
+159,A Counterfactual Canon,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116915,,8/11/2026,2026,1915,Views
+160,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,8/11/2026,2026,696,Views
+161,Data Beyond Vision,Internal Projects / PM and Process,Publication,https://doi.org/10.5281/zenodo.3713670,,8/11/2026,2026,696,Views
+162,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.32551,,8/11/2026,2026,804,Downloads
+163,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00518,,8/11/2026,2026,200,Downloads
+164,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,http://doi.org/10.5281/zenodo.8292322,,8/11/2026,2026,199,Downloads
+165,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00519,,8/11/2026,2026,78,Downloads
+166,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,https://doi.org/10.5281/zenodo.8292370,,8/11/2026,2026,126,Views
+167,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,https://doi.org/10.5281/zenodo.8292370,,8/11/2026,2026,124,Downloads
+168,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,http://doi.org/10.5281/zenodo.8292322,,8/11/2026,2026,107,Views
+169,"""Missing Data, Speculative Reading""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116926,,8/11/2026,2026,398,Downloads
+170,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116905,,8/11/2026,2026,219,Downloads
+171,A Counterfactual Canon,🌐Shakespeare and Company,Publication,https://doi.org/10.22148/001c.116915,,8/11/2026,2026,351,Downloads
+172,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00518,,8/11/2026,2026,5,Citation Count
+173,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,https://doi.org/10.1162/comj_a_00519,,8/11/2026,2026,3,Citation Count
+174,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,https://doi.org/10.21428/51bee781.13f8c789,,8/11/2026,2026,,Citation Count
+175,mep-django,🌐Shakespeare and Company,Software Release,https://doi.org/10.5281/zenodo.3834178,,8/11/2026,2026,1341,Views
+176,ppa-django,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.2400704,,8/11/2026,2026,808,Views
+177,bitKlavier,bitKlavier,Software Release,https://doi.org/10.5281/zenodo.3667650,,8/11/2026,2026,701,Views
+178,geniza,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.7347726,,8/11/2026,2026,1193,Views
+179,annotorious-tahqiq,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.14888965,,8/11/2026,2026,633,Views
+180,undate,R&D,Software Release,https://doi.org/10.5281/zenodo.11068867,,8/11/2026,2026,458,Views
+181,mep-django,🌐Shakespeare and Company,Software Release,https://doi.org/10.5281/zenodo.3834178,,8/11/2026,2026,383,Downloads
+182,djiffy,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.15587021,,8/11/2026,2026,420,Views
+183,annotorious-tahqiq,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.14888965,,8/11/2026,2026,162,Downloads
+184,ppa-django,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.2400704,,8/11/2026,2026,207,Downloads
+185,bitKlavier,bitKlavier,Software Release,https://doi.org/10.5281/zenodo.3667650,,8/11/2026,2026,133,Downloads
+186,geniza,🌐Geniza,Software Release,https://doi.org/10.5281/zenodo.7347726,,8/11/2026,2026,335,Downloads
+187,piffle,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13256210,,8/11/2026,2026,435,Views
+188,undate,R&D,Software Release,https://doi.org/10.5281/zenodo.11068867,,8/11/2026,2026,89,Downloads
+189,django-pucas,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13905619,,8/11/2026,2026,207,Views
+190,djiffy,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.15587021,,8/11/2026,2026,104,Downloads
+191,corppa,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.15312547,,8/11/2026,2026,73,Views
+192,corppa,🌐Princeton Prosody Archive,Software Release,https://doi.org/10.5281/zenodo.15312547,,8/11/2026,2026,34,Downloads
+193,piffle,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13256210,,8/11/2026,2026,98,Downloads
+194,django-pucas,Internal Projects / PM and Process,Software Release,https://doi.org/10.5281/zenodo.13905619,,8/11/2026,2026,44,Downloads
+195,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,8/11/2026,2026,89,Views
+196,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,8/11/2026,2026,89,Views
+197,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,8/11/2026,2026,9,Downloads
+198,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,https://doi.org/10.34770/yw3y-ze12,,8/11/2026,2026,9,Downloads
+199,""" Shakespeare and Company Project Data Sets, Version 2.0""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/jca.1114,,8/11/2026,2026,1154,Views
+200,""" Shakespeare and Company Project Data Sets, Version 2.0""",🌐Shakespeare and Company,Publication,https://doi.org/10.22148/jca.1114,,8/11/2026,2026,176,Downloads

@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.eggs/
+*.egg-info/
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+
+# Apple Numbers binaries (keep the repo text-only / diffable)
+archive/yearly-analytics-pipeline/*.numbers

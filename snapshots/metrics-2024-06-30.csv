@@ -1,0 +1,5 @@
+output_id,link,output_name,project,type,metric_type,count,retrieved_date,status
+o046,https://geniza.princeton.edu/en/,Princeton Geniza Website,🌐Geniza,Website,Active Users,8000,2024-06-30,ok
+o045,https://shakespeareandco.princeton.edu/,Shakespeare and Company Website,🌐Shakespeare and Company,Website,Active Users,5800,2024-06-30,ok
+o041,https://derridas-margins.princeton.edu/,Derrida's Margins website,🌐Derrida’s Margins,Website,Active Users,4400,2024-06-30,ok
+o034,https://prosody.princeton.edu/,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,Active Users,1900,2024-06-30,ok
