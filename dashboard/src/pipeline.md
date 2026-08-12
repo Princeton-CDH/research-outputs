@@ -5,27 +5,32 @@ toc: false
 
 # Pipeline — what's coming
 
-Planned and in-progress outputs that don't exist yet: everything at **To do**, **In progress**, or **Submitted**. As each is finished it flips to Released/Done and shows up on the [Impact](/) page.
+Planned and hypothetical outputs that don't exist yet. This list is **maintained
+by hand** in `data/planned.csv` (unlike [realized](/portfolio) outputs, which are
+generated from the canonical sources). When a planned item actually ships it
+appears on [Impact](/) and [Portfolio](/portfolio) — at that point, delete its
+row here.
 
 ```js
-const outputs = await FileAttachment("data/outputs.json").json();
-const PIPELINE = ["To do", "In progress", "Submitted"];
-const pipeline = outputs.filter((o) => PIPELINE.includes(o.status));
+const planned = await FileAttachment("data/planned.json").json();
 
+const STATUS = ["Hypothetical", "To do", "In progress", "Submitted"];
 const statusColor = {
-  domain: PIPELINE,
-  range: ["#9AA0A6", "#0072B2", "#E69F00"], // to do (grey) · in progress (blue) · submitted (orange)
+  domain: STATUS,
+  // hypothetical (light grey) · to do (grey) · in progress (blue) · submitted (orange)
+  range: ["#CCCCCC", "#9AA0A6", "#0072B2", "#E69F00"],
   legend: true,
 };
-const countAt = (s) => pipeline.filter((o) => o.status === s).length;
+const countAt = (s) => planned.filter((o) => o.status === s).length;
 const typeOf = (o) => (o.type.length ? o.type[0] : "Uncategorized");
+const milestoneOf = (o) => o.milestone ?? "No milestone";
 ```
 
 <div class="grid grid-cols-4">
   <div class="card">
-    <h2>In the pipeline</h2>
-    <span class="big">${pipeline.length}</span>
-    <span class="muted">of ${outputs.length} total outputs</span>
+    <h2>Planned</h2>
+    <span class="big">${planned.length}</span>
+    <span class="muted">forecast outputs</span>
   </div>
   <div class="card"><h2>To do</h2><span class="big">${countAt("To do")}</span></div>
   <div class="card"><h2>In progress</h2><span class="big">${countAt("In progress")}</span></div>
@@ -37,17 +42,17 @@ const typeOf = (o) => (o.type.length ? o.type[0] : "Uncategorized");
     resize((width) =>
       Plot.plot({
         width,
-        title: "Pipeline by project",
-        marginLeft: 220,
+        title: "Planned by milestone",
+        marginLeft: 160,
         x: { label: "Outputs", grid: true },
-        y: { label: null, tickFormat: (s) => (s.length > 30 ? s.slice(0, 29) + "…" : s) },
+        y: { label: null, tickFormat: (s) => (s.length > 26 ? s.slice(0, 25) + "…" : s) },
         color: statusColor,
         marks: [
           Plot.barX(
-            pipeline,
+            planned,
             Plot.groupY(
               { x: "count" },
-              { y: "project", fill: "status", sort: { y: "x", reverse: true }, tip: true }
+              { y: milestoneOf, fill: "status", sort: { y: "x", reverse: true }, tip: true }
             )
           ),
           Plot.ruleX([0]),
@@ -59,17 +64,17 @@ const typeOf = (o) => (o.type.length ? o.type[0] : "Uncategorized");
     resize((width) =>
       Plot.plot({
         width,
-        title: "Pipeline by output type",
-        marginLeft: 160,
+        title: "Planned by project",
+        marginLeft: 220,
         x: { label: "Outputs", grid: true },
-        y: { label: null },
+        y: { label: null, tickFormat: (s) => (s.length > 30 ? s.slice(0, 29) + "…" : s) },
         color: statusColor,
         marks: [
           Plot.barX(
-            pipeline,
+            planned,
             Plot.groupY(
               { x: "count" },
-              { y: typeOf, fill: "status", sort: { y: "x", reverse: true }, tip: true }
+              { y: "project", fill: "status", sort: { y: "x", reverse: true }, tip: true }
             )
           ),
           Plot.ruleX([0]),
@@ -79,21 +84,26 @@ const typeOf = (o) => (o.type.length ? o.type[0] : "Uncategorized");
   }</div>
 </div>
 
-## Every pipeline output
+## Every planned output
 
 ```js
-const pipelineRows = pipeline.map((o) => ({
-  Output: o.output_name,
-  Project: o.project,
-  Type: o.type.join(", ") || "—",
-  Tier: o.tier ?? "",
-  Status: o.status,
-  Lead: o.lead ?? "—",
-  Assignees: o.assignee.join(", ") || "—",
-}));
+const plannedRows = planned
+  .slice()
+  .sort((a, b) => d3.ascending(a.target_sort, b.target_sort))
+  .map((o) => ({
+    Output: o.name,
+    Project: o.project,
+    Type: o.type.join(", ") || "—",
+    Tier: o.tier ?? "",
+    Status: o.status,
+    Milestone: o.milestone ?? "—",
+    Target: o.target_date ?? "—",
+    Priority: o.priority ?? "—",
+    Owner: o.owner.join(", ") || "—",
+  }));
 const query = view(
-  Inputs.search(pipelineRows, {
-    placeholder: `Search ${pipelineRows.length} pipeline outputs…`,
+  Inputs.search(plannedRows, {
+    placeholder: `Search ${plannedRows.length} planned outputs…`,
   })
 );
 ```
@@ -101,7 +111,6 @@ const query = view(
 ```js
 Inputs.table(query, {
   rows: 20,
-  sort: "Status",
   layout: "auto",
 })
 ```

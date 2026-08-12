@@ -13,7 +13,8 @@ You maintain a few hand-edited CSVs and run a small set of scripts on a regular
 ```
 data/
   projects.csv            # hand-maintained: one row per project
-  outputs.csv             # hand-maintained: one row per output (stable output_id)
+  outputs.csv             # REALIZED outputs (Released/Done); increasingly generated from Zenodo/Zotero
+  planned.csv             # hand-maintained: planned/forecast outputs (stable planned_id)
   people.csv              # hand-maintained: name → role (Faculty / CDH / Post Doc)
 snapshots/
   metrics-<date>.csv      # lifetime view/download/citation counts as of a date (time series)
@@ -49,9 +50,18 @@ diff cleanly in git).
     uses it to fetch citations (see below).
   - `assignee` is a comma-separated author list; the **first** name is treated as the
     lead. `type`/`tier` are independent facets.
-  - `status` is the lifecycle: **Realized** (`Released`, `Done`) = the work exists;
-    **Pipeline** (`To do`, `In progress`, `Submitted`) = planned. Move an output along
-    by editing `status` in place — never move rows between files.
+  - `status` here is **realized-only** (`Released`, `Done`) — outputs.csv is the record
+    of work that *exists*, and is increasingly **generated** from the canonical sources
+    (Zenodo + Zotero). Planned/forecast work lives in `planned.csv` (below), not here.
+- **planned.csv** — hand-maintained forecast of outputs that don't exist yet. Columns:
+  `planned_id, name, project, type, tier, status, owner, milestone, target_date,
+  priority, notes`. `planned_id` is a stable key (`p001`…). `status` is the planning
+  lifecycle: `Hypothetical`, `To do`, `In progress`, `Submitted`. `project` must match a
+  `projects.csv` project; `owner` is a comma-separated list (first = lead). `milestone`
+  and `target_date` are the hooks for Zenhub-style milestone planning. When a planned
+  item actually ships (and shows up in the generated outputs), **delete its row here** —
+  graduation is a manual deletion, there's no automatic dedup. Drives the dashboard's
+  [Pipeline](dashboard/src/pipeline.md) page.
 - **people.csv** — `name, role`. `role` is `Faculty`, `CDH`, or `Post Doc`, and drives
   the lead-author coloring on the dashboard. A lead not listed here shows as "Unknown".
 
@@ -96,7 +106,8 @@ npm run build          # static site → dashboard/dist/
 
 Python **data loaders** (`dashboard/src/data/*.py`, standard-library only) read the
 CSVs and rollup and emit JSON; the pages (`src/index.md` = Impact, `pipeline.md`,
-`portfolio.md`) render it with Observable Plot. `node_modules/`, `dist/`, and the
+`portfolio.md`) render it with Observable Plot. Impact and Portfolio read the realized
+`outputs.csv`; the **Pipeline** page reads the hand-maintained `planned.csv`. `node_modules/`, `dist/`, and the
 `.observablehq` cache are git-ignored — `npm install && npm run build` regenerates them.
 
 A **dormant** GitHub Pages workflow lives at `.github/workflows/deploy.yml`; activate
