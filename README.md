@@ -16,11 +16,18 @@ data/
   outputs.csv             # REALIZED outputs (Released/Done); increasingly generated from Zenodo/Zotero
   planned.csv             # hand-maintained: planned/forecast outputs (stable planned_id)
   people.csv              # hand-maintained: name → role (Faculty / CDH / Post Doc)
+  sync_ledger.csv         # GENERATED: durable record of every ingest keep/skip decision
+  incoming/               # transient review files from the syncs (git-ignored)
 snapshots/
   metrics-<date>.csv      # lifetime view/download/citation counts as of a date (time series)
 rollups/
   yearly-metrics.csv      # GENERATED: per output × metric × year → lifetime + yearly gain
 scripts/
+  sync_zenodo.py          # sweep the Zenodo princetoncdh community → review file
+  sync_zotero.py          # sweep the Zotero group collection → review file (auto-classified)
+  merge_incoming.py       # apply a reviewed review file into outputs.csv + ledger
+  synclib.py              # shared: matching/dedup, ledger, name & type helpers
+  add_provenance_columns.py # one-time/idempotent: add source/zenodo_concept/zotero_key
   fetch_metrics.py        # harvest lifetime counts (Zenodo + OpenAlex citations) → dated snapshot
   build_rollup.py         # snapshots/* → rollups/yearly-metrics.csv
   backfill_citations.py   # (re-runnable) reconstruct historical citations from OpenAlex
@@ -40,7 +47,9 @@ diff cleanly in git).
   `project` is the key; it must match the `project` value used in outputs.csv. `status`
   may be multi-valued (comma-separated).
 - **outputs.csv** — `output_id, output_name, project, type, tier, status, assignee,
-  link, doi_service, completed_date, availability, description, alt_id`.
+  link, doi_service, completed_date, availability, description, alt_id, source, zenodo_concept, zotero_key`. The last
+    three are provenance: `source` (`zenodo`/`zotero`/`manual`) plus the stable
+    upstream keys the syncs match on.
   - `output_id` is a stable key (`o001`…). Give a new output the next unused id and
     never renumber — snapshots and the rollup join on it.
   - `link` is the canonical DOI/URL. For Zenodo, prefer the **concept DOI** (the
@@ -113,12 +122,38 @@ CSVs and rollup and emit JSON; the pages (`src/index.md` = Impact, `pipeline.md`
 A **dormant** GitHub Pages workflow lives at `.github/workflows/deploy.yml`; activate
 it per the comments in that file once the repo is on GitHub.
 
-## Sources of published works
+## Sources of published works — the quarterly ingest sweep
 
-Zenodo (the `princetoncdh` community) is one canonical source. A second — a **Zotero**
-group library — is planned, to capture books and externally-published work Zenodo
-doesn't. A quarterly two-source sweep with a review/filter step is the intended
-workflow (not yet built).
+Realized outputs are reconciled from **two canonical sources** into `outputs.csv`:
+the **Zenodo `princetoncdh` community** (clean, all-DOI'd) and a **Zotero** group
+collection (books + externally-published work Zenodo lacks, but noisier). Each sync
+dedups against `outputs.csv` and the ledger, then writes a **review file** you edit;
+`merge_incoming.py` applies your decisions. Run quarterly:
+
+```bash
+python3 scripts/sync_zenodo.py        # → data/incoming/zenodo-review.csv
+python3 scripts/sync_zotero.py        # → data/incoming/zotero-review.csv
+#  edit each review file: set `decision` (keep/skip) and assign `project` to keeps
+python3 scripts/merge_incoming.py data/incoming/zenodo-review.csv --apply
+python3 scripts/merge_incoming.py data/incoming/zotero-review.csv --apply
+#  add any new project names the merge flagged to data/projects.csv
+python3 scripts/fetch_metrics.py      # metrics + citations for the now-larger list
+python3 scripts/build_rollup.py
+cd dashboard && npm run build
+```
+
+How the sweep decides:
+- **Matches** an existing output (DOI → Zenodo-id → ISBN → concept → zotero_key →
+  title+year) → **enriched in place** (backfills provenance keys), never duplicated.
+- **New Zenodo** items → proposed pre-marked `keep` (community = in scope).
+- **New Zotero** items → pre-marked `keep` if a `people.csv` author is on them,
+  otherwise left blank for you to triage.
+- Every keep/skip is written to **`data/sync_ledger.csv`**, so re-running a sweep only
+  ever surfaces genuinely new items (idempotent). The `incoming/` review files are
+  transient (git-ignored); the ledger is the durable record.
+
+Graduation from `planned.csv`: when a planned item ships and appears via a sweep,
+delete its row from `planned.csv` (manual — there's no automatic dedup across the two).
 
 ## History already loaded
 
