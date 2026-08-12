@@ -1,0 +1,152 @@
+output_id,link,output_name,project,type,metric_type,count,retrieved_date,status
+o016,https://doi.org/10.5281/zenodo.3834178,mep-django,🌐Shakespeare and Company,Software Release,Views,360,2026-08-12,ok
+o016,https://doi.org/10.5281/zenodo.3834178,mep-django,🌐Shakespeare and Company,Software Release,Downloads,115,2026-08-12,ok
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,Citation Count,2,2026-08-12,ok
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,Views,,2026-08-12,manual
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,Downloads,,2026-08-12,manual
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Dataset,Citation Count,1,2026-08-12,ok
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Dataset,Views,,2026-08-12,manual
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Dataset,Downloads,,2026-08-12,manual
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,Citation Count,3,2026-08-12,ok
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,Views,,2026-08-12,manual
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,Downloads,,2026-08-12,manual
+o026,https://doi.org/10.34770/nz90-ym25,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,Views,,2026-08-12,manual
+o026,https://doi.org/10.34770/nz90-ym25,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Dataset,Downloads,,2026-08-12,manual
+o027,https://doi.org/10.34770/yj5r-0m59,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,Views,,2026-08-12,manual
+o027,https://doi.org/10.34770/yj5r-0m59,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,🌐Shakespeare and Company,Dataset,Downloads,,2026-08-12,manual
+o045,https://shakespeareandco.princeton.edu/,Shakespeare and Company Website,🌐Shakespeare and Company,Website,Views,,2026-08-12,manual
+o045,https://shakespeareandco.princeton.edu/,Shakespeare and Company Website,🌐Shakespeare and Company,Website,Downloads,,2026-08-12,manual
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,Citation Count,1,2026-08-12,ok
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Publication,Citation Count,6,2026-08-12,ok
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,Citation Count,8,2026-08-12,ok
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,Citation Count,3,2026-08-12,ok
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,🌐Shakespeare and Company,Publication,Citation Count,2,2026-08-12,ok
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o071,https://doi.org/10.5281/zenodo.3277319,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,Views,332,2026-08-12,ok
+o071,https://doi.org/10.5281/zenodo.3277319,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Presentation / Poster,Downloads,225,2026-08-12,ok
+o076,https://doi.org/10.22148/jca.1114,"Shakespeare and Company Project Data Sets, Version 2.0",🌐Shakespeare and Company,Publication,Views,,2026-08-12,manual
+o076,https://doi.org/10.22148/jca.1114,"Shakespeare and Company Project Data Sets, Version 2.0",🌐Shakespeare and Company,Publication,Downloads,,2026-08-12,manual
+o010,https://doi.org/10.63744/cTWwVSItf41f,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,🌐Princeton Prosody Archive,Publication,Views,,2026-08-12,manual
+o010,https://doi.org/10.63744/cTWwVSItf41f,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,🌐Princeton Prosody Archive,Publication,Downloads,,2026-08-12,manual
+o011,https://doi.org/10.5281/zenodo.15312547,corppa,🌐Princeton Prosody Archive,Software Release,Views,31,2026-08-12,ok
+o011,https://doi.org/10.5281/zenodo.15312547,corppa,🌐Princeton Prosody Archive,Software Release,Downloads,12,2026-08-12,ok
+o032,https://doi.org/10.5281/zenodo.3255052,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,Views,815,2026-08-12,ok
+o032,https://doi.org/10.5281/zenodo.3255052,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Dataset,Downloads,402,2026-08-12,ok
+o034,https://prosody.princeton.edu/,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,Views,,2026-08-12,manual
+o034,https://prosody.princeton.edu/,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Website,Downloads,,2026-08-12,manual
+o035,https://doi.org/10.5281/zenodo.2400704,ppa-django,🌐Princeton Prosody Archive,Software Release,Views,28,2026-08-12,ok
+o035,https://doi.org/10.5281/zenodo.2400704,ppa-django,🌐Princeton Prosody Archive,Software Release,Downloads,19,2026-08-12,ok
+o036,https://doi.org/10.5281/zenodo.13850967,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,Views,261,2026-08-12,ok
+o036,https://doi.org/10.5281/zenodo.13850967,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Presentation / Poster,Downloads,196,2026-08-12,ok
+o037,https://doi.org/10.5281/zenodo.12575879,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,Views,230,2026-08-12,ok
+o037,https://doi.org/10.5281/zenodo.12575879,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Presentation / Poster,Downloads,208,2026-08-12,ok
+o038,https://doi.org/10.5281/zenodo.8292322,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,Views,107,2026-08-12,ok
+o038,https://doi.org/10.5281/zenodo.8292322,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Publication,Downloads,199,2026-08-12,ok
+o060,https://doi.org/10.5281/zenodo.8292370,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,Views,125,2026-08-12,ok
+o060,https://doi.org/10.5281/zenodo.8292370,Coventry Patmore and the Problem of Excerpts,🌐Princeton Prosody Archive,Publication,Downloads,124,2026-08-12,ok
+o066,https://doi.org/10.5281/zenodo.3359171,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,Views,838,2026-08-12,ok
+o066,https://doi.org/10.5281/zenodo.3359171,CDH Project Charter — Princeton Prosody Archive 2017-18,🌐Princeton Prosody Archive,Grey Literature,Downloads,476,2026-08-12,ok
+o074,https://doi.org/10.5281/zenodo.20044416,PPA Found Poems Dataset,🌐Princeton Prosody Archive,Dataset,Views,126,2026-08-12,ok
+o074,https://doi.org/10.5281/zenodo.20044416,PPA Found Poems Dataset,🌐Princeton Prosody Archive,Dataset,Downloads,125,2026-08-12,ok
+o075,https://press.princeton.edu/books/paperback/9780691254678/poetrys-data,Poetry's Data,🌐Princeton Prosody Archive,Publication,Citation Count,1,2026-08-12,ok
+o085,https://doi.org/10.5281/zenodo.17049420,Princeton Prosody Archive: Rebuilding the Collection and User Interface,🌐Princeton Prosody Archive,Presentation / Poster,Views,252,2026-08-12,ok
+o085,https://doi.org/10.5281/zenodo.17049420,Princeton Prosody Archive: Rebuilding the Collection and User Interface,🌐Princeton Prosody Archive,Presentation / Poster,Downloads,612,2026-08-12,ok
+o089,https://doi.org/10.5281/zenodo.18187580,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),🌐Princeton Prosody Archive,Presentation / Poster,Views,236,2026-08-12,ok
+o089,https://doi.org/10.5281/zenodo.18187580,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),🌐Princeton Prosody Archive,Presentation / Poster,Downloads,149,2026-08-12,ok
+o091,https://doi.org/10.5281/zenodo.20044417,Princeton Prosody Archive Found Poems Dataset,🌐Princeton Prosody Archive,Dataset,Views,126,2026-08-12,ok
+o091,https://doi.org/10.5281/zenodo.20044417,Princeton Prosody Archive Found Poems Dataset,🌐Princeton Prosody Archive,Dataset,Downloads,125,2026-08-12,ok
+o094,https://doi.org/10.5281/zenodo.18623170,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",🌐Princeton Prosody Archive,Dataset,Views,68,2026-08-12,ok
+o094,https://doi.org/10.5281/zenodo.18623170,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",🌐Princeton Prosody Archive,Dataset,Downloads,246,2026-08-12,ok
+o058,https://doi.org/10.5281/zenodo.8040362,lenape-timetree,🌐Lunaapahkiing Princeton Timetree,Software Release,Views,116,2026-08-12,ok
+o058,https://doi.org/10.5281/zenodo.8040362,lenape-timetree,🌐Lunaapahkiing Princeton Timetree,Software Release,Downloads,17,2026-08-12,ok
+o019,https://doi.org/10.5281/zenodo.7347725,geniza,🌐Geniza,Software Release,Views,83,2026-08-12,ok
+o019,https://doi.org/10.5281/zenodo.7347725,geniza,🌐Geniza,Software Release,Downloads,20,2026-08-12,ok
+o020,https://doi.org/10.5281/zenodo.12796543,annotorious-tahqiq,🌐Geniza,Software Release,Views,91,2026-08-12,ok
+o020,https://doi.org/10.5281/zenodo.12796543,annotorious-tahqiq,🌐Geniza,Software Release,Downloads,15,2026-08-12,ok
+o043,https://doi.org/10.5281/zenodo.7841822,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",🌐Geniza,Grey Literature,Views,287,2026-08-12,ok
+o043,https://doi.org/10.5281/zenodo.7841822,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",🌐Geniza,Grey Literature,Downloads,216,2026-08-12,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,Citation Count,2,2026-08-12,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,Views,857,2026-08-12,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,Downloads,702,2026-08-12,ok
+o046,https://geniza.princeton.edu/en/,Princeton Geniza Website,🌐Geniza,Website,Views,,2026-08-12,manual
+o046,https://geniza.princeton.edu/en/,Princeton Geniza Website,🌐Geniza,Website,Downloads,,2026-08-12,manual
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,🌐Geniza,Dataset,Citation Count,1,2026-08-12,ok
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,🌐Geniza,Dataset,Views,135,2026-08-12,ok
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,🌐Geniza,Dataset,Downloads,57,2026-08-12,ok
+o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,Views,,2026-08-12,manual
+o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,Downloads,,2026-08-12,manual
+o023,https://doi.org/10.34770/8nc6-4418,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Dataset,Views,,2026-08-12,manual
+o023,https://doi.org/10.34770/8nc6-4418,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Dataset,Downloads,,2026-08-12,manual
+o039,https://doi.org/10.5281/zenodo.3359144,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,Views,706,2026-08-12,ok
+o039,https://doi.org/10.5281/zenodo.3359144,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Grey Literature,Downloads,410,2026-08-12,ok
+o041,https://derridas-margins.princeton.edu/,Derrida's Margins website,🌐Derrida’s Margins,Website,Views,,2026-08-12,manual
+o041,https://derridas-margins.princeton.edu/,Derrida's Margins website,🌐Derrida’s Margins,Website,Downloads,,2026-08-12,manual
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Citation Count,1,2026-08-12,ok
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Views,7,2026-08-12,ok
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Downloads,0,2026-08-12,ok
+o087,https://doi.org/10.5281/zenodo.17253973,Undate: computing with uncertain and partially-unknown dates,Undate,Presentation / Poster,Views,236,2026-08-12,ok
+o087,https://doi.org/10.5281/zenodo.17253973,Undate: computing with uncertain and partially-unknown dates,Undate,Presentation / Poster,Downloads,174,2026-08-12,ok
+o009,https://doi.org/10.5281/zenodo.8087661,Simulating Risk Project Charter,Simulating Risks,Grey Literature,Views,447,2026-08-12,ok
+o009,https://doi.org/10.5281/zenodo.8087661,Simulating Risk Project Charter,Simulating Risks,Grey Literature,Downloads,340,2026-08-12,ok
+o017,https://doi.org/10.5281/zenodo.14516700,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,Views,108,2026-08-12,ok
+o017,https://doi.org/10.5281/zenodo.14516700,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,Downloads,169,2026-08-12,ok
+o056,https://doi.org/10.5281/zenodo.14516240,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,Views,215,2026-08-12,ok
+o056,https://doi.org/10.5281/zenodo.14516240,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,Downloads,321,2026-08-12,ok
+o018,https://zenodo.org/records/17633794,djiffy,Research Software,Software Release,Views,85,2026-08-12,ok
+o018,https://zenodo.org/records/17633794,djiffy,Research Software,Software Release,Downloads,18,2026-08-12,ok
+o054,https://doi.org/10.5281/zenodo.13256210,piffle,Research Software,Software Release,Views,66,2026-08-12,ok
+o054,https://doi.org/10.5281/zenodo.13256210,piffle,Research Software,Software Release,Downloads,8,2026-08-12,ok
+o057,https://doi.org/10.5281/zenodo.13905619,django-pucas,Research Software,Software Release,Views,30,2026-08-12,ok
+o057,https://doi.org/10.5281/zenodo.13905619,django-pucas,Research Software,Software Release,Downloads,5,2026-08-12,ok
+o042,https://doi.org/10.5281/zenodo.3359202,"""Built by CDH"" Long Term Software Agreement",Project Management and Documentation,Grey Literature,Views,329,2026-08-12,ok
+o042,https://doi.org/10.5281/zenodo.3359202,"""Built by CDH"" Long Term Software Agreement",Project Management and Documentation,Grey Literature,Downloads,171,2026-08-12,ok
+o047,https://doi.org/10.5281/zenodo.14907039,Project Management 101,Project Management and Documentation,Presentation / Poster,Views,196,2026-08-12,ok
+o047,https://doi.org/10.5281/zenodo.14907039,Project Management 101,Project Management and Documentation,Presentation / Poster,Downloads,583,2026-08-12,ok
+o055,https://doi.org/10.5281/zenodo.14516760,Modeling Project Management through Charters,Project Management and Documentation,Presentation / Poster,Views,119,2026-08-12,ok
+o055,https://doi.org/10.5281/zenodo.14516760,Modeling Project Management through Charters,Project Management and Documentation,Presentation / Poster,Downloads,560,2026-08-12,ok
+o088,https://doi.org/10.5281/zenodo.17315341,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Project Management and Documentation,Presentation / Poster,Views,138,2026-08-12,ok
+o088,https://doi.org/10.5281/zenodo.17315341,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Project Management and Documentation,Presentation / Poster,Downloads,529,2026-08-12,ok
+o090,https://doi.org/10.5281/zenodo.21891370,CDH Project Management Tools and Templates,Project Management and Documentation,,Views,5,2026-08-12,ok
+o090,https://doi.org/10.5281/zenodo.21891370,CDH Project Management Tools and Templates,Project Management and Documentation,,Downloads,1,2026-08-12,ok
+o063,https://doi.org/10.5281/zenodo.6909568,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Dataset,Views,966,2026-08-12,ok
+o063,https://doi.org/10.5281/zenodo.6909568,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Dataset,Downloads,2010,2026-08-12,ok
+o064,https://doi.org/10.5281/zenodo.3359177,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Grey Literature,Views,1580,2026-08-12,ok
+o064,https://doi.org/10.5281/zenodo.3359177,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Grey Literature,Downloads,989,2026-08-12,ok
+o029,https://zenodo.org/records/17344496,HTR2HPC Project Charter,Open HTR,Grey Literature,Views,69,2026-08-12,ok
+o029,https://zenodo.org/records/17344496,HTR2HPC Project Charter,Open HTR,Grey Literature,Downloads,48,2026-08-12,ok
+o033,https://doi.org/10.5281/zenodo.17245594,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Open HTR,Publication,Views,180,2026-08-12,ok
+o033,https://doi.org/10.5281/zenodo.17245594,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Open HTR,Publication,Downloads,233,2026-08-12,ok
+o092,https://doi.org/10.5281/zenodo.19472367,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,Music Theory in the Plural,Grey Literature,Views,129,2026-08-12,ok
+o092,https://doi.org/10.5281/zenodo.19472367,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,Music Theory in the Plural,Grey Literature,Downloads,84,2026-08-12,ok
+o001,https://doi.org/10.5281/zenodo.14861082,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,Views,308,2026-08-12,ok
+o001,https://doi.org/10.5281/zenodo.14861082,Citing Marx Project Charter,Marxism’s Marx,Grey Literature,Downloads,250,2026-08-12,ok
+o086,https://doi.org/10.5281/zenodo.17315400,Community Code Review in the Digital Humanities,DH Tech,,Views,223,2026-08-12,ok
+o086,https://doi.org/10.5281/zenodo.17315400,Community Code Review in the Digital Humanities,DH Tech,,Downloads,154,2026-08-12,ok
+o096,https://doi.org/10.5281/zenodo.15863899,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Presentation / Poster,Views,434,2026-08-12,ok
+o096,https://doi.org/10.5281/zenodo.15863899,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Presentation / Poster,Downloads,264,2026-08-12,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Physicalization,Publication,Citation Count,2,2026-08-12,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Physicalization,Publication,Views,569,2026-08-12,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Physicalization,Publication,Downloads,1002,2026-08-12,ok
+o069,https://medium.com/nightingale/what-if-you-could-touch-data-9c3a82a73407,What If You Could Touch Data?,Data Physicalization,Publication,Views,,2026-08-12,manual
+o069,https://medium.com/nightingale/what-if-you-could-touch-data-9c3a82a73407,What If You Could Touch Data?,Data Physicalization,Publication,Downloads,,2026-08-12,manual
+o072,https://doi.org/10.5281/zenodo.3261530,Data Beyond Vision,Data Physicalization,Presentation / Poster,Views,491,2026-08-12,ok
+o072,https://doi.org/10.5281/zenodo.3261530,Data Beyond Vision,Data Physicalization,Presentation / Poster,Downloads,278,2026-08-12,ok
+o059,https://doi.org/10.5281/zenodo.3667650,bitKlavier,bitKlavier,Software Release,Views,237,2026-08-12,ok
+o059,https://doi.org/10.5281/zenodo.3667650,bitKlavier,bitKlavier,Software Release,Downloads,27,2026-08-12,ok
+o065,https://doi.org/10.5281/zenodo.3359175,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,Views,513,2026-08-12,ok
+o065,https://doi.org/10.5281/zenodo.3359175,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,Downloads,260,2026-08-12,ok
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Citation Count,6,2026-08-12,ok
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Views,,2026-08-12,manual
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Downloads,,2026-08-12,manual
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Citation Count,3,2026-08-12,ok
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Views,,2026-08-12,manual
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Downloads,,2026-08-12,manual

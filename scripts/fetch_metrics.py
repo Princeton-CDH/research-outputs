@@ -41,6 +41,7 @@ PREFIX_MAP = [
     ("10.5281/zenodo", "Zenodo"),
     ("10.34770", "DataCommons"),
     ("10.22148", "CulturalAnalytics"),
+    ("10.63744", "CulturalAnalytics"),  # newer Journal of Cultural Analytics DOI prefix
     ("10.1162", "MITPress"),
     ("10.21428", "PubPub"),
 ]
@@ -64,6 +65,9 @@ def classify(link: str) -> str:
     link = (link or "").strip()
     if not link:
         return ""
+    # Zenodo records are sometimes linked by record URL rather than DOI.
+    if re.search(r"zenodo\.org/records?/\d+", link):
+        return "Zenodo"
     for prefix, label in PREFIX_MAP:
         if prefix in link:
             return label
@@ -89,13 +93,20 @@ def _get(url: str, headers: dict | None = None) -> requests.Response:
 
 
 def fetch_zenodo(link: str) -> dict:
-    m = re.search(r"zenodo\.(\d+)", link)
+    # Handle both the DOI form (…/zenodo.NNN) and the record-URL form
+    # (zenodo.org/records/NNN).
+    m = re.search(r"zenodo(?:\.org/records?/|\.)(\d+)", link)
     if not m:
         raise ValueError("no zenodo record id in link")
     resp = _get(f"https://zenodo.org/api/records/{m.group(1)}",
                 headers={"Accept": "application/json"})
     stats = resp.json().get("stats", {})
-    return {"Views": stats.get("views"), "Downloads": stats.get("downloads")}
+    # Prefer all-versions totals (version_*) so a concept DOI reflects the whole
+    # record's reach across versions; fall back to this-version counts.
+    return {
+        "Views": stats.get("version_views", stats.get("views")),
+        "Downloads": stats.get("version_downloads", stats.get("downloads")),
+    }
 
 
 def extract_doi(link: str) -> str | None:

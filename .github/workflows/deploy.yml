@@ -1,0 +1,59 @@
+# Build the Observable Framework dashboard and publish it to GitHub Pages.
+#
+# DORMANT BY DESIGN: this runs only when triggered by hand (workflow_dispatch).
+# It does nothing on push until you opt in. To activate automatic deploys:
+#   1. Push this repo to GitHub.
+#   2. Settings → Pages → Build and deployment → Source: "GitHub Actions".
+#   3. Uncomment the `push:` trigger below.
+# The dashboard's Python data loaders only read local CSVs (no network, no pip
+# deps), so the build is fully reproducible on the runner.
+
+name: Deploy dashboard
+
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+  #   paths: ['dashboard/**', 'data/**', 'rollups/**', 'snapshots/**']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: dashboard/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - run: npm run build
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

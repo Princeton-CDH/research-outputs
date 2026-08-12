@@ -57,7 +57,19 @@ def main() -> None:
                     continue
                 k = (okey, mt, year)
                 prev = chosen.get(k)
-                if prev is None or r.get("retrieved_date", "") > prev.get("retrieved_date", ""):
+                if prev is None:
+                    chosen[k] = r
+                    continue
+                # Prefer a real value over a blank; among equals, later retrieved
+                # date wins. This keeps a hand-entered count from being wiped out
+                # when a later automated harvest re-emits it blank (e.g. the
+                # Cloudflare-gated press metrics).
+                r_val = (r.get("count") or "").strip() != ""
+                p_val = (prev.get("count") or "").strip() != ""
+                if r_val != p_val:
+                    if r_val:
+                        chosen[k] = r
+                elif r.get("retrieved_date", "") > prev.get("retrieved_date", ""):
                     chosen[k] = r
 
     # Group by output+metric, walk years in order to compute deltas.

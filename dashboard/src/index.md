@@ -140,7 +140,7 @@ const byProject = d3
       width,
       title: "Outputs by publication year",
       subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by its lead's role. Click a dot to open its DOI.`,
-      marginLeft: 240,
+      marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
       x: { label: "Publication year", tickFormat: "d", grid: true, nice: true },
@@ -148,7 +148,7 @@ const byProject = d3
         label: null,
         domain: [projectOrder.length - 0.5, -0.5], // row 0 (earliest) on top
         ticks: projectOrder.map((_, i) => i),
-        tickFormat: (i) => truncate(projectOrder[i]),
+        tickFormat: (i) => truncate(projectOrder[i], 52),
         grid: true,
       },
       r: { range: [3, 16], label: `Lifetime ${metricType}` },
@@ -251,9 +251,9 @@ const byProject = d3
     Plot.plot({
       width,
       title: `Lifetime ${metricType} by project (as of ${maxYear})`,
-      marginLeft: 240,
+      marginLeft: 320,
       x: { label: `Lifetime ${metricType}`, grid: true },
-      y: { label: null, tickFormat: truncate },
+      y: { label: null, tickFormat: (s) => truncate(s, 52) },
       marks: [
         Plot.barX(byProject, {
           x: "total",
