@@ -23,6 +23,7 @@ import os
 import re
 import sys
 import time
+import urllib.parse
 
 import requests
 
@@ -44,6 +45,11 @@ PREFIX_MAP = [
     ("10.21428", "PubPub"),
 ]
 MANUAL_PROVIDERS = {"CulturalAnalytics", "MITPress", "PubPub"}
+
+# Citations come from OpenAlex (free, no key), keyed by DOI — independent of the
+# view/download provider. The mailto joins OpenAlex's faster "polite pool".
+OPENALEX_MAIL = "cdh@princeton.edu"
+DOI_RE = re.compile(r"(10\.\d{4,9}/\S+)")
 
 USER_AGENT = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -92,6 +98,33 @@ def fetch_zenodo(link: str) -> dict:
     return {"Views": stats.get("views"), "Downloads": stats.get("downloads")}
 
 
+def extract_doi(link: str) -> str | None:
+    m = DOI_RE.search(link or "")
+    return m.group(1).rstrip("/.") if m else None
+
+
+def openalex_entity(o: dict) -> str | None:
+    """OpenAlex lookup path for an output: its DOI, or a pinned OpenAlex work id
+    from the alt_id column ('openalex:W123', for books with an ISBN but no DOI)."""
+    doi = extract_doi(o.get("link", ""))
+    if doi:
+        return "https://doi.org/" + urllib.parse.quote(doi, safe="")
+    alt = (o.get("alt_id") or "").strip()
+    if alt.lower().startswith("openalex:"):
+        return alt.split(":", 1)[1].strip()
+    return None
+
+
+def fetch_openalex_citation(entity: str):
+    """Lifetime citation count for an OpenAlex entity (DOI or work id), or None."""
+    url = (
+        "https://api.openalex.org/works/" + entity
+        + "?mailto=" + OPENALEX_MAIL + "&select=cited_by_count"
+    )
+    resp = _get(url, headers={"Accept": "application/json"})
+    return resp.json().get("cited_by_count")
+
+
 def fetch_datacommons(link: str) -> dict:
     html = _get(link).text
 
@@ -113,6 +146,7 @@ def main() -> None:
         outputs = [o for o in csv.DictReader(f) if (o.get("link") or "").strip()]
 
     cache: dict[str, dict] = {}
+    cite_cache: dict[str, object] = {}
     status_counts: dict[str, int] = {}
     rows = []
 
@@ -135,6 +169,27 @@ def main() -> None:
     for o in outputs:
         link = (o.get("link") or "").strip()
         provider = classify(link)
+
+        # Citations (OpenAlex) — for any DOI or pinned OpenAlex id, regardless of
+        # the view/download provider. Only emit once an output has been cited.
+        entity = openalex_entity(o)
+        if entity:
+            try:
+                if entity not in cite_cache:
+                    cite_cache[entity] = fetch_openalex_citation(entity)
+                    time.sleep(SLEEP_BETWEEN)
+                cites = cite_cache[entity]
+            except Exception as exc:  # noqa: BLE001
+                cites = None
+                print(f"  ! OpenAlex {entity}: {exc}", file=sys.stderr)
+            if isinstance(cites, int) and cites > 0:
+                emit(o, "Citation Count", cites, "ok")
+                bump("ok")
+
+        # Citation-only outputs (a pinned OpenAlex id but no DOI, e.g. a book with
+        # only an ISBN) have no view/download source — don't emit empty manual rows.
+        if not extract_doi(link) and (o.get("alt_id") or "").strip():
+            continue
 
         if provider in MANUAL_PROVIDERS or provider not in FETCHERS:
             for metric in ("Views", "Downloads"):

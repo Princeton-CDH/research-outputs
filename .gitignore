@@ -17,3 +17,9 @@ venv/
 
 # Apple Numbers binaries (keep the repo text-only / diffable)
 archive/yearly-analytics-pipeline/*.numbers
+
+# Node / Observable Framework dashboard — dependencies & generated build output.
+# Regenerate any time with:  cd dashboard && npm install && npm run build
+node_modules/
+dashboard/dist/
+.observablehq/

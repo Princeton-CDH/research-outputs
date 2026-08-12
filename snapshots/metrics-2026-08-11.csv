@@ -69,9 +69,6 @@ o038,https://doi.org/10.5281/zenodo.8292322,Elizabeth Barrett Browning's Pathway
 o049,https://doi.org/10.22148/001c.116926,"""Missing Data, Speculative Reading""",🌐Shakespeare and Company,Publication,Downloads,398,2026-08-11,ok
 o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,Downloads,219,2026-08-11,ok
 o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,🌐Shakespeare and Company,Publication,Downloads,351,2026-08-11,ok
-o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Citation Count,5,2026-08-11,ok
-o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Citation Count,3,2026-08-11,ok
-o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,Citation Count,,2026-08-11,no-count
 o016,https://doi.org/10.5281/zenodo.3834178,mep-django,🌐Shakespeare and Company,Software Release,Views,1341,2026-08-11,ok
 o035,https://doi.org/10.5281/zenodo.2400704,ppa-django,🌐Princeton Prosody Archive,Software Release,Views,808,2026-08-11,ok
 o059,https://doi.org/10.5281/zenodo.3667650,bitKlavier,bitKlavier,Software Release,Views,701,2026-08-11,ok
@@ -98,3 +95,21 @@ o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,🌐Derrid
 o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,🌐Derrida’s Margins,WebArchive,Downloads,9,2026-08-11,ok
 o076,https://doi.org/10.22148/jca.1114,""" Shakespeare and Company Project Data Sets, Version 2.0""",🌐Shakespeare and Company,Publication,Views,1154,2026-08-11,ok
 o076,https://doi.org/10.22148/jca.1114,""" Shakespeare and Company Project Data Sets, Version 2.0""",🌐Shakespeare and Company,Publication,Downloads,176,2026-08-11,ok
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Dataset,Citation Count,2,2026-08-11,openalex
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Dataset,Citation Count,1,2026-08-11,openalex
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Dataset,Citation Count,3,2026-08-11,openalex
+o040,https://doi.org/10.5281/zenodo.11068867,undate,R&D,Software Release,Citation Count,1,2026-08-11,openalex
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Grey Literature,Citation Count,2,2026-08-11,openalex
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Publication,Citation Count,1,2026-08-11,openalex
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Publication,Citation Count,6,2026-08-11,openalex
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Publication,Citation Count,8,2026-08-11,openalex
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,🌐Shakespeare and Company,Publication,Citation Count,3,2026-08-11,openalex
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,🌐Geniza,Dataset,Citation Count,1,2026-08-11,openalex
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Internal Projects / PM and Process,Publication,Citation Count,2,2026-08-11,openalex
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,🌐Shakespeare and Company,Publication,Citation Count,2,2026-08-11,openalex
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Citation Count,6,2026-08-11,openalex
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Citation Count,3,2026-08-11,openalex
+o075,https://press.princeton.edu/books/paperback/9780691254678/poetrys-data,Poetry's Data,🌐Princeton Prosody Archive,Publication,Citation Count,1,2026-08-11,openalex
+o105,https://doi.org/10.5281/zenodo.6567481,Mapping the Latent Spaces of Culture,,Publication,Citation Count,4,2026-08-11,openalex
+o106,https://doi.org/10.5281/zenodo.6567985,Are Large Language Models Our Limit Case?,,Publication,Citation Count,2,2026-08-11,openalex
+o110,https://doi.org/10.5281/zenodo.5750679,"""Strangers in the Landscape"": On Research Development and Making Things for Making",,Publication,Citation Count,1,2026-08-11,openalex

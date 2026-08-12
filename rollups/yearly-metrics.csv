@@ -1,4 +1,13 @@
 output_id,output_name,project,metric_type,year,lifetime_count,yearly_delta
+o110,"""Strangers in the Landscape"": On Research Development and Making Things for Making",,Citation Count,2024,1,
+o110,"""Strangers in the Landscape"": On Research Development and Making Things for Making",,Citation Count,2025,1,0
+o110,"""Strangers in the Landscape"": On Research Development and Making Things for Making",,Citation Count,2026,1,0
+o106,Are Large Language Models Our Limit Case?,,Citation Count,2024,1,
+o106,Are Large Language Models Our Limit Case?,,Citation Count,2025,1,0
+o106,Are Large Language Models Our Limit Case?,,Citation Count,2026,2,1
+o105,Mapping the Latent Spaces of Culture,,Citation Count,2024,3,
+o105,Mapping the Latent Spaces of Culture,,Citation Count,2025,4,1
+o105,Mapping the Latent Spaces of Culture,,Citation Count,2026,4,0
 o063,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Downloads,2025,849,
 o063,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Downloads,2026,2735,1886
 o063,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Views,2025,1359,
@@ -7,10 +16,21 @@ o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Pri
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Downloads,2026,994,164
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Views,2025,1262,
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Views,2026,1587,325
+o086,Community Code Review in the Digital Humanities,DH Tech,Downloads,2026,154,
+o086,Community Code Review in the Digital Humanities,DH Tech,Views,2026,223,
+o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Downloads,2026,264,
+o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Views,2026,434,
+o072,Data Beyond Vision,Data Physicalization,Downloads,2026,277,
+o072,Data Beyond Vision,Data Physicalization,Views,2026,491,
+o069,What If You Could Touch Data?,Data Physicalization,Downloads,2026,,
+o069,What If You Could Touch Data?,Data Physicalization,Views,2026,,
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Downloads,2025,119,
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Downloads,2026,171,52
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Views,2025,245,
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Views,2026,329,84
+o061,Data Beyond Vision,Internal Projects / PM and Process,Citation Count,2024,1,
+o061,Data Beyond Vision,Internal Projects / PM and Process,Citation Count,2025,1,0
+o061,Data Beyond Vision,Internal Projects / PM and Process,Citation Count,2026,2,1
 o061,Data Beyond Vision,Internal Projects / PM and Process,Downloads,2025,697,
 o061,Data Beyond Vision,Internal Projects / PM and Process,Downloads,2026,1105,408
 o061,Data Beyond Vision,Internal Projects / PM and Process,Views,2025,503,
@@ -39,6 +59,19 @@ o001,Citing Marx Project Charter,Marxism’s Marx,Downloads,2025,64,
 o001,Citing Marx Project Charter,Marxism’s Marx,Downloads,2026,250,186
 o001,Citing Marx Project Charter,Marxism’s Marx,Views,2025,72,
 o001,Citing Marx Project Charter,Marxism’s Marx,Views,2026,308,236
+o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,Music Theory in the Plural,Downloads,2026,84,
+o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,Music Theory in the Plural,Views,2026,129,
+o029,HTR2HPC Project Charter,Open HTR,Downloads,2026,,
+o029,HTR2HPC Project Charter,Open HTR,Views,2026,,
+o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Open HTR,Downloads,2026,233,
+o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Open HTR,Views,2026,180,
+o090,CDH Project Management Tools and Templates,Project Management and Documentation,Downloads,2026,0,
+o090,CDH Project Management Tools and Templates,Project Management and Documentation,Views,2026,5,
+o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Project Management and Documentation,Downloads,2026,529,
+o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Project Management and Documentation,Views,2026,138,
+o040,undate,R&D,Citation Count,2024,0,
+o040,undate,R&D,Citation Count,2025,1,1
+o040,undate,R&D,Citation Count,2026,1,0
 o040,undate,R&D,Downloads,2025,28,
 o040,undate,R&D,Downloads,2026,89,61
 o040,undate,R&D,Views,2025,107,
@@ -55,18 +88,24 @@ o056,Theorizing risk attitudes and rationality using agent based modeling,Simula
 o056,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Downloads,2026,321,205
 o056,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Views,2025,128,
 o056,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Views,2026,215,87
+o087,Undate: computing with uncertain and partially-unknown dates,Undate,Downloads,2026,174,
+o087,Undate: computing with uncertain and partially-unknown dates,Undate,Views,2026,236,
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Downloads,2025,197,
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Downloads,2026,261,64
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Views,2025,396,
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Views,2026,515,119
-o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2025,4,
-o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2026,5,1
+o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2024,4,
+o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2025,5,1
+o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2026,6,1
 o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Downloads,2025,197,
 o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Downloads,2026,200,3
-o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Citation Count,2025,1,
-o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Citation Count,2026,3,2
+o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Views,2026,,
+o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Citation Count,2024,2,
+o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Citation Count,2025,3,1
+o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Citation Count,2026,3,0
 o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Downloads,2025,76,
 o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Downloads,2026,78,2
+o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Views,2026,,
 o059,bitKlavier,bitKlavier,Downloads,2025,46,
 o059,bitKlavier,bitKlavier,Downloads,2026,133,87
 o059,bitKlavier,bitKlavier,Views,2025,348,
@@ -75,7 +114,9 @@ o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,D
 o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Downloads,2026,412,76
 o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Views,2025,560,
 o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Views,2026,709,149
+o023,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Downloads,2026,,
 o023,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Views,2025,8,
+o023,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Views,2026,,
 o022,Derrida's Margins web archive,🌐Derrida’s Margins,Downloads,2025,9,
 o022,Derrida's Margins web archive,🌐Derrida’s Margins,Downloads,2026,9,0
 o022,Derrida's Margins web archive,🌐Derrida’s Margins,Views,2025,67,
@@ -83,17 +124,29 @@ o022,Derrida's Margins web archive,🌐Derrida’s Margins,Views,2026,88,21
 o041,Derrida's Margins website,🌐Derrida’s Margins,Active Users,2024,4400,
 o041,Derrida's Margins website,🌐Derrida’s Margins,Active Users,2025,4300,-100
 o041,Derrida's Margins website,🌐Derrida’s Margins,Active Users,2026,13000,8700
+o041,Derrida's Margins website,🌐Derrida’s Margins,Downloads,2026,,
+o041,Derrida's Margins website,🌐Derrida’s Margins,Views,2026,,
 o043,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Downloads,2025,113,
 o043,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Downloads,2026,217,104
 o043,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Views,2025,160,
 o043,"""CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022""",🌐Geniza,Views,2026,288,128
+o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Citation Count,2024,2,
+o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Citation Count,2025,2,0
+o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Citation Count,2026,2,0
 o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Downloads,2025,559,
 o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Downloads,2026,703,144
 o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Views,2025,662,
 o044,CDH Project Charter – Princeton Geniza Project 2020-2021,🌐Geniza,Views,2026,860,198
+o052,Geniza Datasets,🌐Geniza,Citation Count,2024,0,
+o052,Geniza Datasets,🌐Geniza,Citation Count,2025,1,1
+o052,Geniza Datasets,🌐Geniza,Citation Count,2026,1,0
+o052,Geniza Datasets,🌐Geniza,Downloads,2026,112,
+o052,Geniza Datasets,🌐Geniza,Views,2026,935,
 o046,Princeton Geniza Website,🌐Geniza,Active Users,2024,8000,
 o046,Princeton Geniza Website,🌐Geniza,Active Users,2025,12000,4000
 o046,Princeton Geniza Website,🌐Geniza,Active Users,2026,898000,886000
+o046,Princeton Geniza Website,🌐Geniza,Downloads,2026,,
+o046,Princeton Geniza Website,🌐Geniza,Views,2026,,
 o020,annotorious-tahqiq,🌐Geniza,Downloads,2025,58,
 o020,annotorious-tahqiq,🌐Geniza,Downloads,2026,162,104
 o020,annotorious-tahqiq,🌐Geniza,Views,2025,186,
@@ -102,6 +155,8 @@ o019,geniza,🌐Geniza,Downloads,2025,41,
 o019,geniza,🌐Geniza,Downloads,2026,335,294
 o019,geniza,🌐Geniza,Views,2025,213,
 o019,geniza,🌐Geniza,Views,2026,1193,980
+o058,lenape-timetree,🌐Lunaapahkiing Princeton Timetree,Downloads,2026,42,
+o058,lenape-timetree,🌐Lunaapahkiing Princeton Timetree,Views,2026,246,
 o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Downloads,2025,53,
 o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Downloads,2026,196,143
 o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,🌐Princeton Prosody Archive,Views,2025,115,
@@ -118,13 +173,30 @@ o038,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody
 o038,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Downloads,2026,199,119
 o038,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Views,2025,50,
 o038,Elizabeth Barrett Browning's Pathways through the PPA,🌐Princeton Prosody Archive,Views,2026,107,57
+o074,PPA Found Poems Dataset,🌐Princeton Prosody Archive,Downloads,2026,125,
+o074,PPA Found Poems Dataset,🌐Princeton Prosody Archive,Views,2026,125,
+o075,Poetry's Data,🌐Princeton Prosody Archive,Citation Count,2024,0,
+o075,Poetry's Data,🌐Princeton Prosody Archive,Citation Count,2025,1,1
+o075,Poetry's Data,🌐Princeton Prosody Archive,Citation Count,2026,1,0
 o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Downloads,2025,207,
 o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Downloads,2026,401,194
 o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Views,2025,612,
 o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,🌐Princeton Prosody Archive,Views,2026,819,207
+o091,Princeton Prosody Archive Found Poems Dataset,🌐Princeton Prosody Archive,Downloads,2026,125,
+o091,Princeton Prosody Archive Found Poems Dataset,🌐Princeton Prosody Archive,Views,2026,125,
 o034,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Active Users,2024,1900,
 o034,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Active Users,2025,2300,400
 o034,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Active Users,2026,65000,62700
+o034,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Downloads,2026,,
+o034,Princeton Prosody Archive Website,🌐Princeton Prosody Archive,Views,2026,,
+o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,🌐Princeton Prosody Archive,Downloads,2026,612,
+o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,🌐Princeton Prosody Archive,Views,2026,252,
+o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",🌐Princeton Prosody Archive,Downloads,2026,246,
+o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",🌐Princeton Prosody Archive,Views,2026,68,
+o010,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,🌐Princeton Prosody Archive,Downloads,2026,,
+o010,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,🌐Princeton Prosody Archive,Views,2026,,
+o089,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),🌐Princeton Prosody Archive,Downloads,2026,149,
+o089,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),🌐Princeton Prosody Archive,Views,2026,236,
 o037,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Downloads,2025,60,
 o037,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Downloads,2026,208,148
 o037,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,🌐Princeton Prosody Archive,Views,2025,105,
@@ -147,6 +219,9 @@ o024,"""Shakespeare and Company Project Dataset: Lending Library Members, Books,
 o024,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Downloads,2026,12,1
 o024,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Views,2025,83,
 o024,"""Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0""",🌐Shakespeare and Company,Views,2026,69,-14
+o067,A Counterfactual Canon,🌐Shakespeare and Company,Citation Count,2024,1,
+o067,A Counterfactual Canon,🌐Shakespeare and Company,Citation Count,2025,1,0
+o067,A Counterfactual Canon,🌐Shakespeare and Company,Citation Count,2026,2,1
 o067,A Counterfactual Canon,🌐Shakespeare and Company,Downloads,2025,29,
 o067,A Counterfactual Canon,🌐Shakespeare and Company,Downloads,2026,351,322
 o067,A Counterfactual Canon,🌐Shakespeare and Company,Views,2025,510,
@@ -155,8 +230,17 @@ o071,Documents to Data: the evolution of approaches to a library archive,🌐Sha
 o071,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Downloads,2026,224,50
 o071,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Views,2025,215,
 o071,Documents to Data: the evolution of approaches to a library archive,🌐Shakespeare and Company,Views,2026,332,117
-o051,Shakespeare and Company Project,🌐Shakespeare and Company,Citation Count,2025,0,
-o051,Shakespeare and Company Project,🌐Shakespeare and Company,Citation Count,2026,,
+o049,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Citation Count,2024,2,
+o049,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Citation Count,2025,4,2
+o049,"Missing Data, Speculative Reading",🌐Shakespeare and Company,Citation Count,2026,6,2
+o051,Shakespeare and Company Project,🌐Shakespeare and Company,Citation Count,2024,3,
+o051,Shakespeare and Company Project,🌐Shakespeare and Company,Citation Count,2025,3,0
+o051,Shakespeare and Company Project,🌐Shakespeare and Company,Citation Count,2026,3,0
+o051,Shakespeare and Company Project,🌐Shakespeare and Company,Downloads,2026,,
+o051,Shakespeare and Company Project,🌐Shakespeare and Company,Views,2026,,
+o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Citation Count,2024,4,
+o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Citation Count,2025,7,3
+o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Citation Count,2026,8,1
 o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Downloads,2025,215,
 o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Downloads,2026,804,589
 o050,Shakespeare and Company Project Data Sets,🌐Shakespeare and Company,Views,2025,2419,
@@ -169,15 +253,31 @@ o026,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐S
 o026,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Downloads,2026,11,-1
 o026,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Views,2025,41,
 o026,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,🌐Shakespeare and Company,Views,2026,29,-12
+o024,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Citation Count,2024,1,
+o024,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Citation Count,2025,1,0
+o024,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",🌐Shakespeare and Company,Citation Count,2026,1,0
+o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Citation Count,2024,3,
+o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Citation Count,2025,3,0
+o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Citation Count,2026,3,0
 o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Downloads,2025,22,
 o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Downloads,2026,21,-1
 o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Views,2025,71,
 o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,🌐Shakespeare and Company,Views,2026,61,-10
+o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Citation Count,2024,0,
+o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Citation Count,2025,2,2
+o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Citation Count,2026,2,0
 o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Downloads,2025,6,
+o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Downloads,2026,,
 o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Views,2025,191,
+o021,Shakespeare and Company Project Datasets: v2.0,🌐Shakespeare and Company,Views,2026,,
 o045,Shakespeare and Company Website,🌐Shakespeare and Company,Active Users,2024,5800,
 o045,Shakespeare and Company Website,🌐Shakespeare and Company,Active Users,2025,9500,3700
 o045,Shakespeare and Company Website,🌐Shakespeare and Company,Active Users,2026,394000,384500
+o045,Shakespeare and Company Website,🌐Shakespeare and Company,Downloads,2026,,
+o045,Shakespeare and Company Website,🌐Shakespeare and Company,Views,2026,,
+o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Citation Count,2024,0,
+o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Citation Count,2025,0,0
+o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Citation Count,2026,1,1
 o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Downloads,2025,36,
 o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Downloads,2026,219,183
 o048,The World of Shakespeare and Company: An Introduction,🌐Shakespeare and Company,Views,2025,618,
