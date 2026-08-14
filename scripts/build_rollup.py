@@ -27,6 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 SNAP = os.path.join(ROOT, "snapshots")
 ROLLUP = os.path.join(ROOT, "rollups", "yearly-metrics.csv")
+OUTPUTS = os.path.join(ROOT, "data", "outputs.csv")
 
 OUT_COLS = ["output_id", "output_name", "project", "metric_type", "year",
             "lifetime_count", "yearly_delta"]
@@ -45,12 +46,23 @@ def main() -> None:
     if not files:
         raise SystemExit("No snapshots found in snapshots/ — run fetch or backfill first.")
 
+    # Valid output ids — drop orphan metric rows for outputs no longer tracked
+    # (e.g. an output pruned from outputs.csv after a snapshot was taken).
+    with open(OUTPUTS, encoding="utf-8", newline="") as f:
+        valid_ids = {(r.get("output_id") or "").strip() for r in csv.DictReader(f)}
+    valid_ids.discard("")
+
     # (output_key, metric_type, year) -> chosen row, keeping latest retrieved_date.
     chosen: dict = {}
+    dropped = 0
     for path in files:
         with open(path, encoding="utf-8", newline="") as f:
             for r in csv.DictReader(f):
-                okey = (r.get("output_id") or "").strip() or (r.get("link") or "").strip()
+                oid = (r.get("output_id") or "").strip()
+                if oid and oid not in valid_ids:
+                    dropped += 1
+                    continue
+                okey = oid or (r.get("link") or "").strip()
                 mt = (r.get("metric_type") or "").strip()
                 year = (r.get("retrieved_date") or "").strip()[:4]
                 if not (okey and mt and year):
@@ -106,7 +118,8 @@ def main() -> None:
 
     years = sorted({r["year"] for r in out_rows})
     print(f"Wrote {len(out_rows)} rows -> rollups/yearly-metrics.csv")
-    print(f"Years: {', '.join(years)} | from {len(files)} snapshot(s)")
+    print(f"Years: {', '.join(years)} | from {len(files)} snapshot(s)"
+          + (f" | dropped {dropped} orphan metric row(s)" if dropped else ""))
 
 
 if __name__ == "__main__":

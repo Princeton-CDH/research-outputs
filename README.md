@@ -1,8 +1,9 @@
-# RSE Project Tracking
+# CDH Research Tracking
 
-The canonical record of RSE/CDH **projects**, their **outputs** (publications,
-datasets, software, presentations, …), and the **yearly views / downloads /
-citations** each output earns — plus an **Observable dashboard** for viewing it all.
+The canonical record of the Center for Digital Humanities' **projects**, their
+**outputs** (publications, datasets, software, presentations, …), and the **yearly
+views / downloads / citations** each output earns — plus an **Observable dashboard**
+for viewing it all, across every CDH community.
 
 You maintain a few hand-edited CSVs and run a small set of scripts on a regular
 (quarterly) cadence. Airtable is no longer in the loop (its exports are kept in
@@ -12,7 +13,7 @@ You maintain a few hand-edited CSVs and run a small set of scripts on a regular
 
 ```
 data/
-  projects.csv            # hand-maintained: one row per project
+  projects.csv            # projects + CDH community (Project-Lead) classification
   outputs.csv             # REALIZED outputs (Released/Done); increasingly generated from Zenodo/Zotero
   planned.csv             # hand-maintained: planned/forecast outputs (stable planned_id)
   people.csv              # hand-maintained: name → role (Faculty / CDH / Post Doc)
@@ -28,12 +29,15 @@ scripts/
   merge_incoming.py       # apply a reviewed review file into outputs.csv + ledger
   synclib.py              # shared: matching/dedup, ledger, name & type helpers
   add_provenance_columns.py # one-time/idempotent: add source/zenodo_concept/zotero_key
+  sync_cdh_projects.py    # sweep the CDH projects catalog → project community classification
+  merge_projects.py       # apply a reviewed cdh-projects-review file into projects.csv
+  add_project_columns.py  # one-time/idempotent: add community/cdh_built/cdh_slug
   fetch_metrics.py        # harvest lifetime counts (Zenodo + OpenAlex citations) → dated snapshot
   build_rollup.py         # snapshots/* → rollups/yearly-metrics.csv
   backfill_citations.py   # (re-runnable) reconstruct historical citations from OpenAlex
   migrate_from_airtable.py  # one-time: built data/ from the Airtable exports (provenance)
   backfill_snapshots.py     # one-time: built 2024–2026 snapshots from the curated export
-dashboard/                # Observable Framework app (Impact / Pipeline / Portfolio)
+dashboard/                # Observable Framework app (Overview / Impact / Pipeline / Portfolio)
 archive/                  # raw Airtable exports + the retired 2-stage pipeline
 requirements.txt          # just `requests`
 ```
@@ -43,9 +47,12 @@ requirements.txt          # just `requests`
 Edit the CSVs directly (Numbers, Excel, or any text editor — they're plain CSV and
 diff cleanly in git).
 
-- **projects.csv** — `project, status, start_date, end_date, faculty_engagement, notes`.
-  `project` is the key; it must match the `project` value used in outputs.csv. `status`
-  may be multi-valued (comma-separated).
+- **projects.csv** — `project, status, start_date, end_date, faculty_engagement, notes,
+  community, cdh_built, cdh_slug`. `project` is the key; it must match the `project` value
+  used in outputs.csv. `status` may be multi-valued (comma-separated). `community` is the
+  CDH **Project-Lead** classification (`Faculty` / `Postdoc` / `Graduate Student` / `Staff` /
+  `External Collaborator`, multi-valued) — outputs inherit it via their project, and it's the
+  "community" dimension on the dashboard. `cdh_built`/`cdh_slug` come from the CDH catalog.
 - **outputs.csv** — `output_id, output_name, project, type, tier, status, assignee,
   link, doi_service, completed_date, availability, description, alt_id, source, zenodo_concept, zotero_key`. The last
     three are provenance: `source` (`zenodo`/`zotero`/`manual`) plus the stable
@@ -154,6 +161,25 @@ How the sweep decides:
 
 Graduation from `planned.csv`: when a planned item ships and appears via a sweep,
 delete its row from `planned.csv` (manual — there's no automatic dedup across the two).
+
+## CDH project catalog & communities
+
+Projects and their **community** (CDH Project-Lead classification) are imported from the
+CDH projects site so the dashboard shows the full CDH landscape and can slice by community.
+Idempotent and review-gated, like the output syncs:
+
+```bash
+python3 scripts/sync_cdh_projects.py                              # → data/incoming/cdh-projects-review.csv
+#  review: keep/skip proposed projects, fix any name-mismatch flags
+python3 scripts/merge_projects.py data/incoming/cdh-projects-review.csv --apply
+```
+
+`sync_cdh_projects.py` reads `cdh.princeton.edu/projects` (the `role=<id>` facet gives each
+project's lead; `cdh_built=on` flags Built-by-CDH), matches to `projects.csv` (enriching
+existing rows in place, with a small alias map for renamed projects), and proposes new
+catalog projects. Projects not in the CDH catalog (internal R&D / tooling) get their
+`community` set by hand. Two lenses coexist on the dashboard: **community** (the project's
+CDH lead category) and **lead_role** (a specific output's author role, from `people.csv`).
 
 ## History already loaded
 

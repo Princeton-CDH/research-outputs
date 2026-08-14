@@ -8,7 +8,7 @@ toc: false
 Planned and hypothetical outputs that don't exist yet. This list is **maintained
 by hand** in `data/planned.csv` (unlike [realized](/portfolio) outputs, which are
 generated from the canonical sources). When a planned item actually ships it
-appears on [Impact](/) and [Portfolio](/portfolio) — at that point, delete its
+appears on [Impact](/impact) and [Portfolio](/portfolio) — at that point, delete its
 row here.
 
 ```js

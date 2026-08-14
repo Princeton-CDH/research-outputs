@@ -14,6 +14,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[3]
 OUTPUTS_CSV = REPO_ROOT / "data" / "outputs.csv"
 PEOPLE_CSV = REPO_ROOT / "data" / "people.csv"
+PROJECTS_CSV = REPO_ROOT / "data" / "projects.csv"
 
 REALIZED_STATUSES = {"Released", "Done"}
 
@@ -28,6 +29,18 @@ def load_roles():
                 if name:
                     roles[name] = (row.get("role") or "").strip() or "Unknown"
     return roles
+
+
+def load_project_communities():
+    """project name -> list of CDH communities, from data/projects.csv."""
+    comm = {}
+    if PROJECTS_CSV.exists():
+        with PROJECTS_CSV.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                p = (row.get("project") or "").strip()
+                if p:
+                    comm[p] = [c.strip() for c in (row.get("community") or "").split(",") if c.strip()]
+    return comm
 
 
 def parse_date(value):
@@ -48,6 +61,7 @@ def split_multi(value):
 
 def main():
     roles = load_roles()
+    communities = load_project_communities()
     records = []
     with OUTPUTS_CSV.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
@@ -60,6 +74,7 @@ def main():
                     "output_id": (row.get("output_id") or "").strip(),
                     "output_name": (row.get("output_name") or "").strip(),
                     "project": (row.get("project") or "").strip(),
+                    "community": communities.get((row.get("project") or "").strip(), []),
                     "type": split_multi(row.get("type")),
                     "tier": (row.get("tier") or "").strip() or None,
                     "status": status,

@@ -1,8 +1,9 @@
 // Observable Framework config.
 export default {
-  title: "RSE Project Tracking",
+  title: "CDH Research",
   pages: [
-    { name: "Impact", path: "/index" },
+    { name: "Overview", path: "/index" },
+    { name: "Impact", path: "/impact" },
     { name: "Pipeline", path: "/pipeline" },
     { name: "Portfolio", path: "/portfolio" },
   ],

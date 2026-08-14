@@ -43,6 +43,9 @@ def main():
                     "faculty_engagement": engagements,
                     "engagement_count": len(engagements),
                     "notes": (row.get("notes") or "").strip() or None,
+                    "community": split_multi(row.get("community")),
+                    "cdh_built": (row.get("cdh_built") or "").strip().lower() == "yes",
+                    "cdh_slug": (row.get("cdh_slug") or "").strip() or None,
                 }
             )
     json.dump(records, sys.stdout, ensure_ascii=False, indent=None)

@@ -5,7 +5,7 @@ toc: false
 
 # Portfolio
 
-The full body of **realized** work — everything Released or Done — and the projects behind it. (Planned work lives on the [Pipeline](/pipeline) page; view/download impact on [Impact](/).)
+The full body of **realized** work — everything Released or Done — and the projects behind it. (Planned work lives on the [Pipeline](/pipeline) page; view/download impact on [Impact](/impact).)
 
 ```js
 const outputs = await FileAttachment("data/outputs.json").json();
@@ -116,9 +116,20 @@ const trunc = (s, n = 30) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s)
 ## Every realized output
 
 ```js
-const realizedRows = realized.map((o) => ({
+const communities = Array.from(new Set(realized.flatMap((o) => o.community || []))).sort();
+const community = view(
+  Inputs.select(["All communities", ...communities], { label: "Community", value: "All communities" })
+);
+```
+
+```js
+const shownRealized = realized.filter(
+  (o) => community === "All communities" || (o.community || []).includes(community)
+);
+const realizedRows = shownRealized.map((o) => ({
   Output: o.output_name,
   Project: o.project,
+  Community: (o.community || []).join(", ") || "—",
   Type: o.type.join(", ") || "—",
   Tier: o.tier ?? "",
   Lead: o.lead ?? "—",

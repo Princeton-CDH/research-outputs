@@ -1,22 +1,101 @@
-project,status,start_date,end_date,faculty_engagement,notes
-Music Theory in the Plural,Active Collaboration,8/25/2025,4/30/2026,"MTitP Project Design Workshop, Music Theory in the Plural Data Update, Music Theory in the Plural data consult",
-Marxism’s Marx,Active Collaboration,9/2/2024,3/27/2026,"Citing Marx Team Meeting, Marx Charter Part 2, Marx Charter Part 1",
-Simulating Risks,Active Collaboration,6/5/2023,10/31/2025,,
-Princeton Prosody Archive,"Active Legacy Project,Active Collaboration",5/14/2025,8/27/2027,"PPA Publishing Goals, Final PPA Website Features Conversation, Ends of Prosody Conference Day 2, Ends of Prosody Conference Day 3, Ends of Prosody / RSE meeting, PPA Debrief and Ending Planning",
-Open HTR,Active Collaboration,6/17/2024,8/30/2025,"HTR2HPC Checkin, meeting: HTR2HPC first release",
-Shakespeare and Company,Active Legacy Project,2/24/2025,12/19/2025,,
-Geniza,Affiliated Lab,,,"CDH + PGP Maintenance, PGP Dataset essay coworking, PGP Datasets Revision, PGP Dataset Essay Working Session, PGP Dataset Essay, PGP dataset coworking, Quarterly check-in with RSK, CDH - RC Geniza Handoff, PGP Dataset Publishing Conversation, Geniza Lab (Rachel) and RC Check In, Geniza Updates Planning",
-Derrida’s Margins,Completed Projects,,,,
-Lunaapahkiing Princeton Timetree,Completed Projects,,,,
-"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Completed Projects,,,,
-bitKlavier,Completed Projects,,,,
-DH Tech,Active Collaboration,,,,
-Data Physicalization,Completed Projects,,,,
-Project Management and Documentation,Active Collaboration,,,,
-Research Software,Active Collaboration,,,,
-Undate,Active Collaboration,,,,
-Exercises in Literary Style,Supported Project,,,,
-R&D,,,,,
-African Language Technologies Lab,,,,,
-Humanities for AI,,,,,
-Princeton Open HTR Initiative,,,,,
+project,status,start_date,end_date,faculty_engagement,notes,community,cdh_built,cdh_slug
+Music Theory in the Plural,Active Collaboration,8/25/2025,4/30/2026,"MTitP Project Design Workshop, Music Theory in the Plural Data Update, Music Theory in the Plural data consult",,Faculty,,
+Marxism’s Marx,Active Collaboration,9/2/2024,3/27/2026,"Citing Marx Team Meeting, Marx Charter Part 2, Marx Charter Part 1",,Faculty,yes,citing-marx
+Simulating Risks,Active Collaboration,6/5/2023,10/31/2025,,,"Faculty,Staff",yes,simulating-risk
+Princeton Prosody Archive,"Active Legacy Project,Active Collaboration",5/14/2025,8/27/2027,"PPA Publishing Goals, Final PPA Website Features Conversation, Ends of Prosody Conference Day 2, Ends of Prosody Conference Day 3, Ends of Prosody / RSE meeting, PPA Debrief and Ending Planning",,Faculty,yes,princeton-prosody-archive
+Open HTR,Active Collaboration,6/17/2024,8/30/2025,"HTR2HPC Checkin, meeting: HTR2HPC first release",,"Faculty,Postdoc",yes,bringing-htr-to-the-hpc
+Shakespeare and Company,Active Legacy Project,2/24/2025,12/19/2025,,,"Faculty,Staff",yes,shakespeare-and-company-project
+Geniza,Affiliated Lab,,,"CDH + PGP Maintenance, PGP Dataset essay coworking, PGP Datasets Revision, PGP Dataset Essay Working Session, PGP Dataset Essay, PGP dataset coworking, Quarterly check-in with RSK, CDH - RC Geniza Handoff, PGP Dataset Publishing Conversation, Geniza Lab (Rachel) and RC Check In, Geniza Updates Planning",,"Faculty,Staff",yes,princeton-geniza-project
+Derrida’s Margins,Completed Projects,,,,,Faculty,yes,derridas-margins
+Lunaapahkiing Princeton Timetree,Completed Projects,,,,,Staff,yes,lenape-timetree
+"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Completed Projects,,,,,Faculty,,princeton-ethiopian-miracles-mary-project
+bitKlavier,Completed Projects,,,,,Faculty,,bitklavier
+DH Tech,Active Collaboration,,,,,Staff,,
+Data Physicalization,Completed Projects,,,,,Staff,,
+Project Management and Documentation,Active Collaboration,,,,,Staff,,
+Research Software,Active Collaboration,,,,,Staff,,
+Undate,Active Collaboration,,,,,Staff,,undate
+Exercises in Literary Style,Supported Project,,,,,"Faculty,Postdoc",,exercises-in-literary-style
+R&D,,,,,,Staff,,
+African Language Technologies Lab,,,,,,Faculty,,
+Humanities for AI,,,,,,Faculty,,
+Princeton Open HTR Initiative,,,,,,"Faculty,Postdoc",,princeton-open-htr-initiative
+A Survey of Text-Based DH Projects in Tibetan Studies,,,,,,Graduate Student,,a-survey-of-text-based-dh-projects-in-tibetan-studies
+ABC Books,,,,,,Faculty,,abc-books
+Archival Justice for the Enslaved,,,,,,Faculty,,archival-justice-enslaved
+Art Hx: Visual and Medical Legacies of British Colonialism,,,,,,Graduate Student,,art-hx-visual-and-medical-legacies-of-british-colonialism
+Beyond Beauty,,,,,,Graduate Student,,beyond-beauty
+Building a Comparative Database for the Study of the Old and New Tang Histories,,,,,,Faculty,,building-comparative-database-study-old-and-new-tang-histories
+Chang’an: A Deep Map,,,,,,Faculty,,changan-a-deep-map
+Chinese Archival Handbooks,,,,,,Staff,,chinese-archival-handbooks
+Chinese Exchange Poems,,,,,,Graduate Student,,chinese-exchange-poems
+Colored Conventions Project,,,,,,Graduate Student,,colored-conventions-project
+Common Readers,,,,,,Staff,,common-readers
+Computational Approaches to Nigerian Literature,,,,,,Postdoc,,computational-approaches-to-nigerian-literature-analyzing-texts-in-yoruba-and-efik
+Computer-Assisted Pattern Analysis of Domenico Scarlatti&#x27;s Keyboard Sonatas,,,,,,Faculty,,computer-assisted-pattern-analysis-domenico-scarlattis-keyboard-sonatas
+Critical Studies in Gaming Lab,,,,,,Graduate Student,,critical-studies-in-gaming-lab
+Curating Analyses of the Complete Beethoven Quartets,,,,,,Faculty,,curating-analyses-complete-beethoven-quartets
+"Dallas: Wealth and Inheritance in a Population of Elites, 1890-1950",,,,,,Graduate Student,,dallas-wealth-and-inheritance-in-a-population-of-elites-1890-1950
+Data Beyond Vision,,,,,,Staff,,data-beyond-vision
+Datastructuring Fragmented Lives: A Probabilistic Record Linkage to Historical Data,,,,,,Graduate Student,,datastructuring-fragmented-lives-a-probabilistic-record-linkage-to-historical-data
+davila.js,,,,,,Staff,,davilajs
+Designing Empire,,,,,,Graduate Student,,designing-empire
+Digital Oulipo: Programming Potential Literature,,,,,,Graduate Student,,digital-oulipo
+DIRECT,,,,,,Staff,,direct
+Extracting Data From the Bulletin de la Convention Nationale,,,,,,Graduate Student,,extracting-data-from-the-bulletin-de-la-convention-nationale
+Finding the Fifth Century in Britain,,,,,,Faculty,,finding-fifth-century-britain
+Flora and Fauna in Focus,,,,,,Graduate Student,,flora-and-fauna-in-focus
+From Map to Dataset,,,,,,Faculty,,from-map-to-dataset
+Geography of Taste,,,,,,"Faculty,Staff",yes,geography-of-taste
+Glitch in Reality,,,,,,Graduate Student,,glitch-in-reality
+Global Networks of Cultural Production,,,,,,Postdoc,,global-networks-cultural-production
+Godly and Learned Divines,,,,,,Graduate Student,,godly-and-learned-divines
+Grassroots Minstrelsy in Bronzeville,,,,,,Graduate Student,,grassroots-minstrelsy-in-bronzeville
+Hale/Eliot Letters,,,,,,Staff,,haleeliot-letters
+"Healing, Water, and Art",,,,,,Staff,,healing-water-and-art
+History Books and the History of the Book in the Middle Ages,,,,,,Faculty,,history-books-and-the-history-of-the-book-in-the-middle-ages
+Implementation of preposition-based Semantic Annotation in Busa’s Index Thomisticus,,,,,,Graduate Student,,implementation-preposition-based-semantic-annotation-busas-index-thomisticus
+Inhabiting Antiquities in Ottoman Bodrum: Reconstructing a Demolished Neighborhood,,,,,,Graduate Student,,inhabiting-antiquities-in-ottoman-bodrum-reconstructing-a-demolished-neighborhood
+The Justinianic Plague,,,,,,Graduate Student,,justinianic-plague
+Languages of Art Writing,,,,,,"Faculty,Graduate Student",,languages-of-art-writing
+"The Making (and Unmaking) of Environmental Carcinogens, 1960–2000",,,,,,Graduate Student,,making-and-unmaking-environmental-carcinogens-19602000
+"Manliness, Insecurity, and Media Discourse in Contemporary France",,,,,,Graduate Student,,manliness-insecurity-and-media-discourse-in-contemporary-france
+"Mapping Iranian Migrants and their Networks in Bahrain, 1920-1950",,,,,,Graduate Student,,mapping-iranian-migrants-and-their-networks-bahrain-1920-1950
+Mapping Medieval Metadata,,,,,,"Faculty,Graduate Student",,mapping-medieval-metadata
+Mapping Phono-Post,,,,,,Faculty,,mapping-phono-post
+Mapping the Suffrage Metropolis,,,,,,Faculty,,mapping-suffrage-metropolis
+Modeling Culture: New Humanities Practices in the Age of AI,,,,,,"Faculty,Graduate Student,Staff",,modeling-culture-new-humanities-practices-in-the-age-of-ai
+Mondrianify,,,,,,Staff,,mondrianify
+MuSE (Multilingual Semantic Embeddings),,,,,,Faculty,yes,muse
+New Languages for NLP: Building Linguistic Diversity in the Digital Humanities,,,,,,"Staff,External Collaborator",,new-languages-nlp-building-linguistic-diversity-digital-humanities
+Pacific Northwest Maritime Trade,,,,,,Graduate Student,,pacific-northwest-maritime-trade
+Pages of Early Soviet Performance,,,,,,Staff,,pages-early-soviet-performance
+PARECT,,,,,,Graduate Student,,parect
+Pastoral Discourse After a Mass Shooting,,,,,,Staff,,pastoral-discourse-after-a-mass-shooting
+Philly Community Wireless,,,,,,Staff,,philly-community-wireless
+Playing Soviet,,,,,,Staff,,playing-soviet
+The Pliny Project,,,,,,Graduate Student,,pliny-project
+Pope Manuscripts Online,,,,,,Graduate Student,,pope-manuscripts-online
+Princeton and Slavery,,,,,,Faculty,,princeton-and-slavery
+Reconstructing the Past,,,,,,Graduate Student,,reconstructing-past
+Remedies Across Contexts,,,,,,Postdoc,,remedies-across-contexts
+Rhizomatic Reading,,,,,,Graduate Student,,rhizomatic-reading
+Segmenting Paratextual Material in Arabic Scientific Manuscripts,,,,,,Postdoc,,segmenting-paratextual-material-in-arabic-scientific-manuscripts
+Selling Menthol,,,,,,Faculty,,selling-menthol
+The Serge Prokofiev Archive as Data,,,,,,"Staff,External Collaborator",,serge-prokofiev-archive-data
+Shen Nanpin and the Problem of Authenticity,,,,,,Graduate Student,,shen-nanpin-and-the-problem-of-authenticity
+Silver Age Ballet on Stage,,,,,,Graduate Student,,silver-age-ballet-on-stage
+Soviet Journals Reconnected,,,,,,Graduate Student,,soviet-journals-reconnected
+Startwords,,,,,,Staff,yes,startwords
+Taking Note,,,,,,Graduate Student,,taking-note
+The Ends of Prosody,,,,,,Faculty,yes,the-ends-of-prosody
+The First Age of Lexicons,,,,,,Graduate Student,,the-first-age-of-lexicons
+"The Monastery, the Bridge and the River",,,,,,Faculty,,the-monastery-the-bridge-and-the-river
+The phenomenological experiences of different live or digital spaces for musical performance,,,,,,Graduate Student,,the-phenomenological-experiences-of-different-live-or-digital-spaces-for-musical-performance
+The Victoria Press Circle,,,,,,Graduate Student,,the-victoria-press-circle
+The Winthrop Family on the Page,,,,,,Faculty,,the-winthrop-family-on-the-page
+The UNOW Oral History Project,,,,,,Postdoc,,unow-oral-history-project
+Density and Crowding in the Roman City,,,,,,Graduate Student,,urban-density-in-the-roman-city
+(In)Visible Princeton,,,,,,Graduate Student,,visible-princeton
+Willing Prosperity,,,,,,Graduate Student,,willing-prosperity
+Works Revived: Tracking Lifecycles of Editions in the French National Bibliography,,,,,,Graduate Student,,works-revived-tracking-lifecycles-of-editions-in-the-french-national-bibliography
