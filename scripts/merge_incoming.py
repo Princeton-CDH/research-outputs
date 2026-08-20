@@ -2,11 +2,11 @@
 """Apply a reviewed *-review.csv into data/outputs.csv and record decisions.
 
 For each reviewed row:
-  decision=keep  -> append a new realized output (next output_id) carrying the
-                    user-assigned project/type/tier plus source/zenodo_concept/
-                    zotero_key; log the decision.
-  decision=skip  -> log the decision only (so it never re-surfaces).
-  decision blank -> left undecided (warned, not logged) so it comes back.
+  decision=keep         -> append a new realized output (next output_id) carrying
+                           the user-assigned project/type/tier plus source/
+                           zenodo_concept/zotero_key; log the decision.
+  decision=skip|drop    -> log the decision only (so it never re-surfaces).
+  decision=review|blank -> left undecided (not logged) so it comes back next sweep.
 
 Idempotent: rows already in data/sync_ledger.csv are skipped, so re-running a
 merge (or merging an already-merged file) is a no-op.
@@ -84,11 +84,11 @@ def main():
             ledger_entries.append({"source": src, "upstream_key": key, "decision": "keep",
                                    "output_id": oid, "decided_date": today,
                                    "title": rev.get("output_name", "")})
-        elif decision == "skip":
+        elif decision in ("skip", "drop", "discard"):
             ledger_entries.append({"source": src, "upstream_key": key, "decision": "skip",
                                    "output_id": "", "decided_date": today,
                                    "title": rev.get("output_name", "")})
-        else:
+        else:  # "review", blank, or unknown -> undecided, re-surfaces next sweep
             blanks.append(rev.get("output_name", ""))
 
     # New projects not yet in projects.csv (informational).
@@ -98,12 +98,10 @@ def main():
     print(f"review file: {review_path}")
     print(f"  keep  -> add {len(to_add)} new output(s): {to_add[0]['output_id'] if to_add else '-'}"
           f"…{to_add[-1]['output_id'] if to_add else ''}")
-    print(f"  skip  -> log {sum(1 for e in ledger_entries if e['decision']=='skip')}")
+    print(f"  skip/drop -> log {sum(1 for e in ledger_entries if e['decision']=='skip')}")
     print(f"  already decided (skipped): {already}")
     if blanks:
-        print(f"  ⚠ blank decision (left undecided, will re-surface): {len(blanks)}")
-        for b in blanks[:10]:
-            print(f"      {b[:52]!r}")
+        print(f"  · undecided/review (left for a later sweep): {len(blanks)}")
     if new_projects:
         print(f"  ⚠ new projects to add to data/projects.csv: {new_projects}")
 
@@ -113,7 +111,9 @@ def main():
 
     if to_add:
         with open(S.OUTPUTS, "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=fields)
+            # extrasaction="ignore" so a review-only column the outputs schema has
+            # dropped (e.g. tier) doesn't break the write — it's simply not carried.
+            w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
             w.writeheader()
             w.writerows(rows + to_add)
     if ledger_entries:

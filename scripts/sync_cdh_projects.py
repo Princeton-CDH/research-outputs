@@ -30,6 +30,9 @@ REVIEW = f"{S.INCOMING}/cdh-projects-review.csv"
 ROLE_LABEL = {"1": "Graduate Student", "2": "Faculty", "3": "Staff",
               "4": "Postdoc", "5": "External Collaborator"}
 ORDER = ["Faculty", "Postdoc", "Graduate Student", "Staff", "External Collaborator"]
+# Communities excluded from the published dataset (see scripts/remove_grad_projects.py):
+# projects led *solely* by these are skipped; the label is stripped from mixed leads.
+EXCLUDE_COMMUNITIES = {"Graduate Student"}
 CARD_RE = re.compile(r'class="tile__link"\s+href="/projects/([a-z0-9-]+)/"\s*>\s*<h3>\s*(.*?)\s*</h3>', re.S)
 REVIEW_COLS = ["decision", "confidence", "why", "project", "status", "community", "cdh_built", "cdh_slug"]
 
@@ -84,10 +87,11 @@ def main():
     tokens = {r["project"]: token_set(r["project"]) for r in prows}
     decided = S.load_ledger()
 
-    proposals, enriched, matched, skipped = [], [], 0, 0
+    proposals, enriched, matched, skipped, grad_skipped = [], [], 0, 0, 0
 
     def community_str(slug):
-        labels = sorted(set(role_of.get(slug, [])), key=lambda x: ORDER.index(x) if x in ORDER else 9)
+        labels = sorted(set(role_of.get(slug, [])) - EXCLUDE_COMMUNITIES,
+                        key=lambda x: ORDER.index(x) if x in ORDER else 9)
         return ",".join(labels)
 
     def enrich(row, slug):
@@ -110,6 +114,11 @@ def main():
             ch = enrich(target, slug)
             if ch:
                 enriched.append((target["project"][:32], "+".join(ch)))
+            continue
+        # Skip catalog projects led solely by an excluded community (grad students).
+        raw_roles = set(role_of.get(slug, []))
+        if raw_roles and raw_roles <= EXCLUDE_COMMUNITIES:
+            grad_skipped += 1
             continue
         if S.already_decided(decided, "cdh", slug):
             skipped += 1
@@ -146,6 +155,7 @@ def main():
     rev_n = len(proposals) - keep_n
     print(f"\ncatalog projects: {len(listing)}")
     print(f"  matched existing        : {matched}  ({len(enriched)} enriched)")
+    print(f"  skipped (grad-led only) : {grad_skipped}")
     print(f"  already decided (ledger): {skipped}")
     print(f"  NEW proposals           : {len(proposals)}  -> {REVIEW}")
     print(f"       ├─ pre-marked keep (new project) : {keep_n}")

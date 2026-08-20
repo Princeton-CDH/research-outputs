@@ -1,6 +1,6 @@
 # CDH Research Tracking
 
-The canonical record of the Center for Digital Humanities' **projects**, their
+A record of the Center for Digital Humanities' **projects**, their
 **outputs** (publications, datasets, software, presentations, …), and the **yearly
 views / downloads / citations** each output earns — plus an **Observable dashboard**
 for viewing it all, across every CDH community.
@@ -37,7 +37,7 @@ scripts/
   backfill_citations.py   # (re-runnable) reconstruct historical citations from OpenAlex
   migrate_from_airtable.py  # one-time: built data/ from the Airtable exports (provenance)
   backfill_snapshots.py     # one-time: built 2024–2026 snapshots from the curated export
-dashboard/                # Observable Framework app (Overview / Impact / Pipeline / Portfolio)
+dashboard/                # Observable Framework app (Overview / Impact / Portfolio)
 archive/                  # raw Airtable exports + the retired 2-stage pipeline
 requirements.txt          # just `requests`
 ```
@@ -50,34 +50,25 @@ diff cleanly in git).
 - **projects.csv** — `project, status, start_date, end_date, faculty_engagement, notes,
   community, cdh_built, cdh_slug`. `project` is the key; it must match the `project` value
   used in outputs.csv. `status` may be multi-valued (comma-separated). `community` is the
-  CDH **Project-Lead** classification (`Faculty` / `Postdoc` / `Graduate Student` / `Staff` /
+  CDH **Project-Lead** classification (`Faculty` / `Postdoc` / `Staff` /
   `External Collaborator`, multi-valued) — outputs inherit it via their project, and it's the
   "community" dimension on the dashboard. `cdh_built`/`cdh_slug` come from the CDH catalog.
 - **outputs.csv** — `output_id, output_name, project, type, tier, status, assignee,
   link, doi_service, completed_date, availability, description, alt_id, source, zenodo_concept, zotero_key`. The last
-    three are provenance: `source` (`zenodo`/`zotero`/`manual`) plus the stable
-    upstream keys the syncs match on.
-  - `output_id` is a stable key (`o001`…). Give a new output the next unused id and
-    never renumber — snapshots and the rollup join on it.
-  - `link` is the canonical DOI/URL. For Zenodo, prefer the **concept DOI** (the
-    version-agnostic "always latest" one) over a specific version DOI.
-  - `alt_id` is an optional secondary identifier for items with no usable DOI — e.g.
-    `openalex:W4408262440` for a book that has only an ISBN. The citation harvester
-    uses it to fetch citations (see below).
-  - `assignee` is a comma-separated author list; the **first** name is treated as the
-    lead. `type`/`tier` are independent facets.
-  - `status` here is **realized-only** (`Released`, `Done`) — outputs.csv is the record
-    of work that *exists*, and is increasingly **generated** from the canonical sources
-    (Zenodo + Zotero). Planned/forecast work lives in `planned.csv` (below), not here.
-- **planned.csv** — hand-maintained forecast of outputs that don't exist yet. Columns:
-  `planned_id, name, project, type, tier, status, owner, milestone, target_date,
-  priority, notes`. `planned_id` is a stable key (`p001`…). `status` is the planning
-  lifecycle: `Hypothetical`, `To do`, `In progress`, `Submitted`. `project` must match a
-  `projects.csv` project; `owner` is a comma-separated list (first = lead). `milestone`
-  and `target_date` are the hooks for Zenhub-style milestone planning. When a planned
-  item actually ships (and shows up in the generated outputs), **delete its row here** —
-  graduation is a manual deletion, there's no automatic dedup. Drives the dashboard's
-  [Pipeline](dashboard/src/pipeline.md) page.
+  three are provenance: `source` (`zenodo`/`zotero`/`manual`) plus the stable
+  upstream keys the syncs match on.
+    - `output_id` is a stable key (`o001`…). Give a new output the next unused id and
+      never renumber — snapshots and the rollup join on it.
+    - `link` is the canonical DOI/URL. For Zenodo, prefer the **concept DOI** (the
+      version-agnostic "always latest" one) over a specific version DOI.
+    - `alt_id` is an optional secondary identifier for items with no usable DOI — e.g.
+      `openalex:W4408262440` for a book that has only an ISBN. The citation harvester
+      uses it to fetch citations (see below).
+    - `assignee` is a comma-separated author list; the **first** name is treated as the
+      lead. `type`/`tier` are independent facets.
+    - `status` here is **realized-only** (`Released`, `Done`) — outputs.csv is the record
+      of work that *exists*, and is increasingly **generated** from the canonical sources
+      (Zenodo + Zotero). Planned/forecast work lives in `planned.csv` (below), not here.
 - **people.csv** — `name, role`. `role` is `Faculty`, `CDH`, or `Post Doc`, and drives
   the lead-author coloring on the dashboard. A lead not listed here shows as "Unknown".
 
@@ -121,10 +112,10 @@ npm run build          # static site → dashboard/dist/
 ```
 
 Python **data loaders** (`dashboard/src/data/*.py`, standard-library only) read the
-CSVs and rollup and emit JSON; the pages (`src/index.md` = Impact, `pipeline.md`,
-`portfolio.md`) render it with Observable Plot. Impact and Portfolio read the realized
-`outputs.csv`; the **Pipeline** page reads the hand-maintained `planned.csv`. `node_modules/`, `dist/`, and the
-`.observablehq` cache are git-ignored — `npm install && npm run build` regenerates them.
+CSVs and rollup and emit JSON; the pages (`src/index.md` = Overview, `impact.md`,
+`portfolio.md`) render it with Observable Plot, all reading the realized `outputs.csv`.
+`node_modules/`, `dist/`, and the `.observablehq` cache are git-ignored —
+`npm install && npm run build` regenerates them.
 
 A **dormant** GitHub Pages workflow lives at `.github/workflows/deploy.yml`; activate
 it per the comments in that file once the repo is on GitHub.
@@ -150,6 +141,7 @@ cd dashboard && npm run build
 ```
 
 How the sweep decides:
+
 - **Matches** an existing output (DOI → Zenodo-id → ISBN → concept → zotero_key →
   title+year) → **enriched in place** (backfills provenance keys), never duplicated.
 - **New Zenodo** items → proposed pre-marked `keep` (community = in scope).

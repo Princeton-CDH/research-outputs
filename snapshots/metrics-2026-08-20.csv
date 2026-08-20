@@ -1,0 +1,315 @@
+output_id,link,output_name,project,type,metric_type,count,retrieved_date,status
+o016,https://doi.org/10.5281/zenodo.3834178,mep-django,Shakespeare and Company,Software Release,Citation Count,1,2026-08-20,ok
+o016,https://doi.org/10.5281/zenodo.3834178,mep-django,Shakespeare and Company,Software Release,Views,362,2026-08-20,ok
+o016,https://doi.org/10.5281/zenodo.3834178,mep-django,Shakespeare and Company,Software Release,Downloads,115,2026-08-20,ok
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Dataset,Citation Count,2,2026-08-20,ok
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Dataset,Views,,2026-08-20,manual
+o021,https://doi.org/10.34770/kf6c-b079,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Dataset,Downloads,,2026-08-20,manual
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",Shakespeare and Company,Dataset,Citation Count,1,2026-08-20,ok
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",Shakespeare and Company,Dataset,Views,,2026-08-20,manual
+o024,https://doi.org/10.34770/dtqa-2981,"Shakespeare and Company Project Dataset: Lending Library Members, Books, Events: v1.0",Shakespeare and Company,Dataset,Downloads,,2026-08-20,manual
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,Shakespeare and Company,Dataset,Citation Count,3,2026-08-20,ok
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,Shakespeare and Company,Dataset,Views,,2026-08-20,manual
+o025,https://doi.org/10.34770/8c2s-a169,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,Shakespeare and Company,Dataset,Downloads,,2026-08-20,manual
+o026,https://doi.org/10.34770/nz90-ym25,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,Shakespeare and Company,Dataset,Views,,2026-08-20,manual
+o026,https://doi.org/10.34770/nz90-ym25,Shakespeare and Company Project Dataset: Lending Library Events: v1.0,Shakespeare and Company,Dataset,Downloads,,2026-08-20,manual
+o027,https://doi.org/10.34770/yj5r-0m59,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,Shakespeare and Company,Dataset,Views,,2026-08-20,manual
+o027,https://doi.org/10.34770/yj5r-0m59,Shakespeare and Company Project Dataset: Lending Library Books: v1.0,Shakespeare and Company,Dataset,Downloads,,2026-08-20,manual
+o045,https://shakespeareandco.princeton.edu/,Shakespeare and Company Website,Shakespeare and Company,Website,Views,,2026-08-20,manual
+o045,https://shakespeareandco.princeton.edu/,Shakespeare and Company Website,Shakespeare and Company,Website,Downloads,,2026-08-20,manual
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,Shakespeare and Company,Publication,Citation Count,2,2026-08-20,ok
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o048,https://doi.org/10.22148/001c.116905,The World of Shakespeare and Company: An Introduction,Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",Shakespeare and Company,Publication,Citation Count,6,2026-08-20,ok
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o049,https://doi.org/10.22148/001c.116926,"Missing Data, Speculative Reading",Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,Shakespeare and Company,Publication,Citation Count,9,2026-08-20,ok
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o050,https://doi.org/10.22148/001c.32551,Shakespeare and Company Project Data Sets,Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,Shakespeare and Company,Publication,Citation Count,3,2026-08-20,ok
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o051,https://doi.org/10.21428/51bee781.13f8c789,Shakespeare and Company Project,Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,Shakespeare and Company,Publication,Citation Count,2,2026-08-20,ok
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o067,https://doi.org/10.22148/001c.116915,A Counterfactual Canon,Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o071,https://doi.org/10.5281/zenodo.3277319,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Presentation / Poster,Views,333,2026-08-20,ok
+o071,https://doi.org/10.5281/zenodo.3277319,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Presentation / Poster,Downloads,225,2026-08-20,ok
+o076,https://doi.org/10.22148/jca.1114,"Shakespeare and Company Project Data Sets, Version 2.0",Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o076,https://doi.org/10.22148/jca.1114,"Shakespeare and Company Project Data Sets, Version 2.0",Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o010,https://doi.org/10.63744/cTWwVSItf41f,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Princeton Prosody Archive,Publication,Views,,2026-08-20,manual
+o010,https://doi.org/10.63744/cTWwVSItf41f,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Princeton Prosody Archive,Publication,Downloads,,2026-08-20,manual
+o011,https://doi.org/10.5281/zenodo.15312547,corppa,Princeton Prosody Archive,Software Release,Views,37,2026-08-20,ok
+o011,https://doi.org/10.5281/zenodo.15312547,corppa,Princeton Prosody Archive,Software Release,Downloads,18,2026-08-20,ok
+o032,https://doi.org/10.5281/zenodo.3255052,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Dataset,Views,818,2026-08-20,ok
+o032,https://doi.org/10.5281/zenodo.3255052,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Dataset,Downloads,402,2026-08-20,ok
+o034,https://prosody.princeton.edu/,Princeton Prosody Archive Website,Princeton Prosody Archive,Website,Views,,2026-08-20,manual
+o034,https://prosody.princeton.edu/,Princeton Prosody Archive Website,Princeton Prosody Archive,Website,Downloads,,2026-08-20,manual
+o035,https://doi.org/10.5281/zenodo.2400704,ppa-django,Princeton Prosody Archive,Software Release,Views,28,2026-08-20,ok
+o035,https://doi.org/10.5281/zenodo.2400704,ppa-django,Princeton Prosody Archive,Software Release,Downloads,19,2026-08-20,ok
+o036,https://doi.org/10.5281/zenodo.13850967,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,Princeton Prosody Archive,Presentation / Poster,Views,267,2026-08-20,ok
+o036,https://doi.org/10.5281/zenodo.13850967,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,Princeton Prosody Archive,Presentation / Poster,Downloads,202,2026-08-20,ok
+o037,https://doi.org/10.5281/zenodo.12575879,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,Princeton Prosody Archive,Presentation / Poster,Views,232,2026-08-20,ok
+o037,https://doi.org/10.5281/zenodo.12575879,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,Princeton Prosody Archive,Presentation / Poster,Downloads,211,2026-08-20,ok
+o038,https://doi.org/10.5281/zenodo.8292322,Elizabeth Barrett Browning's Pathways through the PPA,Princeton Prosody Archive,Publication,Views,111,2026-08-20,ok
+o038,https://doi.org/10.5281/zenodo.8292322,Elizabeth Barrett Browning's Pathways through the PPA,Princeton Prosody Archive,Publication,Downloads,203,2026-08-20,ok
+o060,https://doi.org/10.5281/zenodo.8292370,Coventry Patmore and the Problem of Excerpts,Princeton Prosody Archive,Publication,Views,128,2026-08-20,ok
+o060,https://doi.org/10.5281/zenodo.8292370,Coventry Patmore and the Problem of Excerpts,Princeton Prosody Archive,Publication,Downloads,125,2026-08-20,ok
+o066,https://doi.org/10.5281/zenodo.3359171,CDH Project Charter — Princeton Prosody Archive 2017-18,Princeton Prosody Archive,Grey Literature,Views,844,2026-08-20,ok
+o066,https://doi.org/10.5281/zenodo.3359171,CDH Project Charter — Princeton Prosody Archive 2017-18,Princeton Prosody Archive,Grey Literature,Downloads,478,2026-08-20,ok
+o074,https://doi.org/10.5281/zenodo.20044416,PPA Found Poems Dataset,Princeton Prosody Archive,Dataset,Views,138,2026-08-20,ok
+o074,https://doi.org/10.5281/zenodo.20044416,PPA Found Poems Dataset,Princeton Prosody Archive,Dataset,Downloads,125,2026-08-20,ok
+o075,https://press.princeton.edu/books/paperback/9780691254678/poetrys-data,Poetry's Data,Princeton Prosody Archive,Publication,Citation Count,1,2026-08-20,ok
+o085,https://doi.org/10.5281/zenodo.17049420,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Presentation / Poster,Views,254,2026-08-20,ok
+o085,https://doi.org/10.5281/zenodo.17049420,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Presentation / Poster,Downloads,613,2026-08-20,ok
+o089,https://doi.org/10.5281/zenodo.18187580,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),Princeton Prosody Archive,Presentation / Poster,Views,244,2026-08-20,ok
+o089,https://doi.org/10.5281/zenodo.18187580,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),Princeton Prosody Archive,Presentation / Poster,Downloads,150,2026-08-20,ok
+o091,https://doi.org/10.5281/zenodo.20044417,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Dataset,Views,138,2026-08-20,ok
+o091,https://doi.org/10.5281/zenodo.20044417,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Dataset,Downloads,125,2026-08-20,ok
+o094,https://doi.org/10.5281/zenodo.18623170,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Dataset,Views,70,2026-08-20,ok
+o094,https://doi.org/10.5281/zenodo.18623170,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Dataset,Downloads,249,2026-08-20,ok
+o058,https://doi.org/10.5281/zenodo.8040362,lenape-timetree,Lunaapahkiing Princeton Timetree,Software Release,Views,116,2026-08-20,ok
+o058,https://doi.org/10.5281/zenodo.8040362,lenape-timetree,Lunaapahkiing Princeton Timetree,Software Release,Downloads,17,2026-08-20,ok
+o019,https://doi.org/10.5281/zenodo.7347725,geniza,Princeton Geniza Lab,Software Release,Views,85,2026-08-20,ok
+o019,https://doi.org/10.5281/zenodo.7347725,geniza,Princeton Geniza Lab,Software Release,Downloads,20,2026-08-20,ok
+o020,https://doi.org/10.5281/zenodo.12796543,annotorious-tahqiq,Princeton Geniza Lab,Software Release,Views,91,2026-08-20,ok
+o020,https://doi.org/10.5281/zenodo.12796543,annotorious-tahqiq,Princeton Geniza Lab,Software Release,Downloads,15,2026-08-20,ok
+o043,https://doi.org/10.5281/zenodo.7841822,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Grey Literature,Citation Count,1,2026-08-20,ok
+o043,https://doi.org/10.5281/zenodo.7841822,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Grey Literature,Views,290,2026-08-20,ok
+o043,https://doi.org/10.5281/zenodo.7841822,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Grey Literature,Downloads,218,2026-08-20,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Grey Literature,Citation Count,2,2026-08-20,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Grey Literature,Views,860,2026-08-20,ok
+o044,https://doi.org/10.5281/zenodo.4081714,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Grey Literature,Downloads,702,2026-08-20,ok
+o046,https://geniza.princeton.edu/en/,Princeton Geniza Website,Princeton Geniza Lab,Website,Views,,2026-08-20,manual
+o046,https://geniza.princeton.edu/en/,Princeton Geniza Website,Princeton Geniza Lab,Website,Downloads,,2026-08-20,manual
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,Princeton Geniza Lab,Dataset,Citation Count,1,2026-08-20,ok
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,Princeton Geniza Lab,Dataset,Views,138,2026-08-20,ok
+o052,https://doi.org/10.5281/zenodo.15839055,Geniza Datasets,Princeton Geniza Lab,Dataset,Downloads,57,2026-08-20,ok
+o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,Derrida's Margins,WebArchive,Views,,2026-08-20,manual
+o022,https://doi.org/10.34770/yw3y-ze12,Derrida's Margins web archive,Derrida's Margins,WebArchive,Downloads,,2026-08-20,manual
+o023,https://doi.org/10.34770/8nc6-4418,Derrida's Margins datasets: v1.1,Derrida's Margins,Dataset,Views,,2026-08-20,manual
+o023,https://doi.org/10.34770/8nc6-4418,Derrida's Margins datasets: v1.1,Derrida's Margins,Dataset,Downloads,,2026-08-20,manual
+o039,https://doi.org/10.5281/zenodo.3359144,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Grey Literature,Views,709,2026-08-20,ok
+o039,https://doi.org/10.5281/zenodo.3359144,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Grey Literature,Downloads,414,2026-08-20,ok
+o041,https://derridas-margins.princeton.edu/,Derrida's Margins website,Derrida's Margins,Website,Views,,2026-08-20,manual
+o041,https://derridas-margins.princeton.edu/,Derrida's Margins website,Derrida's Margins,Website,Downloads,,2026-08-20,manual
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Citation Count,1,2026-08-20,ok
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Views,13,2026-08-20,ok
+o040,https://doi.org/10.5281/zenodo.11068867,undate,Undate,Software Release,Downloads,10,2026-08-20,ok
+o087,https://doi.org/10.5281/zenodo.17253973,Undate: computing with uncertain and partially-unknown dates,Undate,Presentation / Poster,Views,240,2026-08-20,ok
+o087,https://doi.org/10.5281/zenodo.17253973,Undate: computing with uncertain and partially-unknown dates,Undate,Presentation / Poster,Downloads,175,2026-08-20,ok
+o009,https://doi.org/10.5281/zenodo.8087661,Simulating Risk Project Charter,Simulating Risks,Grey Literature,Views,449,2026-08-20,ok
+o009,https://doi.org/10.5281/zenodo.8087661,Simulating Risk Project Charter,Simulating Risks,Grey Literature,Downloads,340,2026-08-20,ok
+o017,https://doi.org/10.5281/zenodo.14516700,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,Views,112,2026-08-20,ok
+o017,https://doi.org/10.5281/zenodo.14516700,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Presentation / Poster,Downloads,170,2026-08-20,ok
+o056,https://doi.org/10.5281/zenodo.14516240,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,Views,220,2026-08-20,ok
+o056,https://doi.org/10.5281/zenodo.14516240,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Presentation / Poster,Downloads,321,2026-08-20,ok
+o018,https://zenodo.org/records/17633794,djiffy,Research Software,Software Release,Views,88,2026-08-20,ok
+o018,https://zenodo.org/records/17633794,djiffy,Research Software,Software Release,Downloads,18,2026-08-20,ok
+o054,https://doi.org/10.5281/zenodo.13256210,piffle,Research Software,Software Release,Views,71,2026-08-20,ok
+o054,https://doi.org/10.5281/zenodo.13256210,piffle,Research Software,Software Release,Downloads,8,2026-08-20,ok
+o057,https://doi.org/10.5281/zenodo.13905619,django-pucas,Research Software,Software Release,Views,34,2026-08-20,ok
+o057,https://doi.org/10.5281/zenodo.13905619,django-pucas,Research Software,Software Release,Downloads,5,2026-08-20,ok
+o042,https://doi.org/10.5281/zenodo.3359202,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Grey Literature,Views,332,2026-08-20,ok
+o042,https://doi.org/10.5281/zenodo.3359202,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Grey Literature,Downloads,173,2026-08-20,ok
+o047,https://doi.org/10.5281/zenodo.14907039,Project Management 101,Digital Humanities Processes and Practices,Presentation / Poster,Views,199,2026-08-20,ok
+o047,https://doi.org/10.5281/zenodo.14907039,Project Management 101,Digital Humanities Processes and Practices,Presentation / Poster,Downloads,586,2026-08-20,ok
+o055,https://doi.org/10.5281/zenodo.14516760,Modeling Project Management through Charters,Digital Humanities Processes and Practices,Presentation / Poster,Views,123,2026-08-20,ok
+o055,https://doi.org/10.5281/zenodo.14516760,Modeling Project Management through Charters,Digital Humanities Processes and Practices,Presentation / Poster,Downloads,560,2026-08-20,ok
+o088,https://doi.org/10.5281/zenodo.17315341,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Presentation / Poster,Views,144,2026-08-20,ok
+o088,https://doi.org/10.5281/zenodo.17315341,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Presentation / Poster,Downloads,530,2026-08-20,ok
+o090,https://doi.org/10.5281/zenodo.21891370,CDH Project Management Tools and Templates,Digital Humanities Processes and Practices,,Views,8,2026-08-20,ok
+o090,https://doi.org/10.5281/zenodo.21891370,CDH Project Management Tools and Templates,Digital Humanities Processes and Practices,,Downloads,2,2026-08-20,ok
+o063,https://doi.org/10.5281/zenodo.6909568,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Dataset,Views,974,2026-08-20,ok
+o063,https://doi.org/10.5281/zenodo.6909568,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Dataset,Downloads,2023,2026-08-20,ok
+o064,https://doi.org/10.5281/zenodo.3359177,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Grey Literature,Views,1585,2026-08-20,ok
+o064,https://doi.org/10.5281/zenodo.3359177,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Grey Literature,Downloads,995,2026-08-20,ok
+o029,https://zenodo.org/records/17344496,HTR2HPC Project Charter,Princeton Open HTR Initiative,Grey Literature,Views,72,2026-08-20,ok
+o029,https://zenodo.org/records/17344496,HTR2HPC Project Charter,Princeton Open HTR Initiative,Grey Literature,Downloads,50,2026-08-20,ok
+o033,https://doi.org/10.5281/zenodo.17245594,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Publication,Views,183,2026-08-20,ok
+o033,https://doi.org/10.5281/zenodo.17245594,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Publication,Downloads,236,2026-08-20,ok
+o092,https://doi.org/10.5281/zenodo.19472367,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Grey Literature,Views,136,2026-08-20,ok
+o092,https://doi.org/10.5281/zenodo.19472367,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Grey Literature,Downloads,86,2026-08-20,ok
+o001,https://doi.org/10.5281/zenodo.14861082,Citing Marx Project Charter,Remarx,Grey Literature,Views,314,2026-08-20,ok
+o001,https://doi.org/10.5281/zenodo.14861082,Citing Marx Project Charter,Remarx,Grey Literature,Downloads,251,2026-08-20,ok
+o086,https://doi.org/10.5281/zenodo.17315400,Community Code Review in the Digital Humanities,DH Tech,,Views,229,2026-08-20,ok
+o086,https://doi.org/10.5281/zenodo.17315400,Community Code Review in the Digital Humanities,DH Tech,,Downloads,154,2026-08-20,ok
+o096,https://doi.org/10.5281/zenodo.15863899,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Presentation / Poster,Views,441,2026-08-20,ok
+o096,https://doi.org/10.5281/zenodo.15863899,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Presentation / Poster,Downloads,265,2026-08-20,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Beyond Vision,Publication,Citation Count,2,2026-08-20,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Beyond Vision,Publication,Views,578,2026-08-20,ok
+o061,https://doi.org/10.5281/zenodo.3713670,Data Beyond Vision,Data Beyond Vision,Publication,Downloads,1010,2026-08-20,ok
+o069,https://medium.com/nightingale/what-if-you-could-touch-data-9c3a82a73407,What If You Could Touch Data?,Data Beyond Vision,Publication,Views,,2026-08-20,manual
+o069,https://medium.com/nightingale/what-if-you-could-touch-data-9c3a82a73407,What If You Could Touch Data?,Data Beyond Vision,Publication,Downloads,,2026-08-20,manual
+o072,https://doi.org/10.5281/zenodo.3261530,Data Beyond Vision,Data Beyond Vision,Presentation / Poster,Views,495,2026-08-20,ok
+o072,https://doi.org/10.5281/zenodo.3261530,Data Beyond Vision,Data Beyond Vision,Presentation / Poster,Downloads,282,2026-08-20,ok
+o059,https://doi.org/10.5281/zenodo.3667650,bitKlavier,bitKlavier,Software Release,Views,237,2026-08-20,ok
+o059,https://doi.org/10.5281/zenodo.3667650,bitKlavier,bitKlavier,Software Release,Downloads,27,2026-08-20,ok
+o065,https://doi.org/10.5281/zenodo.3359175,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,Views,514,2026-08-20,ok
+o065,https://doi.org/10.5281/zenodo.3359175,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Grey Literature,Downloads,262,2026-08-20,ok
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Citation Count,6,2026-08-20,ok
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Views,,2026-08-20,manual
+o068,https://doi.org/10.1162/comj_a_00518,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Publication,Downloads,,2026-08-20,manual
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Citation Count,3,2026-08-20,ok
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Views,,2026-08-20,manual
+o070,https://doi.org/10.1162/comj_a_00519,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Publication,Downloads,,2026-08-20,manual
+o097,https://doi.org/10.5281/zenodo.17109457,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Dataset,Views,168,2026-08-20,ok
+o097,https://doi.org/10.5281/zenodo.17109457,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Dataset,Downloads,2713,2026-08-20,ok
+o098,https://doi.org/10.5281/zenodo.16876911,"Teaching Critical AI Literacy through ""Lab""-Based Learning",Humanities for AI,Presentation / Poster,Views,139,2026-08-20,ok
+o098,https://doi.org/10.5281/zenodo.16876911,"Teaching Critical AI Literacy through ""Lab""-Based Learning",Humanities for AI,Presentation / Poster,Downloads,89,2026-08-20,ok
+o099,https://doi.org/10.5281/zenodo.14537978,Time Horizons of Futuristic Fiction [poster],Staff Projects,Presentation / Poster,Views,121,2026-08-20,ok
+o099,https://doi.org/10.5281/zenodo.14537978,Time Horizons of Futuristic Fiction [poster],Staff Projects,Presentation / Poster,Downloads,107,2026-08-20,ok
+o100,https://doi.org/10.5281/zenodo.14518294,Evaluating Augmented Training Data for Complex Document Layouts: the Case of Arabic Scientific Manuscripts,Princeton Open HTR Initiative,Presentation / Poster,Views,71,2026-08-20,ok
+o100,https://doi.org/10.5281/zenodo.14518294,Evaluating Augmented Training Data for Complex Document Layouts: the Case of Arabic Scientific Manuscripts,Princeton Open HTR Initiative,Presentation / Poster,Downloads,39,2026-08-20,ok
+o101,https://doi.org/10.5281/zenodo.14516551,Computational Approaches to Nigerian Literature: Analyzing Texts in Yoruba and Efik,African Language Technologies Lab,Presentation / Poster,Views,138,2026-08-20,ok
+o101,https://doi.org/10.5281/zenodo.14516551,Computational Approaches to Nigerian Literature: Analyzing Texts in Yoruba and Efik,African Language Technologies Lab,Presentation / Poster,Downloads,309,2026-08-20,ok
+o102,https://doi.org/10.5281/zenodo.14516179,Charting the Evolution of Topics and Ideas in the Princeton Prosody Archive,Princeton Prosody Archive,Presentation / Poster,Views,100,2026-08-20,ok
+o102,https://doi.org/10.5281/zenodo.14516179,Charting the Evolution of Topics and Ideas in the Princeton Prosody Archive,Princeton Prosody Archive,Presentation / Poster,Downloads,125,2026-08-20,ok
+o103,https://doi.org/10.5281/zenodo.3374002,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Grey Literature,Views,955,2026-08-20,ok
+o103,https://doi.org/10.5281/zenodo.3374002,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Grey Literature,Downloads,653,2026-08-20,ok
+o104,https://doi.org/10.1007/978-3-031-70543-4_11,CATMuS Medieval: A Multilingual Large-Scale Cross-Century Dataset in Latin Script for Handwritten Text Recognition and Beyond,Staff Projects,Publication,Citation Count,14,2026-08-20,ok
+o104,https://doi.org/10.1007/978-3-031-70543-4_11,CATMuS Medieval: A Multilingual Large-Scale Cross-Century Dataset in Latin Script for Handwritten Text Recognition and Beyond,Staff Projects,Publication,Views,,2026-08-20,manual
+o104,https://doi.org/10.1007/978-3-031-70543-4_11,CATMuS Medieval: A Multilingual Large-Scale Cross-Century Dataset in Latin Script for Handwritten Text Recognition and Beyond,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o105,https://doi.org/10.18653/v1/2024.ml4al-1.21,Latin Treebanks in Review: An Evaluation of Morphological Tagging Across Time,Staff Projects,Publication,Views,,2026-08-20,manual
+o105,https://doi.org/10.18653/v1/2024.ml4al-1.21,Latin Treebanks in Review: An Evaluation of Morphological Tagging Across Time,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o106,https://doi.org/10.63744/dCDQd0sTPLEk,Proceedings of Digital Humanities Tech Symposium 2025: Introduction,DH Tech,Publication,Views,,2026-08-20,manual
+o106,https://doi.org/10.63744/dCDQd0sTPLEk,Proceedings of Digital Humanities Tech Symposium 2025: Introduction,DH Tech,Publication,Downloads,,2026-08-20,manual
+o107,https://doi.org/10.63744/SFtXXpIE4ERh,Undate in Action,Staff Projects,Publication,Views,,2026-08-20,manual
+o107,https://doi.org/10.63744/SFtXXpIE4ERh,Undate in Action,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o109,https://doi.org/10.22148/jca.1084,Princeton Geniza Project datasets,Princeton Geniza Lab,Publication,Views,,2026-08-20,manual
+o109,https://doi.org/10.22148/jca.1084,Princeton Geniza Project datasets,Princeton Geniza Lab,Publication,Downloads,,2026-08-20,manual
+o110,https://doi.org/10.5281/zenodo.18187581,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Undate,Presentation / Poster,Views,244,2026-08-20,ok
+o110,https://doi.org/10.5281/zenodo.18187581,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Undate,Presentation / Poster,Downloads,150,2026-08-20,ok
+o111,https://www.oeaw.ac.at/en/imafo/events/event-details/computational-approaches-to-textual-multiplicity-in-curricular-manuscripts,Computational Approaches to Textual Multiplicity in Curricular Manuscripts,Staff Projects,Presentation / Poster,Views,,2026-08-20,manual
+o111,https://www.oeaw.ac.at/en/imafo/events/event-details/computational-approaches-to-textual-multiplicity-in-curricular-manuscripts,Computational Approaches to Textual Multiplicity in Curricular Manuscripts,Staff Projects,Presentation / Poster,Downloads,,2026-08-20,manual
+o112,https://pricelab.sas.upenn.edu/events/mellon-seminar-christine-roughan,Machine Learning for Manuscript Texts and Images,Staff Projects,Presentation / Poster,Views,,2026-08-20,manual
+o112,https://pricelab.sas.upenn.edu/events/mellon-seminar-christine-roughan,Machine Learning for Manuscript Texts and Images,Staff Projects,Presentation / Poster,Downloads,,2026-08-20,manual
+o113,https://cdh.princeton.edu/events/2025/06/scoop-source-codes-of-the-past-launching-an-international-atrhtr-network-for-manuscript-analysis/,Integrating ATR Software with University HPC Infrastructure,Princeton Open HTR Initiative,Presentation / Poster,Views,,2026-08-20,manual
+o113,https://cdh.princeton.edu/events/2025/06/scoop-source-codes-of-the-past-launching-an-international-atrhtr-network-for-manuscript-analysis/,Integrating ATR Software with University HPC Infrastructure,Princeton Open HTR Initiative,Presentation / Poster,Downloads,,2026-08-20,manual
+o115,https://humanities.princeton.edu/event/resistance-and-its-futures-translating-the-untranslatable-wartime-poetry-of-rene-char/,When Humans and Machines Translate Char: Computational Insights into Feuillets d'Hypnos Across Languages,Staff Projects,Presentation / Poster,Views,,2026-08-20,manual
+o115,https://humanities.princeton.edu/event/resistance-and-its-futures-translating-the-untranslatable-wartime-poetry-of-rene-char/,When Humans and Machines Translate Char: Computational Insights into Feuillets d'Hypnos Across Languages,Staff Projects,Presentation / Poster,Downloads,,2026-08-20,manual
+o116,https://doi.org/10.21071/mijtk.v9i.16723,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Staff Projects,Publication,Citation Count,1,2026-08-20,ok
+o116,https://doi.org/10.21071/mijtk.v9i.16723,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Staff Projects,Publication,Views,,2026-08-20,manual
+o116,https://doi.org/10.21071/mijtk.v9i.16723,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o117,https://doi.org/10.1145/3685650.3685669,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Publication,Citation Count,7,2026-08-20,ok
+o117,https://doi.org/10.1145/3685650.3685669,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Publication,Views,,2026-08-20,manual
+o117,https://doi.org/10.1145/3685650.3685669,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Publication,Downloads,,2026-08-20,manual
+o118,https://ceur-ws.org/Vol-3834/#xpreface,Proceedings of the Computational Humanities Research Conference 2024,Staff Projects,Publication,Views,,2026-08-20,manual
+o118,https://ceur-ws.org/Vol-3834/#xpreface,Proceedings of the Computational Humanities Research Conference 2024,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o119,https://2024.computational-humanities-research.org/papers/paper110/,Steps towards mining manuscript images for untranscribed texts: A case study from the Syriac collection at the Vatican Library,Staff Projects,Publication,Views,,2026-08-20,manual
+o119,https://2024.computational-humanities-research.org/papers/paper110/,Steps towards mining manuscript images for untranscribed texts: A case study from the Syriac collection at the Vatican Library,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o120,https://amodern.net/article/amodern-9-techniques-technologies/,Extended Technique: New Scholarship on the Uses of Media,Staff Projects,Publication,Views,,2026-08-20,manual
+o120,https://amodern.net/article/amodern-9-techniques-technologies/,Extended Technique: New Scholarship on the Uses of Media,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o121,https://lareviewofbooks.org/article/what-is-space-opera-in-the-2020s,What Is Space Opera in the 2020s?,Staff Projects,Publication,Views,,2026-08-20,manual
+o121,https://lareviewofbooks.org/article/what-is-space-opera-in-the-2020s,What Is Space Opera in the 2020s?,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o124,https://doi.org/10.1017/chr.2025.10006,Undate: humanistic dates for computation,Undate,Publication,Citation Count,2,2026-08-20,ok
+o124,https://doi.org/10.1017/chr.2025.10006,Undate: humanistic dates for computation,Undate,Publication,Views,,2026-08-20,manual
+o124,https://doi.org/10.1017/chr.2025.10006,Undate: humanistic dates for computation,Undate,Publication,Downloads,,2026-08-20,manual
+o125,https://www.upress.umn.edu/9781517916084/critical-infrastructure-studies-and-digital-humanities/,Alternative Infrastructures for Digital Equity: Community-Based Internet Access,Staff Projects,Publication,Views,,2026-08-20,manual
+o125,https://www.upress.umn.edu/9781517916084/critical-infrastructure-studies-and-digital-humanities/,Alternative Infrastructures for Digital Equity: Community-Based Internet Access,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o126,https://dhdebates.gc.cuny.edu/read/digital-futures-of-graduate-study-in-the-humanities/section/a956c743-97af-4345-9da6-2e9682ca0a55#ch23,“Graduate Students and Project Management” in “Digital Futures of Graduate Study in the Humanities”,Digital Humanities Processes and Practices,Publication,Views,,2026-08-20,manual
+o126,https://dhdebates.gc.cuny.edu/read/digital-futures-of-graduate-study-in-the-humanities/section/a956c743-97af-4345-9da6-2e9682ca0a55#ch23,“Graduate Students and Project Management” in “Digital Futures of Graduate Study in the Humanities”,Digital Humanities Processes and Practices,Publication,Downloads,,2026-08-20,manual
+o127,https://doi.org/10.5281/zenodo.14516830,Versions and Values: Exploring DH Coding Communities and Practices on GitHub,Staff Projects,Presentation / Poster,Views,213,2026-08-20,ok
+o127,https://doi.org/10.5281/zenodo.14516830,Versions and Values: Exploring DH Coding Communities and Practices on GitHub,Staff Projects,Presentation / Poster,Downloads,166,2026-08-20,ok
+o129,https://doi.org/10.18737/CNJV1733p4520221212,Time Horizons of Futuristic Fiction,Staff Projects,Publication,Citation Count,2,2026-08-20,ok
+o129,https://doi.org/10.18737/CNJV1733p4520221212,Time Horizons of Futuristic Fiction,Staff Projects,Publication,Views,,2026-08-20,manual
+o129,https://doi.org/10.18737/CNJV1733p4520221212,Time Horizons of Futuristic Fiction,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o130,https://docs.google.com/document/d/16aM9mgIayAdD4heavVI0Og3Ia7J2jnisbUqbIs66qy8/edit?usp=embed_facebook,Prodigy Handbook - PPA,Princeton Prosody Archive,Grey Literature,Views,,2026-08-20,manual
+o130,https://docs.google.com/document/d/16aM9mgIayAdD4heavVI0Og3Ia7J2jnisbUqbIs66qy8/edit?usp=embed_facebook,Prodigy Handbook - PPA,Princeton Prosody Archive,Grey Literature,Downloads,,2026-08-20,manual
+o131,https://shakespeareandco.princeton.edu/analysis/2019/12/representing-gender-in-the-shakespeare-and-company-project/,Representing Gender in the Shakespeare and Company Project,Shakespeare and Company,Grey Literature,Views,,2026-08-20,manual
+o131,https://shakespeareandco.princeton.edu/analysis/2019/12/representing-gender-in-the-shakespeare-and-company-project/,Representing Gender in the Shakespeare and Company Project,Shakespeare and Company,Grey Literature,Downloads,,2026-08-20,manual
+o132,https://shakespeareandco.princeton.edu/analysis/2020/03/shakespeare-and-company-lending-library-cards-context/,The Shakespeare and Company Lending Library Cards in Context,Shakespeare and Company,Grey Literature,Views,,2026-08-20,manual
+o132,https://shakespeareandco.princeton.edu/analysis/2020/03/shakespeare-and-company-lending-library-cards-context/,The Shakespeare and Company Lending Library Cards in Context,Shakespeare and Company,Grey Literature,Downloads,,2026-08-20,manual
+o134,https://shakespeareandco.princeton.edu/analysis/2020/11/shakespeare-and-company-top-ten-lists/,Shakespeare and Company: Top Ten Lists,Shakespeare and Company,Grey Literature,Views,,2026-08-20,manual
+o134,https://shakespeareandco.princeton.edu/analysis/2020/11/shakespeare-and-company-top-ten-lists/,Shakespeare and Company: Top Ten Lists,Shakespeare and Company,Grey Literature,Downloads,,2026-08-20,manual
+o136,https://www.routledge.com/Multilingual-Digital-Humanities/Viola-Spence/p/book/9781032491943,Bridging the Gap Between Digital Humanities and Natural Language Processing: A Pedagogical Imperative for Humanistic NLP,New Languages for NLP,Publication,Views,,2026-08-20,manual
+o136,https://www.routledge.com/Multilingual-Digital-Humanities/Viola-Spence/p/book/9781032491943,Bridging the Gap Between Digital Humanities and Natural Language Processing: A Pedagogical Imperative for Humanistic NLP,New Languages for NLP,Publication,Downloads,,2026-08-20,manual
+o138,https://doi.org/10.1017/9781009263610.012,"Computing Koselleck: Modelling Semantic Revolutions, 1720–1960",Staff Projects,Publication,Citation Count,2,2026-08-20,ok
+o138,https://doi.org/10.1017/9781009263610.012,"Computing Koselleck: Modelling Semantic Revolutions, 1720–1960",Staff Projects,Publication,Views,,2026-08-20,manual
+o138,https://doi.org/10.1017/9781009263610.012,"Computing Koselleck: Modelling Semantic Revolutions, 1720–1960",Staff Projects,Publication,Downloads,,2026-08-20,manual
+o139,https://startwords.cdh.princeton.edu/issues/1/modeling-howto/,Print a Model of the Shakespeare and Company Lending Library Membership,Data Beyond Vision,Publication,Views,,2026-08-20,manual
+o139,https://startwords.cdh.princeton.edu/issues/1/modeling-howto/,Print a Model of the Shakespeare and Company Lending Library Membership,Data Beyond Vision,Publication,Downloads,,2026-08-20,manual
+o140,https://modernistreviewcouk.wordpress.com/2020/08/04/a-conversation-with-joshua-kotin-and-rebecca-sutton-koser-about-the-shakespeare-and-company-project/,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Publication,Views,,2026-08-20,manual
+o140,https://modernistreviewcouk.wordpress.com/2020/08/04/a-conversation-with-joshua-kotin-and-rebecca-sutton-koser-about-the-shakespeare-and-company-project/,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Publication,Downloads,,2026-08-20,manual
+o142,https://rlskoeser.github.io/2019/07/26/best-practices/,Best Practices?,Digital Humanities Processes and Practices,Presentation / Poster,Views,,2026-08-20,manual
+o142,https://rlskoeser.github.io/2019/07/26/best-practices/,Best Practices?,Digital Humanities Processes and Practices,Presentation / Poster,Downloads,,2026-08-20,manual
+o143,http://uxpamagazine.org/on-a-path-to-transparent-collaborations-weave/,On a Path to Transparent Collaborations: Weave User Experience Magazine,Digital Humanities Processes and Practices,Publication,Views,,2026-08-20,manual
+o143,http://uxpamagazine.org/on-a-path-to-transparent-collaborations-weave/,On a Path to Transparent Collaborations: Weave User Experience Magazine,Digital Humanities Processes and Practices,Publication,Downloads,,2026-08-20,manual
+o163,http://converge.cci.kent.edu/design-for-collaborative-research/,Design for Interdisciplinary Collaboration,Digital Humanities Processes and Practices,Presentation / Poster,Views,,2026-08-20,manual
+o163,http://converge.cci.kent.edu/design-for-collaborative-research/,Design for Interdisciplinary Collaboration,Digital Humanities Processes and Practices,Presentation / Poster,Downloads,,2026-08-20,manual
+o165,https://www.academia.edu/20390023/Periodical_Studies_Why_and_How_to_Re-read_East_European_Journals,Periodical Studies: Why and How to Re-read East European Journals,Staff Projects,Publication,Views,,2026-08-20,manual
+o165,https://www.academia.edu/20390023/Periodical_Studies_Why_and_How_to_Re-read_East_European_Journals,Periodical Studies: Why and How to Re-read East European Journals,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o166,https://doi.org/10.5281/ZENODO.14714088,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,,Views,,2026-08-20,manual
+o166,https://doi.org/10.5281/ZENODO.14714088,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,,Downloads,,2026-08-20,manual
+o167,https://doi.org/10.5281/ZENODO.15839056,Princeton Geniza Project Dataset,Princeton Geniza Lab,,Citation Count,2,2026-08-20,ok
+o167,https://doi.org/10.5281/ZENODO.15839056,Princeton Geniza Project Dataset,Princeton Geniza Lab,,Views,,2026-08-20,manual
+o167,https://doi.org/10.5281/ZENODO.15839056,Princeton Geniza Project Dataset,Princeton Geniza Lab,,Downloads,,2026-08-20,manual
+o168,https://doi.org/10.34770/2EZK-1104,Derrida's Margins datasets,Derrida's Margins,,Views,,2026-08-20,manual
+o168,https://doi.org/10.34770/2EZK-1104,Derrida's Margins datasets,Derrida's Margins,,Downloads,,2026-08-20,manual
+o169,https://doi.org/10.5281/zenodo.3359172,CDH Project Charter — Princeton Prosody Archive 2017-18,Digital Humanities Processes and Practices,Grey Literature,Views,844,2026-08-20,ok
+o169,https://doi.org/10.5281/zenodo.3359172,CDH Project Charter — Princeton Prosody Archive 2017-18,Digital Humanities Processes and Practices,Grey Literature,Downloads,478,2026-08-20,ok
+o170,https://doi.org/10.5281/zenodo.3359198,"""Built by CDH"" Software Warranty",Digital Humanities Processes and Practices,Publication,Views,260,2026-08-20,ok
+o170,https://doi.org/10.5281/zenodo.3359198,"""Built by CDH"" Software Warranty",Digital Humanities Processes and Practices,Publication,Downloads,140,2026-08-20,ok
+o171,https://github.com/Princeton-CDH/htr2hpc,htr2hpc,Princeton Open HTR Initiative,Software Release,Views,,2026-08-20,manual
+o171,https://github.com/Princeton-CDH/htr2hpc,htr2hpc,Princeton Open HTR Initiative,Software Release,Downloads,,2026-08-20,manual
+o172,https://doi.org/10.5281/zenodo.15312548,Princeton-CDH/corppa: v0.4,Princeton Prosody Archive,Software Release,Views,45,2026-08-20,ok
+o172,https://doi.org/10.5281/zenodo.15312548,Princeton-CDH/corppa: v0.4,Princeton Prosody Archive,Software Release,Downloads,31,2026-08-20,ok
+o173,https://doi.org/10.5281/zenodo.13312276,Princeton-CDH/djiffy: v0.9.1,Research Software,Software Release,Views,43,2026-08-20,ok
+o173,https://doi.org/10.5281/zenodo.13312276,Princeton-CDH/djiffy: v0.9.1,Research Software,Software Release,Downloads,14,2026-08-20,ok
+o174,https://doi.org/10.5281/zenodo.13905645,Princeton-CDH/django-pucas: v0.9,Research Software,Software Release,Views,40,2026-08-20,ok
+o174,https://doi.org/10.5281/zenodo.13905645,Princeton-CDH/django-pucas: v0.9,Research Software,Software Release,Downloads,19,2026-08-20,ok
+o175,https://doi.org/10.5281/zenodo.14888965,Princeton-CDH/annotorious-tahqiq: 1.5.1,Research Software,Software Release,Views,241,2026-08-20,ok
+o175,https://doi.org/10.5281/zenodo.14888965,Princeton-CDH/annotorious-tahqiq: 1.5.1,Research Software,Software Release,Downloads,62,2026-08-20,ok
+o176,https://doi.org/10.5281/zenodo.14750659,Princeton-CDH/piffle: v0.6.1,Research Software,Software Release,Views,68,2026-08-20,ok
+o176,https://doi.org/10.5281/zenodo.14750659,Princeton-CDH/piffle: v0.6.1,Research Software,Software Release,Downloads,19,2026-08-20,ok
+o177,https://doi.org/10.5281/zenodo.14889293,Princeton-CDH/mep-django: v1.7.2,Shakespeare and Company,Software Release,Views,129,2026-08-20,ok
+o177,https://doi.org/10.5281/zenodo.14889293,Princeton-CDH/mep-django: v1.7.2,Shakespeare and Company,Software Release,Downloads,31,2026-08-20,ok
+o178,https://doi.org/10.5281/ZENODO.5602038,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Software Release,Citation Count,1,2026-08-20,ok
+o178,https://doi.org/10.5281/ZENODO.5602038,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Software Release,Views,,2026-08-20,manual
+o178,https://doi.org/10.5281/ZENODO.5602038,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Software Release,Downloads,,2026-08-20,manual
+o179,https://doi.org/10.5281/zenodo.3944796,Princeton-CDH/mep-django: v1.2,Shakespeare and Company,Software Release,Views,157,2026-08-20,ok
+o179,https://doi.org/10.5281/zenodo.3944796,Princeton-CDH/mep-django: v1.2,Shakespeare and Company,Software Release,Downloads,25,2026-08-20,ok
+o180,https://doi.org/10.5281/zenodo.3834179,Princeton-CDH/mep-django: v1.0,Shakespeare and Company,Software Release,Views,134,2026-08-20,ok
+o180,https://doi.org/10.5281/zenodo.3834179,Princeton-CDH/mep-django: v1.0,Shakespeare and Company,Software Release,Downloads,24,2026-08-20,ok
+o181,https://doi.org/10.5281/zenodo.1453447,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes,Derrida's Margins,Software Release,Views,316,2026-08-20,ok
+o181,https://doi.org/10.5281/zenodo.1453447,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes,Derrida's Margins,Software Release,Downloads,51,2026-08-20,ok
+o182,https://doi.org/10.5281/zenodo.2400705,Princeton-CDH/ppa-django: v3.0 Initial public release,Princeton Prosody Archive,Software Release,Views,307,2026-08-20,ok
+o182,https://doi.org/10.5281/zenodo.2400705,Princeton-CDH/ppa-django: v3.0 Initial public release,Princeton Prosody Archive,Software Release,Downloads,49,2026-08-20,ok
+o183,https://reallifemag.com/public-enemies/,Public Enemies,Staff Projects,Publication,Views,,2026-08-20,manual
+o183,https://reallifemag.com/public-enemies/,Public Enemies,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o184,http://wi.mobilities.ca/grant-wythoff-aerophone-telephot-hypnobioscope-hugo-gernsbacks-media-theory/,"Aerophone, Telephot, Hypnobioscope: Hugo Gernsback’s Media Theory",Staff Projects,Publication,Views,,2026-08-20,manual
+o184,http://wi.mobilities.ca/grant-wythoff-aerophone-telephot-hypnobioscope-hugo-gernsbacks-media-theory/,"Aerophone, Telephot, Hypnobioscope: Hugo Gernsback’s Media Theory",Staff Projects,Publication,Downloads,,2026-08-20,manual
+o185,http://theappendix.net/issues/2014/7/the-invention-of-wireless-cryptography,The Invention of Wireless Cryptography,Staff Projects,Publication,Views,,2026-08-20,manual
+o185,http://theappendix.net/issues/2014/7/the-invention-of-wireless-cryptography,The Invention of Wireless Cryptography,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o186,https://doi.org/10.1353/con.2018.0024,On Method in the Humanities,Staff Projects,Publication,Citation Count,2,2026-08-20,ok
+o186,https://doi.org/10.1353/con.2018.0024,On Method in the Humanities,Staff Projects,Publication,Views,,2026-08-20,manual
+o186,https://doi.org/10.1353/con.2018.0024,On Method in the Humanities,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o187,https://doi.org/10.1353/rhm.2018.0003,Track Changes: A Literary History of Word Processing by Matthew G. Kirschenbaum (review),Staff Projects,Publication,Views,,2026-08-20,manual
+o187,https://doi.org/10.1353/rhm.2018.0003,Track Changes: A Literary History of Word Processing by Matthew G. Kirschenbaum (review),Staff Projects,Publication,Downloads,,2026-08-20,manual
+o188,https://www.washingtonpost.com/outlook/silicon-valleys-attempts-to-self-police-are-anti-democratic-theyre-also-not-new/2018/08/17/cd44fb22-9b1d-11e8-843b-36e177f3081c_story.html,Silicon Valley is Ready to Make Your Decisions For You,Staff Projects,Publication,Views,,2026-08-20,manual
+o188,https://www.washingtonpost.com/outlook/silicon-valleys-attempts-to-self-police-are-anti-democratic-theyre-also-not-new/2018/08/17/cd44fb22-9b1d-11e8-843b-36e177f3081c_story.html,Silicon Valley is Ready to Make Your Decisions For You,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o189,https://doi.org/10.1162/GREY_a_00106,"Pocket Wireless and the Shape of Media to Come, 1899–1922",Staff Projects,Publication,Citation Count,8,2026-08-20,ok
+o189,https://doi.org/10.1162/GREY_a_00106,"Pocket Wireless and the Shape of Media to Come, 1899–1922",Staff Projects,Publication,Views,,2026-08-20,manual
+o189,https://doi.org/10.1162/GREY_a_00106,"Pocket Wireless and the Shape of Media to Come, 1899–1922",Staff Projects,Publication,Downloads,,2026-08-20,manual
+o190,https://doi.org/10.1558/jca.v2i1.27061,Artifactual Interpretation,Staff Projects,Publication,Views,,2026-08-20,manual
+o190,https://doi.org/10.1558/jca.v2i1.27061,Artifactual Interpretation,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o191,http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown,Sustainable Authorship in Plain Text using Pandoc and Markdown,Staff Projects,Publication,Views,,2026-08-20,manual
+o191,http://programminghistorian.org/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown,Sustainable Authorship in Plain Text using Pandoc and Markdown,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o192,https://www.teachingmedia.org/design-and-dh-in-the-media-studies-classroom/,Design and DH in the Media Studies Classroom,Staff Projects,Publication,Views,,2026-08-20,manual
+o192,https://www.teachingmedia.org/design-and-dh-in-the-media-studies-classroom/,Design and DH in the Media Studies Classroom,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o193,http://mediafieldsjournal.squarespace.com/the-form-of-content-delivery/,The Form of Content Delivery,Staff Projects,Publication,Views,,2026-08-20,manual
+o193,http://mediafieldsjournal.squarespace.com/the-form-of-content-delivery/,The Form of Content Delivery,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o194,https://academic.oup.com/DocumentLibrary/ALH/Online%20Review%20Series%2015/15Grant%20Wythoff.pdf,Network Aesthetics by Patrick Jagoda (review),Staff Projects,Publication,Views,,2026-08-20,manual
+o194,https://academic.oup.com/DocumentLibrary/ALH/Online%20Review%20Series%2015/15Grant%20Wythoff.pdf,Network Aesthetics by Patrick Jagoda (review),Staff Projects,Publication,Downloads,,2026-08-20,manual
+o196,https://doi.org/10.1353/elh.2015.0020,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Publication,Citation Count,64,2026-08-20,ok
+o196,https://doi.org/10.1353/elh.2015.0020,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Publication,Views,,2026-08-20,manual
+o196,https://doi.org/10.1353/elh.2015.0020,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Publication,Downloads,,2026-08-20,manual
+o197,https://www.jstor.org/stable/10.2979/victorianstudies.61.2.05,"Response: Women's Poetry, Women's Vision, Women's Power",Princeton Prosody Archive,Publication,Views,,2026-08-20,manual
+o197,https://www.jstor.org/stable/10.2979/victorianstudies.61.2.05,"Response: Women's Poetry, Women's Vision, Women's Power",Princeton Prosody Archive,Publication,Downloads,,2026-08-20,manual
+o198,https://doi.org/https://doi.org/10.31835/crdh.2019.02,A Committee of the Whole,Staff Projects,Publication,Views,,2026-08-20,manual
+o198,https://doi.org/https://doi.org/10.31835/crdh.2019.02,A Committee of the Whole,Staff Projects,Publication,Downloads,,2026-08-20,manual
+o199,https://dhtraining.org/hilt/course/spaces-and-stories-in-the-black-public-humanities/,Spaces and Stories in the Black Public Humanities,Staff Projects,Presentation / Poster,Views,,2026-08-20,manual
+o199,https://dhtraining.org/hilt/course/spaces-and-stories-in-the-black-public-humanities/,Spaces and Stories in the Black Public Humanities,Staff Projects,Presentation / Poster,Downloads,,2026-08-20,manual
+o200,https://dh2018.adho.org/en/bridging-digital-humanities-internal-and-open-source-software-projects-through-reusable-building-blocks/,Bridging Digital Humanities Internal and Open Source Software Projects through Reusable Building Blocks,Digital Humanities Processes and Practices,Presentation / Poster,Views,,2026-08-20,manual
+o200,https://dh2018.adho.org/en/bridging-digital-humanities-internal-and-open-source-software-projects-through-reusable-building-blocks/,Bridging Digital Humanities Internal and Open Source Software Projects through Reusable Building Blocks,Digital Humanities Processes and Practices,Presentation / Poster,Downloads,,2026-08-20,manual
+o201,https://doi.org/10.5281/zenodo.1299972,Princeton-CDH/derrida-django: v1.1,Derrida's Margins,Software Release,Views,198,2026-08-20,ok
+o201,https://doi.org/10.5281/zenodo.1299972,Princeton-CDH/derrida-django: v1.1,Derrida's Margins,Software Release,Downloads,36,2026-08-20,ok

@@ -5,7 +5,7 @@ toc: false
 
 # Portfolio
 
-The full body of **realized** work — everything Released or Done — and the projects behind it. (Planned work lives on the [Pipeline](/pipeline) page; view/download impact on [Impact](/impact).)
+The full body of **realized** work — everything Released or Done — and the projects behind it. (View/download impact lives on [Impact](/).)
 
 ```js
 const outputs = await FileAttachment("data/outputs.json").json();
@@ -41,51 +41,28 @@ const trunc = (s, n = 30) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s)
   </div>
 </div>
 
-<div class="grid grid-cols-2">
-  <div class="card">${
-    resize((width) =>
-      Plot.plot({
-        width,
-        title: "Projects by status",
-        subtitle: "A project can hold more than one status",
-        marginLeft: 170,
-        x: { label: "Projects", grid: true },
-        y: { label: null },
-        marks: [
-          Plot.barX(
-            projects.flatMap((p) => p.status.map((s) => ({ status: s }))),
-            Plot.groupY(
-              { x: "count" },
-              { y: "status", sort: { y: "x", reverse: true }, fill: "var(--theme-foreground-focus)", tip: true }
-            )
-          ),
-          Plot.ruleX([0]),
-        ],
-      })
-    )
-  }</div>
-  <div class="card">${
-    resize((width) =>
-      Plot.plot({
-        width,
-        title: "Realized outputs by tier",
-        marginLeft: 200,
-        x: { label: "Outputs", grid: true },
-        y: { label: null },
-        marks: [
-          Plot.barX(
-            realized.map((o) => ({ tier: o.tier ?? "No tier" })),
-            Plot.groupY(
-              { x: "count" },
-              { y: "tier", sort: { y: "x", reverse: true }, fill: "var(--theme-foreground-focus)", tip: true }
-            )
-          ),
-          Plot.ruleX([0]),
-        ],
-      })
-    )
-  }</div>
-</div>
+<div class="card">${
+  resize((width) =>
+    Plot.plot({
+      width,
+      title: "Projects by status",
+      subtitle: "A project can hold more than one status",
+      marginLeft: 170,
+      x: { label: "Projects", grid: true },
+      y: { label: null },
+      marks: [
+        Plot.barX(
+          projects.flatMap((p) => p.status.map((s) => ({ status: s }))),
+          Plot.groupY(
+            { x: "count" },
+            { y: "status", sort: { y: "x", reverse: true }, fill: "var(--theme-foreground-focus)", tip: true }
+          )
+        ),
+        Plot.ruleX([0]),
+      ],
+    })
+  )
+}</div>
 
 <div class="card">${
   resize((width) =>
@@ -116,22 +93,10 @@ const trunc = (s, n = 30) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s)
 ## Every realized output
 
 ```js
-const communities = Array.from(new Set(realized.flatMap((o) => o.community || []))).sort();
-const community = view(
-  Inputs.select(["All communities", ...communities], { label: "Community", value: "All communities" })
-);
-```
-
-```js
-const shownRealized = realized.filter(
-  (o) => community === "All communities" || (o.community || []).includes(community)
-);
-const realizedRows = shownRealized.map((o) => ({
+const realizedRows = realized.map((o) => ({
   Output: o.output_name,
   Project: o.project,
-  Community: (o.community || []).join(", ") || "—",
   Type: o.type.join(", ") || "—",
-  Tier: o.tier ?? "",
   Lead: o.lead ?? "—",
   Role: o.lead_role,
   Completed: o.completed_date ?? "",

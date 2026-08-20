@@ -12,9 +12,9 @@ name: Deploy dashboard
 
 on:
   workflow_dispatch:
-  # push:
-  #   branches: [main]
-  #   paths: ['dashboard/**', 'data/**', 'rollups/**', 'snapshots/**']
+  push:
+    branches: [main]
+    paths: ['dashboard/**', 'data/**', 'rollups/**', 'snapshots/**']
 
 permissions:
   contents: read

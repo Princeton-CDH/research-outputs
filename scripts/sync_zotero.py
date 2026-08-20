@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Sync the CDH Zotero group collection into the ingest review pipeline.
+"""Sync the CDH Zotero group collections into the ingest review pipeline.
 
-Zotero is the noisier source: ~179 items, mostly presentations, many without
-DOIs, and some not tied to a CDH project. For every item:
+Zotero is the noisier source: many items, mostly presentations, many without
+DOIs, and some not tied to a CDH project. Spans all four top-level CDH
+collections — Publications, Datasets, Documentation, Software — deduped by item
+key (an item filed in several keeps every collection label). For every item:
   - if it matches an existing output  -> enrich in place (backfill zotero_key /
     a blank link or date) and report — this captures Zenodo↔Zotero overlap
   - else if already decided            -> skip (ledger)
+  - else if it has no DOI/link         -> skip (not a citable/trackable output)
   - else                               -> propose it in data/incoming/zotero-review.csv
       * roster author (tightened)  -> decision=keep  (auto-classified in scope)
       * otherwise                  -> decision=<blank> (needs your triage)
@@ -20,7 +23,12 @@ import urllib.request
 import synclib as S
 
 GROUP = "1657550"
-COLLECTION = "BUG8AC3A"
+COLLECTIONS = [  # (collection key, label) — all four top-level CDH collections
+    ("BUG8AC3A", "Publications"),
+    ("HEZPCSWC", "Datasets"),
+    ("2CQ3L4FX", "Documentation"),
+    ("AFINDJ6D", "Software"),
+]
 REVIEW = f"{S.INCOMING}/zotero-review.csv"
 
 
@@ -30,8 +38,8 @@ def get(url):
     return r, json.load(r)
 
 
-def fetch_collection():
-    base = f"https://api.zotero.org/groups/{GROUP}/collections/{COLLECTION}/items/top?format=json&limit=100"
+def fetch_collection(key):
+    base = f"https://api.zotero.org/groups/{GROUP}/collections/{key}/items/top?format=json&limit=100"
     items, start = [], 0
     while True:
         r, batch = get(base + f"&start={start}")
@@ -41,6 +49,27 @@ def fetch_collection():
         start += 100
         time.sleep(0.3)
     return items
+
+
+def fetch_all():
+    """All four collections, deduped by Zotero item key. An item filed in more
+    than one collection keeps every collection label it appears under (triage
+    context). Returns ([(raw_item, [labels]), …] in first-seen order, per_cat)."""
+    by_key, order, per_cat = {}, [], {}
+    for key, label in COLLECTIONS:
+        items = fetch_collection(key)
+        per_cat[label] = len(items)
+        print(f"  {label:14} ({key}): {len(items)}")
+        for it in items:
+            k = it["data"].get("key", "")
+            if k in by_key:
+                if label not in by_key[k][1]:
+                    by_key[k][1].append(label)
+            else:
+                by_key[k] = (it, [label])
+                order.append(k)
+        time.sleep(0.3)
+    return [by_key[k] for k in order], per_cat
 
 
 def normalize(it):
@@ -83,18 +112,19 @@ def enrich(row, item):
 
 
 def main():
-    print(f"Fetching Zotero collection {COLLECTION} …")
-    items = fetch_collection()
+    print("Fetching Zotero collections …")
+    items, per_cat = fetch_all()
     rows, fields = S.load_outputs()
     idx = S.OutputsIndex(rows)
     by_oid = {r["output_id"]: r for r in rows}
     decided = S.load_ledger()
     roster = S.roster_names()
 
-    proposals, enriched, matched, skipped = [], [], 0, 0
+    proposals, enriched, matched, skipped, no_link = [], [], 0, 0, 0
     keep_n = ambiguous_n = 0
-    for it in items:
+    for it, labels in items:
         item = normalize(it)
+        category = ", ".join(labels)
         oid, how = idx.match(item)
         if oid:
             matched += 1
@@ -105,14 +135,18 @@ def main():
         if S.already_decided(decided, "zotero", item["upstream_key"]):
             skipped += 1
             continue
+        # Only propose citable/trackable items — skip anything with no DOI/link.
+        if not (item["link"] or "").strip():
+            no_link += 1
+            continue
         roster_match = S.roster_author_name(item["creators"], roster)
         if roster_match:
             decision, conf = "keep", "high"
-            why = f"roster author ({roster_match}); {item['itemType']}"
+            why = f"{category}; roster author ({roster_match}); {item['itemType']}"
             keep_n += 1
         else:
             decision, conf = "", "low"
-            why = f"{item['itemType']}; {'external DOI' if item['doi'] else 'no DOI'}, no roster author"
+            why = f"{category}; {item['itemType']}; {'external DOI' if item['doi'] else 'no DOI'}, no roster author"
             ambiguous_n += 1
         proposals.append({
             "decision": decision, "confidence": conf, "why": why,
@@ -129,9 +163,10 @@ def main():
             w.writerows(rows)
     S.write_review(REVIEW, proposals)
 
-    print(f"\ncollection items: {len(items)}")
+    print(f"\nunique items across {len(COLLECTIONS)} collections: {len(items)}")
     print(f"  matched existing outputs : {matched}  ({len(enriched)} enriched — Zotero↔outputs overlap)")
     print(f"  already decided (ledger) : {skipped}")
+    print(f"  skipped (no DOI/link)    : {no_link}")
     print(f"  NEW proposals            : {len(proposals)}  -> {REVIEW}")
     print(f"       ├─ pre-marked keep (roster author): {keep_n}")
     print(f"       └─ blank (needs your triage)      : {ambiguous_n}")
