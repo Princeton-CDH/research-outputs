@@ -25,7 +25,7 @@ rollups/
   yearly-metrics.csv      # GENERATED: per output × metric × year → lifetime + yearly gain
 scripts/
   sync_zenodo.py          # sweep the Zenodo princetoncdh community → review file
-  sync_zotero.py          # sweep the Zotero group collection → review file (auto-classified)
+  sync_zotero.py          # sweep the 4 Zotero collections (DOI/link items) → review file
   merge_incoming.py       # apply a reviewed review file into outputs.csv + ledger
   synclib.py              # shared: matching/dedup, ledger, name & type helpers
   add_provenance_columns.py # one-time/idempotent: add source/zenodo_concept/zotero_key
@@ -37,7 +37,7 @@ scripts/
   backfill_citations.py   # (re-runnable) reconstruct historical citations from OpenAlex
   migrate_from_airtable.py  # one-time: built data/ from the Airtable exports (provenance)
   backfill_snapshots.py     # one-time: built 2024–2026 snapshots from the curated export
-dashboard/                # Observable Framework app (Overview / Impact / Portfolio)
+dashboard/                # Observable Framework app (Impact / Portfolio)
 archive/                  # raw Airtable exports + the retired 2-stage pipeline
 requirements.txt          # just `requests`
 ```
@@ -51,9 +51,10 @@ diff cleanly in git).
   community, cdh_built, cdh_slug`. `project` is the key; it must match the `project` value
   used in outputs.csv. `status` may be multi-valued (comma-separated). `community` is the
   CDH **Project-Lead** classification (`Faculty` / `Postdoc` / `Staff` /
-  `External Collaborator`, multi-valued) — outputs inherit it via their project, and it's the
-  "community" dimension on the dashboard. `cdh_built`/`cdh_slug` come from the CDH catalog.
-- **outputs.csv** — `output_id, output_name, project, type, tier, status, assignee,
+  `External Collaborator`, multi-valued) used to classify/curate the catalog — kept as data
+  but not currently rendered on the dashboard. (Graduate-student-led projects are excluded
+  from the published data.) `cdh_built`/`cdh_slug` come from the CDH catalog.
+- **outputs.csv** — `output_id, output_name, project, type, status, assignee,
   link, doi_service, completed_date, availability, description, alt_id, source, zenodo_concept, zotero_key`. The last
   three are provenance: `source` (`zenodo`/`zotero`/`manual`) plus the stable
   upstream keys the syncs match on.
@@ -65,7 +66,7 @@ diff cleanly in git).
       `openalex:W4408262440` for a book that has only an ISBN. The citation harvester
       uses it to fetch citations (see below).
     - `assignee` is a comma-separated author list; the **first** name is treated as the
-      lead. `type`/`tier` are independent facets.
+      lead. `type` may be multi-valued (comma-separated).
     - `status` here is **realized-only** (`Released`, `Done`) — outputs.csv is the record
       of work that *exists*, and is increasingly **generated** from the canonical sources
       (Zenodo + Zotero). Planned/forecast work lives in `planned.csv` (below), not here.
@@ -112,26 +113,30 @@ npm run build          # static site → dashboard/dist/
 ```
 
 Python **data loaders** (`dashboard/src/data/*.py`, standard-library only) read the
-CSVs and rollup and emit JSON; the pages (`src/index.md` = Overview, `impact.md`,
-`portfolio.md`) render it with Observable Plot, all reading the realized `outputs.csv`.
+CSVs and rollup and emit JSON; the pages (`src/index.md` = the **Impact** landing page,
+and `portfolio.md`) render it with Observable Plot, all reading the realized `outputs.csv`.
 `node_modules/`, `dist/`, and the `.observablehq` cache are git-ignored —
 `npm install && npm run build` regenerates them.
 
-A **dormant** GitHub Pages workflow lives at `.github/workflows/deploy.yml`; activate
-it per the comments in that file once the repo is on GitHub.
+The GitHub Pages workflow at `.github/workflows/deploy.yml` builds and deploys
+`dashboard/dist` on every push to `main`. First-time setup: on GitHub, set
+**Settings → Pages → Source: "GitHub Actions"**. Served at
+`https://princeton-cdh.github.io/research-outputs/` (the `base` path in
+`observablehq.config.js` must match the repo name).
 
 ## Sources of published works — the quarterly ingest sweep
 
 Realized outputs are reconciled from **two canonical sources** into `outputs.csv`:
-the **Zenodo `princetoncdh` community** (clean, all-DOI'd) and a **Zotero** group
-collection (books + externally-published work Zenodo lacks, but noisier). Each sync
-dedups against `outputs.csv` and the ledger, then writes a **review file** you edit;
-`merge_incoming.py` applies your decisions. Run quarterly:
+the **Zenodo `princetoncdh` community** (clean, all-DOI'd) and the **Zotero** group's
+four collections — Publications, Datasets, Documentation, Software (books + externally-
+published work Zenodo lacks, but noisier). Each sync dedups against `outputs.csv` and the
+ledger, then writes a **review file** you edit; `merge_incoming.py` applies your
+decisions. Run quarterly:
 
 ```bash
 python3 scripts/sync_zenodo.py        # → data/incoming/zenodo-review.csv
 python3 scripts/sync_zotero.py        # → data/incoming/zotero-review.csv
-#  edit each review file: set `decision` (keep/skip) and assign `project` to keeps
+#  edit each review file: set `decision` (keep / drop / review) and assign `project` to keeps
 python3 scripts/merge_incoming.py data/incoming/zenodo-review.csv --apply
 python3 scripts/merge_incoming.py data/incoming/zotero-review.csv --apply
 #  add any new project names the merge flagged to data/projects.csv
@@ -145,9 +150,13 @@ How the sweep decides:
 - **Matches** an existing output (DOI → Zenodo-id → ISBN → concept → zotero_key →
   title+year) → **enriched in place** (backfills provenance keys), never duplicated.
 - **New Zenodo** items → proposed pre-marked `keep` (community = in scope).
-- **New Zotero** items → pre-marked `keep` if a `people.csv` author is on them,
-  otherwise left blank for you to triage.
-- Every keep/skip is written to **`data/sync_ledger.csv`**, so re-running a sweep only
+- **New Zotero** items with a DOI/link → pre-marked `keep` if a `people.csv` author is on
+  them, otherwise left blank for you to triage. Zotero items with **no DOI/link are
+  skipped** (not proposed).
+- `merge_incoming.py` reads your `decision`: `keep` adds the output, `skip`/`drop`
+  discards it (logged so it won't resurface), and `review`/blank leaves it undecided to
+  come back next sweep.
+- Every keep/drop is written to **`data/sync_ledger.csv`**, so re-running a sweep only
   ever surfaces genuinely new items (idempotent). The `incoming/` review files are
   transient (git-ignored); the ledger is the durable record.
 
@@ -157,8 +166,8 @@ delete its row from `planned.csv` (manual — there's no automatic dedup across 
 ## CDH project catalog & communities
 
 Projects and their **community** (CDH Project-Lead classification) are imported from the
-CDH projects site so the dashboard shows the full CDH landscape and can slice by community.
-Idempotent and review-gated, like the output syncs:
+CDH projects site to build and classify the project catalog. Idempotent and review-gated,
+like the output syncs:
 
 ```bash
 python3 scripts/sync_cdh_projects.py                              # → data/incoming/cdh-projects-review.csv
@@ -170,8 +179,9 @@ python3 scripts/merge_projects.py data/incoming/cdh-projects-review.csv --apply
 project's lead; `cdh_built=on` flags Built-by-CDH), matches to `projects.csv` (enriching
 existing rows in place, with a small alias map for renamed projects), and proposes new
 catalog projects. Projects not in the CDH catalog (internal R&D / tooling) get their
-`community` set by hand. Two lenses coexist on the dashboard: **community** (the project's
-CDH lead category) and **lead_role** (a specific output's author role, from `people.csv`).
+`community` set by hand; graduate-student-led catalog projects are skipped (excluded from
+the published data). The dashboard colors outputs by **lead_role** — an output's
+first-author role, from `people.csv`.
 
 ## History already loaded
 
