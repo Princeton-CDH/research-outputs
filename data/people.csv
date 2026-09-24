@@ -1,33 +1,34 @@
-name,role
-Rebecca Sutton Koeser,CDH
-Mary Naydan,CDH
-Laure Thompson,CDH
-Jeri Wieringa,CDH
-Hao Tan,CDH
-Nick Budak,CDH
-Gissoo Doroudian,CDH
-Jean Bauer,CDH
-Rebecca Munson,CDH
-Xinyi Li,CDH
-Natalia Ermolaev,CDH
-Meagan Wilson,CDH
-Meredith Martin,Faculty
-Joshua Kotin,Faculty
-Dan Trueman,Faculty
-Lara Buchak,Faculty
-Edward Baring,Faculty
-Katie Chenoweth,Faculty
-Wendy Belcher,Faculty
-Christine Roughan,Post Doc
-Zoe LeBlanc,Post Doc
-Wouter Haverals,Post Doc
-Marina Rustow,Faculty
-The Center for Digital Humanities at Princeton,CDH
-Grant Wythoff,CDH
-Meg Hicks,CDH
-Kevin McElwee,CDH
-Kevin Glover,CDH
-Ben Silverman,External
-Jim Casey,Post Doc
-Pratima Gopalakrishnan,Affiliate
-Christine Roughan,CDH
+name,role,role_start,role_end
+Rebecca Sutton Koeser,CDH,,
+Mary Naydan,Graduate Student,,12/31/2022
+Mary Naydan,CDH,1/1/2023,
+Laure Thompson,CDH,,
+Jeri Wieringa,CDH,,
+Hao Tan,CDH,,
+Nick Budak,CDH,,
+Gissoo Doroudian,CDH,,
+Jean Bauer,CDH,,
+Rebecca Munson,CDH,,
+Xinyi Li,CDH,,
+Natalia Ermolaev,CDH,,
+Meagan Wilson,CDH,,
+Meredith Martin,Faculty,,
+Joshua Kotin,Faculty,,
+Dan Trueman,Faculty,,
+Lara Buchak,Faculty,,
+Edward Baring,Faculty,,
+Katie Chenoweth,Faculty,,
+Wendy Belcher,Faculty,,
+Christine Roughan,Post Doc,,12/31/2025
+Christine Roughan,CDH,1/1/2026,
+Zoe LeBlanc,Post Doc,,
+Wouter Haverals,Post Doc,,
+Marina Rustow,Faculty,,
+The Center for Digital Humanities at Princeton,CDH,,
+Grant Wythoff,CDH,,
+Meg Hicks,CDH,,
+Kevin McElwee,CDH,,
+Kevin Glover,CDH,,
+Ben Silverman,External,,
+Jim Casey,Post Doc,,
+Pratima Gopalakrishnan,Affiliate,,

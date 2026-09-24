@@ -13,8 +13,8 @@ const projects = await FileAttachment("data/projects.json").json();
 const realized = outputs.filter((o) => o.realized);
 
 const roleColor = {
-  domain: ["Faculty", "CDH", "Post Doc", "Unknown"],
-  range: ["#E69F00", "#0072B2", "#009E73", "#9AA0A6"], // Okabe–Ito, colorblind-safe
+  domain: ["Faculty", "CDH", "Post Doc", "Graduate Student", "External", "Affiliate", "Unknown"],
+  range: ["#E69F00", "#0072B2", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"], // Okabe–Ito, colorblind-safe
   legend: true,
 };
 const trunc = (s, n = 30) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s);
@@ -46,7 +46,6 @@ const trunc = (s, n = 30) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s)
     Plot.plot({
       width,
       title: "Projects by status",
-      subtitle: "A project can hold more than one status",
       marginLeft: 170,
       x: { label: "Projects", grid: true },
       y: { label: null },

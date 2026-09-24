@@ -20,15 +20,46 @@ REALIZED_STATUSES = {"Released", "Done"}
 
 
 def load_roles():
-    """name -> role (Faculty / CDH) from data/people.csv, if present."""
+    """name -> list of (role, start, end) periods from data/people.csv.
+
+    Roles are time-aware: a person may hold different roles over time (e.g.
+    Post Doc -> CDH staff), one row per period. Blank role_start/role_end
+    means open-ended on that side; a single blank-blank row is a constant role.
+    """
     roles = {}
     if PEOPLE_CSV.exists():
         with PEOPLE_CSV.open(newline="", encoding="utf-8") as fh:
             for row in csv.DictReader(fh):
                 name = (row.get("name") or "").strip()
                 if name:
-                    roles[name] = (row.get("role") or "").strip() or "Unknown"
+                    roles.setdefault(name, []).append(
+                        (
+                            (row.get("role") or "").strip() or "Unknown",
+                            parse_mdy(row.get("role_start")),
+                            parse_mdy(row.get("role_end")),
+                        )
+                    )
     return roles
+
+
+def role_for(roles, name, on_date):
+    """Role held by `name` on `on_date` (a date or None).
+
+    Undated outputs and dates outside every period fall back to the person's
+    current (open-ended) role, else their last listed one. Names not in
+    people.csv are external collaborators.
+    """
+    periods = roles.get(name)
+    if not periods:
+        return "External"
+    if on_date:
+        for role, start, end in periods:
+            if (start is None or start <= on_date) and (end is None or on_date <= end):
+                return role
+    for role, start, end in periods:
+        if end is None:
+            return role
+    return periods[-1][0]
 
 
 def load_project_communities():
@@ -43,13 +74,13 @@ def load_project_communities():
     return comm
 
 
-def parse_date(value):
-    """M/D/YYYY -> 'YYYY-MM-DD', or None if blank/unparseable."""
+def parse_mdy(value):
+    """M/D/YYYY -> datetime.date, or None if blank/unparseable."""
     value = (value or "").strip()
     if not value:
         return None
     try:
-        return datetime.strptime(value, "%m/%d/%Y").date().isoformat()
+        return datetime.strptime(value, "%m/%d/%Y").date()
     except ValueError:
         return None
 
@@ -69,6 +100,7 @@ def main():
             link = (row.get("link") or "").strip()
             assignees = split_multi(row.get("assignee"))
             lead = assignees[0] if assignees else None
+            completed = parse_mdy(row.get("completed_date"))
             records.append(
                 {
                     "output_id": (row.get("output_id") or "").strip(),
@@ -81,11 +113,11 @@ def main():
                     "realized": status in REALIZED_STATUSES,
                     "assignee": assignees,
                     "lead": lead,
-                    "lead_role": roles.get(lead, "Unknown") if lead else "Unknown",
+                    "lead_role": role_for(roles, lead, completed) if lead else "Unknown",
                     "link": link or None,
                     "has_link": bool(link),
                     "doi_service": (row.get("doi_service") or "").strip() or None,
-                    "completed_date": parse_date(row.get("completed_date")),
+                    "completed_date": completed.isoformat() if completed else None,
                     "availability": (row.get("availability") or "").strip() or None,
                     "description": (row.get("description") or "").strip() or None,
                 }

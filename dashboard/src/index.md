@@ -165,8 +165,8 @@ const byProject = d3
       },
       r: { range: [3, 16], label: `Lifetime ${metricType}` },
       color: {
-        domain: ["Faculty", "CDH", "Post Doc", "Unknown"],
-        range: ["#E69F00", "#0072B2", "#009E73", "#9AA0A6"], // Okabe–Ito: colorblind-safe
+        domain: ["Faculty", "CDH", "Post Doc", "Graduate Student", "External", "Affiliate", "Unknown"],
+        range: ["#E69F00", "#0072B2", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"], // Okabe–Ito: colorblind-safe
         legend: true,
       },
       marks: [

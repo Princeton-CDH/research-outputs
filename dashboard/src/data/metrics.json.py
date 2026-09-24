@@ -41,26 +41,48 @@ def first_type(value):
     return parts[0] if parts else None
 
 
-def pub_year(value):
-    """Year of an output's completed_date (M/D/YYYY), or None."""
+def parse_mdy(value):
+    """M/D/YYYY -> datetime.date, or None if blank/unparseable."""
     value = (value or "").strip()
     if not value:
         return None
     try:
-        return datetime.strptime(value, "%m/%d/%Y").year
+        return datetime.strptime(value, "%m/%d/%Y").date()
     except ValueError:
         return None
 
 
 def load_roles():
+    """name -> list of (role, start, end) periods; see outputs.json.py."""
     roles = {}
     if PEOPLE_CSV.exists():
         with PEOPLE_CSV.open(newline="", encoding="utf-8") as fh:
             for row in csv.DictReader(fh):
                 name = (row.get("name") or "").strip()
                 if name:
-                    roles[name] = (row.get("role") or "").strip() or "Unknown"
+                    roles.setdefault(name, []).append(
+                        (
+                            (row.get("role") or "").strip() or "Unknown",
+                            parse_mdy(row.get("role_start")),
+                            parse_mdy(row.get("role_end")),
+                        )
+                    )
     return roles
+
+
+def role_for(roles, name, on_date):
+    """Role held by `name` on `on_date`; see outputs.json.py."""
+    periods = roles.get(name)
+    if not periods:
+        return "External"
+    if on_date:
+        for role, start, end in periods:
+            if (start is None or start <= on_date) and (end is None or on_date <= end):
+                return role
+    for role, start, end in periods:
+        if end is None:
+            return role
+    return periods[-1][0]
 
 
 def load_project_communities():
@@ -86,6 +108,7 @@ def load_output_index():
             status = (row.get("status") or "").strip()
             assignees = [a.strip() for a in (row.get("assignee") or "").split(",") if a.strip()]
             lead = assignees[0] if assignees else None
+            completed = parse_mdy(row.get("completed_date"))
             index[oid] = {
                 "project": (row.get("project") or "").strip(),
                 "community": communities.get((row.get("project") or "").strip(), []),
@@ -94,9 +117,9 @@ def load_output_index():
                 "status": status,
                 "realized": status in REALIZED_STATUSES,
                 "link": (row.get("link") or "").strip() or None,
-                "pub_year": pub_year(row.get("completed_date")),
+                "pub_year": completed.year if completed else None,
                 "lead": lead,
-                "lead_role": roles.get(lead, "Unknown") if lead else "Unknown",
+                "lead_role": role_for(roles, lead, completed) if lead else "Unknown",
             }
     return index
 
