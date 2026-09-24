@@ -39,7 +39,7 @@ const sumAt = (metricType, year, field = "lifetime_count") =>
 const viewsLatest = sumAt("Views", maxYear);
 const downloadsLatest = sumAt("Downloads", maxYear);
 const citationsLatest = sumAt("Citation Count", maxYear);
-const viewsGain = sumAt("Views", maxYear, "yearly_delta");
+const downloadsGain = sumAt("Downloads", maxYear, "yearly_delta");
 ```
 
 <div class="grid grid-cols-4">
@@ -54,30 +54,30 @@ const viewsGain = sumAt("Views", maxYear, "yearly_delta");
     <span class="muted">${fmt(linkedCount)} with a DOI / link</span>
   </div>
   <div class="card">
+    <h2>Lifetime downloads · ${maxYear}</h2>
+    <span class="big">${fmt(downloadsLatest)}</span>
+  </div>
+  <div class="card">
     <h2>Lifetime views · ${maxYear}</h2>
     <span class="big">${fmt(viewsLatest)}</span>
     <span class="muted">${fmt(citationsLatest)} citations</span>
   </div>
   <div class="card">
-    <h2>Lifetime downloads · ${maxYear}</h2>
-    <span class="big">${fmt(downloadsLatest)}</span>
-  </div>
-  <div class="card">
-    <h2>Views gained in ${maxYear}</h2>
-    <span class="big">${signed(viewsGain)}</span>
+    <h2>Downloads gained in ${maxYear}</h2>
+    <span class="big">${signed(downloadsGain)}</span>
     <span class="muted">year-over-year</span>
   </div>
 </div>
 
 ## Published outputs (DOIs)
 
-Views, downloads, and citations for outputs with a DOI (Zenodo, journals, datasets). Website analytics are kept separate — see [Website traffic](#website-traffic) below. Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so everything here reflects the **one metric** you select.
+Downloads, views, and citations for outputs with a DOI (Zenodo, journals, datasets). Website analytics are kept separate — see [Website traffic](#website-traffic) below. Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so everything here reflects the **one metric** you select.
 
 ```js
 const pubMetricTypes = Array.from(
   new Set(metrics.filter((d) => d.metric_family === "publication").map((d) => d.metric_type))
 );
-const metricOrder = ["Views", "Downloads", "Citation Count"];
+const metricOrder = ["Downloads", "Views", "Citation Count"];
 pubMetricTypes.sort((a, b) => metricOrder.indexOf(a) - metricOrder.indexOf(b));
 
 const projectNames = Array.from(
@@ -85,7 +85,7 @@ const projectNames = Array.from(
 ).sort();
 
 const metricType = view(
-  Inputs.select(pubMetricTypes, { label: "Metric", value: "Views" })
+  Inputs.select(pubMetricTypes, { label: "Metric", value: "Downloads" })
 );
 const project = view(
   Inputs.select(["All projects", ...projectNames], {
@@ -133,13 +133,16 @@ for (const [, pts] of d3.groups(byPubYear, (d) => `${d.project}|${d.pub_year}`))
     d.yj = projIndex.get(d.project) + (n === 1 ? 0 : (i - (n - 1) / 2) * 0.3);
   });
 }
-// Pre-sorted datasets for the ranked bar charts.
-const movers = d3
-  .sort(
-    selected.filter((d) => d.year === maxYear && d.yearly_delta != null),
-    (d) => -d.yearly_delta
+// Aggregate trajectory: total lifetime count summed across outputs, per year.
+const overTime = d3
+  .rollups(
+    selected.filter((d) => d.lifetime_count != null),
+    (v) => d3.sum(v, (d) => d.lifetime_count),
+    (d) => d.year
   )
-  .slice(0, 12);
+  .map(([year, total]) => ({ year, total }))
+  .sort((a, b) => a.year - b.year);
+// Pre-sorted dataset for the ranked bar chart.
 const topOutputs = d3.sort(latest, (d) => -d.lifetime_count).slice(0, 15);
 const byProject = d3
   .rollups(latest, (v) => d3.sum(v, (d) => d.lifetime_count), (d) => d.project)
@@ -196,30 +199,24 @@ const byProject = d3
   resize((width) =>
     Plot.plot({
       width,
-      title: `${metricType} gained during ${maxYear} (top 12 movers)`,
-      subtitle: "Click a title to open its DOI.",
-      marginLeft: 360,
-      x: { label: `Δ ${metricType}`, grid: true },
-      y: { axis: null, domain: movers.map((d) => d.output_id) },
+      title: `${metricType} over time`,
+      subtitle: `Total lifetime ${metricType.toLowerCase()} across ${
+        project === "All projects" ? "all tracked outputs" : project
+      }, by year`,
+      marginLeft: 64,
+      height: 260,
+      x: { label: "Year", tickFormat: "d", ticks: overTime.map((d) => d.year) },
+      y: { label: `Lifetime ${metricType}`, grid: true, zero: true },
       marks: [
-        Plot.barX(movers, {
-          x: "yearly_delta",
-          y: "output_id",
-          fill: "var(--theme-green, #4caf50)",
+        Plot.line(overTime, { x: "year", y: "total", strokeWidth: 2, stroke: "var(--theme-foreground-focus)" }),
+        Plot.dot(overTime, {
+          x: "year",
+          y: "total",
+          r: 4,
+          fill: "var(--theme-foreground-focus)",
           tip: true,
-          title: (d) => `${d.output_name}\n${signed(d.yearly_delta)} ${metricType} in ${maxYear}`,
+          title: (d) => `${fmt(d.total)} lifetime ${metricType.toLowerCase()} as of ${d.year}`,
         }),
-        Plot.text(movers, {
-          x: 0,
-          y: "output_id",
-          text: (d) => truncate(d.output_name),
-          href: (d) => d.link,
-          target: "_blank",
-          textAnchor: "end",
-          dx: -6,
-          fill: "currentColor",
-        }),
-        Plot.ruleX([0]),
       ],
     })
   )
@@ -281,7 +278,7 @@ const byProject = d3
   )
 }</div>
 
-<div class="note">Metrics with no baseline year show a blank year-over-year gain (not zero). Bars link to the output's DOI where one exists.</div>
+<div class="note">Metrics with no baseline year show a blank year-over-year gain (not zero). Each year's total covers the outputs tracked in that year's harvest, so part of the growth reflects the portfolio expanding. Bars link to the output's DOI where one exists.</div>
 
 ## Website traffic
 
