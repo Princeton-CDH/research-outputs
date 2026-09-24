@@ -151,7 +151,7 @@ const byProject = d3
     Plot.plot({
       width,
       title: "Outputs by publication year",
-      subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by its lead's role. Click a dot to open its DOI.`,
+      subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by output type. Click a dot to open its DOI.`,
       marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
@@ -165,8 +165,9 @@ const byProject = d3
       },
       r: { range: [3, 16], label: `Lifetime ${metricType}` },
       color: {
-        domain: ["Faculty", "CDH", "Post Doc", "Graduate Student", "External", "Affiliate", "Unknown"],
-        range: ["#E69F00", "#0072B2", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"], // Okabe–Ito: colorblind-safe
+        // Okabe–Ito, CVD-validated in this order; gray marks the rare misc type.
+        domain: ["Publication", "Presentation / Poster", "Software Release", "Dataset", "Grey Literature", "Website", "WebArchive"],
+        range: ["#0072B2", "#E69F00", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"],
         legend: true,
       },
       marks: [
@@ -174,7 +175,7 @@ const byProject = d3
           x: "pub_year",
           y: "yj",
           r: "lifetime_count",
-          fill: "lead_role",
+          fill: "type",
           fillOpacity: 0.7,
           stroke: "var(--theme-background)",
           strokeWidth: 0.75,
@@ -182,7 +183,7 @@ const byProject = d3
           target: "_blank",
           tip: true,
           title: (d) =>
-            `${d.output_name}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year} · ${fmt(
+            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year} · ${fmt(
               d.lifetime_count
             )} ${metricType}${d.link ? "\n↗ open DOI" : ""}`,
         }),
