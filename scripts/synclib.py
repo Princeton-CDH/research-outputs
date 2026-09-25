@@ -75,6 +75,27 @@ def iso_to_us(s):
 
 
 # ------------------------------------------------------------------ names
+# Known variants -> canonical roster spelling (people.csv). Sources render the
+# same person differently (Zotero drops Rebecca's middle name; GitHub handles
+# stand in for names on Zenodo software records). Applying this at
+# normalization time means review files and merges carry canonical names, and
+# roster-author detection recognizes the variants. The historical one-off map
+# lives in clean_assignees.py.
+NAME_ALIASES = {
+    "rebecca koeser": "Rebecca Sutton Koeser",
+    "meg-codes": "Meg Hicks",
+    "benjamin hicks": "Meg Hicks",
+    "nicholas budak": "Nick Budak",
+    "natalia ermoalev": "Natalia Ermolaev",
+    "gissoo": "Gissoo Doroudian",
+    "xinyil": "Xinyi Li",
+}
+
+
+def canonical_name(name):
+    return NAME_ALIASES.get((name or "").strip().lower(), name)
+
+
 def name_first_last(creator):
     """Normalize a Zenodo/Zotero creator to 'Given Family' (matches people.csv).
 
@@ -87,14 +108,14 @@ def name_first_last(creator):
     elif "firstName" in creator or "lastName" in creator:
         given = (creator.get("firstName") or "").strip()
         family = (creator.get("lastName") or "").strip()
-        return f"{given.split()[0]} {family}".strip() if given else family
+        return canonical_name(f"{given.split()[0]} {family}".strip() if given else family)
     else:
         raw = (creator.get("person_or_org", {}) or {}).get("name") or creator.get("name", "")
     raw = (raw or "").strip()
     if "," in raw:  # 'Family, Given Middle' -> 'Given Family'
         family, given = [p.strip() for p in raw.split(",", 1)]
-        return f"{given.split()[0]} {family}".strip() if given else family
-    return raw
+        return canonical_name(f"{given.split()[0]} {family}".strip() if given else family)
+    return canonical_name(raw)
 
 
 def roster_names():
