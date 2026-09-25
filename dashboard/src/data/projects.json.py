@@ -16,13 +16,17 @@ PROJECTS_CSV = REPO_ROOT / "data" / "projects.csv"
 
 
 def parse_date(value):
+    """M/D/YYYY or bare YYYY -> ISO date string, or None."""
     value = (value or "").strip()
     if not value:
         return None
     try:
         return datetime.strptime(value, "%m/%d/%Y").date().isoformat()
     except ValueError:
-        return None
+        pass
+    if value.isdigit() and len(value) == 4:
+        return f"{value}-01-01"
+    return None
 
 
 def split_multi(value):
