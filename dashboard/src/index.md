@@ -133,17 +133,15 @@ for (const [, pts] of d3.groups(byPubYear, (d) => `${d.project}|${d.pub_year}`))
     d.yj = projIndex.get(d.project) + (n === 1 ? 0 : (i - (n - 1) / 2) * 0.3);
   });
 }
-// Aggregate trajectory: total lifetime count summed across outputs, per year.
-const overTime = d3
-  .rollups(
-    selected.filter((d) => d.lifetime_count != null),
-    (v) => d3.sum(v, (d) => d.lifetime_count),
-    (d) => d.year
-  )
-  .map(([year, total]) => ({ year, total }))
-  .sort((a, b) => a.year - b.year);
 // Pre-sorted dataset for the ranked bar chart.
 const topOutputs = d3.sort(latest, (d) => -d.lifetime_count).slice(0, 15);
+// Shared output-type color scale (Okabe–Ito, CVD-validated in this order;
+// gray marks the rare misc type).
+const typeColor = {
+  domain: ["Publication", "Presentation / Poster", "Software Release", "Dataset", "Grey Literature", "Website", "WebArchive"],
+  range: ["#0072B2", "#E69F00", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"],
+  legend: true,
+};
 const byProject = d3
   .rollups(latest, (v) => d3.sum(v, (d) => d.lifetime_count), (d) => d.project)
   .map(([project, total]) => ({ project, total }));
@@ -167,12 +165,7 @@ const byProject = d3
         grid: true,
       },
       r: { range: [3, 16], label: `Lifetime ${metricType}` },
-      color: {
-        // Okabe–Ito, CVD-validated in this order; gray marks the rare misc type.
-        domain: ["Publication", "Presentation / Poster", "Software Release", "Dataset", "Grey Literature", "Website", "WebArchive"],
-        range: ["#0072B2", "#E69F00", "#009E73", "#56B4E9", "#CC79A7", "#D55E00", "#9AA0A6"],
-        legend: true,
-      },
+      color: typeColor,
       marks: [
         Plot.dot(byPubYear, {
           x: "pub_year",
@@ -199,46 +192,20 @@ const byProject = d3
   resize((width) =>
     Plot.plot({
       width,
-      title: `${metricType} over time`,
-      subtitle: `Total lifetime ${metricType.toLowerCase()} across ${
-        project === "All projects" ? "all tracked outputs" : project
-      }, by year`,
-      marginLeft: 64,
-      height: 260,
-      x: { label: "Year", tickFormat: "d", ticks: overTime.map((d) => d.year) },
-      y: { label: `Lifetime ${metricType}`, grid: true, zero: true },
-      marks: [
-        Plot.line(overTime, { x: "year", y: "total", strokeWidth: 2, stroke: "var(--theme-foreground-focus)" }),
-        Plot.dot(overTime, {
-          x: "year",
-          y: "total",
-          r: 4,
-          fill: "var(--theme-foreground-focus)",
-          tip: true,
-          title: (d) => `${fmt(d.total)} lifetime ${metricType.toLowerCase()} as of ${d.year}`,
-        }),
-      ],
-    })
-  )
-}</div>
-
-<div class="card">${
-  resize((width) =>
-    Plot.plot({
-      width,
       title: `Top outputs by lifetime ${metricType} (as of ${maxYear})`,
       subtitle: "Click a title to open its DOI.",
       marginLeft: 360,
       height: Math.max(200, 28 * Math.min(15, topOutputs.length) + 70),
       x: { label: `Lifetime ${metricType}`, grid: true },
       y: { axis: null, domain: topOutputs.map((d) => d.output_id) },
+      color: typeColor,
       marks: [
         Plot.barX(topOutputs, {
           x: "lifetime_count",
           y: "output_id",
-          fill: "var(--theme-foreground-focus)",
+          fill: "type",
           tip: true,
-          title: (d) => `${d.output_name}\n${fmt(d.lifetime_count)} ${metricType}`,
+          title: (d) => `${d.output_name}\n${d.type}\n${fmt(d.lifetime_count)} ${metricType}`,
         }),
         Plot.text(topOutputs, {
           x: 0,
@@ -278,7 +245,7 @@ const byProject = d3
   )
 }</div>
 
-<div class="note">Metrics with no baseline year show a blank year-over-year gain (not zero). Each year's total covers the outputs tracked in that year's harvest, so part of the growth reflects the portfolio expanding. Bars link to the output's DOI where one exists.</div>
+<div class="note">Metrics with no baseline year show a blank year-over-year gain (not zero). Bars link to the output's DOI where one exists.</div>
 
 ## Website traffic
 
