@@ -173,17 +173,17 @@ zotero,739VPD8J,keep,o168,2026-08-20,Derrida's Margins datasets
 zotero,I5QSQ773,keep,o169,2026-08-20,CDH Project Charter — Princeton Prosody Archive 2017-18
 zotero,B9ZMZK52,keep,o170,2026-08-20,"""Built by CDH"" Software Warranty"
 zotero,BF3W6R6X,keep,o171,2026-08-20,htr2hpc
-zotero,FXNC7NCT,keep,o172,2026-08-20,Princeton-CDH/corppa: v0.4
-zotero,RSRA682T,keep,o173,2026-08-20,Princeton-CDH/djiffy: v0.9.1
-zotero,W4SQJKC4,keep,o174,2026-08-20,Princeton-CDH/django-pucas: v0.9
-zotero,ZGYG9EYY,keep,o175,2026-08-20,Princeton-CDH/annotorious-tahqiq: 1.5.1
-zotero,6IFB87E5,keep,o176,2026-08-20,Princeton-CDH/piffle: v0.6.1
-zotero,ELSJDS2Z,keep,o177,2026-08-20,Princeton-CDH/mep-django: v1.7.2
-zotero,9V93G3WP,keep,o178,2026-08-20,Princeton-CDH/derrida-django: v1.3
-zotero,YWV2PKJ8,keep,o179,2026-08-20,Princeton-CDH/mep-django: v1.2
-zotero,52RW82RM,keep,o180,2026-08-20,Princeton-CDH/mep-django: v1.0
-zotero,PQ4H5QXR,keep,o181,2026-08-20,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes
-zotero,NTF6PJGY,keep,o182,2026-08-20,Princeton-CDH/ppa-django: v3.0 Initial public release
+zotero,FXNC7NCT,skip,o172,2026-08-20,Princeton-CDH/corppa: v0.4
+zotero,RSRA682T,skip,o173,2026-08-20,Princeton-CDH/djiffy: v0.9.1
+zotero,W4SQJKC4,skip,o174,2026-08-20,Princeton-CDH/django-pucas: v0.9
+zotero,ZGYG9EYY,skip,o175,2026-08-20,Princeton-CDH/annotorious-tahqiq: 1.5.1
+zotero,6IFB87E5,skip,o176,2026-08-20,Princeton-CDH/piffle: v0.6.1
+zotero,ELSJDS2Z,skip,o177,2026-08-20,Princeton-CDH/mep-django: v1.7.2
+zotero,9V93G3WP,skip,o178,2026-08-20,Princeton-CDH/derrida-django: v1.3
+zotero,YWV2PKJ8,skip,o179,2026-08-20,Princeton-CDH/mep-django: v1.2
+zotero,52RW82RM,skip,o180,2026-08-20,Princeton-CDH/mep-django: v1.0
+zotero,PQ4H5QXR,skip,o181,2026-08-20,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes
+zotero,NTF6PJGY,skip,o182,2026-08-20,Princeton-CDH/ppa-django: v3.0 Initial public release
 zotero,NQIYAZ9G,skip,o183,2026-08-20,Public Enemies
 zotero,RP5LYIXA,skip,o184,2026-08-20,"Aerophone, Telephot, Hypnobioscope: Hugo Gernsback’s Media Theory"
 zotero,PCQ7WJVQ,skip,o185,2026-08-20,The Invention of Wireless Cryptography

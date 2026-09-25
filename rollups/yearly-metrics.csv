@@ -41,11 +41,6 @@ o041,Derrida's Margins website,Derrida's Margins,Downloads,2026,,
 o041,Derrida's Margins website,Derrida's Margins,Views,2026,,
 o201,Princeton-CDH/derrida-django: v1.1,Derrida's Margins,Downloads,2026,38,
 o201,Princeton-CDH/derrida-django: v1.1,Derrida's Margins,Views,2026,199,
-o181,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes,Derrida's Margins,Downloads,2026,52,
-o181,Princeton-CDH/derrida-django: v1.2 Data exports and other improvements and fixes,Derrida's Margins,Views,2026,320,
-o178,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Citation Count,2026,1,
-o178,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Downloads,2026,73,
-o178,Princeton-CDH/derrida-django: v1.3,Derrida's Margins,Views,2026,449,
 o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Downloads,2026,181,62
 o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Views,2026,340,95
 o170,"""Built by CDH"" Software Warranty",Digital Humanities Processes and Practices,Downloads,2026,149,
@@ -159,10 +154,6 @@ o034,Princeton Prosody Archive Website,Princeton Prosody Archive,Downloads,2026,
 o034,Princeton Prosody Archive Website,Princeton Prosody Archive,Views,2026,,
 o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Downloads,2026,636,
 o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Views,2026,276,
-o172,Princeton-CDH/corppa: v0.4,Princeton Prosody Archive,Downloads,2026,31,
-o172,Princeton-CDH/corppa: v0.4,Princeton Prosody Archive,Views,2026,48,
-o182,Princeton-CDH/ppa-django: v3.0 Initial public release,Princeton Prosody Archive,Downloads,2026,50,
-o182,Princeton-CDH/ppa-django: v3.0 Initial public release,Princeton Prosody Archive,Views,2026,313,
 o130,Prodigy Handbook - PPA,Princeton Prosody Archive,Downloads,2026,,
 o130,Prodigy Handbook - PPA,Princeton Prosody Archive,Views,2026,,
 o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Downloads,2026,267,
@@ -183,14 +174,6 @@ o040,undate,R&D,Downloads,2025,28,
 o040,undate,R&D,Views,2025,107,
 o001,Citing Marx Project Charter,Remarx,Downloads,2026,263,199
 o001,Citing Marx Project Charter,Remarx,Views,2026,352,280
-o175,Princeton-CDH/annotorious-tahqiq: 1.5.1,Research Software,Downloads,2026,62,
-o175,Princeton-CDH/annotorious-tahqiq: 1.5.1,Research Software,Views,2026,243,
-o174,Princeton-CDH/django-pucas: v0.9,Research Software,Downloads,2026,20,
-o174,Princeton-CDH/django-pucas: v0.9,Research Software,Views,2026,43,
-o173,Princeton-CDH/djiffy: v0.9.1,Research Software,Downloads,2026,14,
-o173,Princeton-CDH/djiffy: v0.9.1,Research Software,Views,2026,46,
-o176,Princeton-CDH/piffle: v0.6.1,Research Software,Downloads,2026,19,
-o176,Princeton-CDH/piffle: v0.6.1,Research Software,Views,2026,69,
 o057,django-pucas,Research Software,Downloads,2026,6,1
 o057,django-pucas,Research Software,Views,2026,45,26
 o018,djiffy,Research Software,Downloads,2026,19,3
@@ -201,12 +184,6 @@ o067,A Counterfactual Canon,Shakespeare and Company,Citation Count,2026,2,1
 o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Downloads,2026,229,55
 o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Views,2026,341,126
 o049,"Missing Data, Speculative Reading",Shakespeare and Company,Citation Count,2026,6,2
-o180,Princeton-CDH/mep-django: v1.0,Shakespeare and Company,Downloads,2026,25,
-o180,Princeton-CDH/mep-django: v1.0,Shakespeare and Company,Views,2026,140,
-o179,Princeton-CDH/mep-django: v1.2,Shakespeare and Company,Downloads,2026,26,
-o179,Princeton-CDH/mep-django: v1.2,Shakespeare and Company,Views,2026,159,
-o177,Princeton-CDH/mep-django: v1.7.2,Shakespeare and Company,Downloads,2026,32,
-o177,Princeton-CDH/mep-django: v1.7.2,Shakespeare and Company,Views,2026,133,
 o140,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Downloads,2026,,
 o140,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Views,2026,,
 o131,Representing Gender in the Shakespeare and Company Project,Shakespeare and Company,Downloads,2026,,
