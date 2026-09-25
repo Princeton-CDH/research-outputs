@@ -22,7 +22,7 @@ REALIZED_STATUSES = {"Released", "Done"}
 
 # Website analytics vs. published-output (DOI) metrics — different units/scales,
 # so the dashboard keeps them in separate sections.
-WEB_METRICS = {"Active Users"}
+WEB_METRICS = {"Active Users", "Engaged Sessions"}
 
 
 def to_int(value):

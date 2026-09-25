@@ -8,6 +8,10 @@ prefix, and fetches its lifetime view/download counts:
   DataCommons  -> HTML scrape (#pageviews / #downloads spans)
   CulturalAnalytics / MITPress / PubPub -> emitted as ``manual`` (metrics sit
       behind Cloudflare / JavaScript) for hand entry into the snapshot.
+  Website outputs -> one ``manual`` "Engaged Sessions" row per site, hand-filled
+      from GA4 (engagedSessions is far more bot-resistant than activeUsers,
+      which the 2026 AI-crawler wave inflated 28-75x). Earlier snapshots hold
+      hand-seeded "Active Users" rows; both count as web metrics downstream.
 
 Writes a dated snapshot ``snapshots/metrics-<today>.csv`` (one Views row and one
 Downloads row per output with a link). Re-runnable: run again on a later date to
@@ -179,6 +183,14 @@ def main() -> None:
 
     for o in outputs:
         link = (o.get("link") or "").strip()
+
+        # Project websites have no DOI provider; their metric is hand-filled
+        # from GA4 each harvest. Record engaged sessions, not active users.
+        if "Website" in (o.get("type") or ""):
+            emit(o, "Engaged Sessions", None, "manual")
+            bump("manual")
+            continue
+
         provider = classify(link)
 
         # Citations (OpenAlex) — for any DOI or pinned OpenAlex id, regardless of
@@ -246,8 +258,9 @@ def main() -> None:
         print(f"  {status:<20} {n}")
     manual = status_counts.get("manual", 0)
     if manual:
-        print(f"\n{manual} 'manual' rows need hand entry "
-              "(CulturalAnalytics / MITPress / PubPub) — fill the count column in the snapshot.")
+        print(f"\n{manual} 'manual' rows need hand entry — fill the count column in the "
+              "snapshot (CulturalAnalytics / MITPress / PubPub views+downloads; websites: "
+              "GA4 'Engaged sessions' for the year to date).")
 
 
 if __name__ == "__main__":

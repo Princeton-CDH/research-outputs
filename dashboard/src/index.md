@@ -110,7 +110,7 @@ const project = view(
     Plot.plot({
       width,
       title: "Outputs by publication year",
-      subtitle: `Each dot is one published output, placed at its publication date and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted 5×, as of ${maxYear}). Click a dot to open it.`,
+      subtitle: `Each dot is one published output, placed at its publication date and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted 5×, as of ${maxYear}); websites are sized by typical annual web traffic (bot-inflated years excluded). Click a dot to open it.`,
       marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
@@ -137,9 +137,11 @@ const project = view(
           target: "_blank",
           tip: true,
           title: (d) =>
-            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year}\nImpact ${d.score.toFixed(1)} · ${fmt(d.downloads)} downloads · ${fmt(
-              d.citations
-            )} citations\n↗ open`,
+            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year}\nImpact ${d.score.toFixed(1)} · ${
+              d.webUsers
+                ? `~${fmt(Math.round(d.webUsers))} web users/yr (typical)`
+                : `${fmt(d.downloads)} downloads · ${fmt(d.citations)} citations`
+            }\n↗ open`,
         }),
       ],
     })
@@ -187,6 +189,23 @@ const lifetimeOf = (type) =>
   );
 const dlByOutput = lifetimeOf("Downloads");
 const citeByOutput = lifetimeOf("Citation Count");
+
+// Websites: impact comes from typical annual web traffic (median across
+// trusted years). 2026 is excluded — AI-crawler traffic inflated it 28–75×.
+const WEB_EXCLUDED_YEARS = new Set([2026]);
+const webByOutput = new Map(
+  d3
+    .rollups(
+      metrics.filter(
+        (d) =>
+          d.metric_family === "web" &&
+          d.lifetime_count != null &&
+          !WEB_EXCLUDED_YEARS.has(d.year)
+      ),
+      (v) => d3.median(v, (d) => d.lifetime_count),
+      (d) => d.output_id
+    )
+);
 // One dot per linked output with a pub year (project filter respected).
 const byPubYear = outputs
   .filter(
@@ -200,6 +219,7 @@ const byPubYear = outputs
   .map((o) => {
     const downloads = dlByOutput.get(o.output_id) ?? 0;
     const citations = citeByOutput.get(o.output_id) ?? 0;
+    const webUsers = webByOutput.get(o.output_id) ?? 0;
     return {
       ...o,
       type: o.type[0] ?? "Uncategorized",
@@ -207,7 +227,12 @@ const byPubYear = outputs
       pub_year: +o.completed_date.slice(0, 4),
       downloads,
       citations,
-      score: 1 + Math.log10(1 + downloads) + 5 * Math.log10(1 + citations),
+      webUsers,
+      score:
+        1 +
+        Math.log10(1 + downloads) +
+        5 * Math.log10(1 + citations) +
+        1.5 * Math.log10(1 + webUsers),
     };
   });
 // Dots sit at their exact publication date, so same-year outputs spread out
@@ -309,7 +334,7 @@ Downloads, views, and citations for outputs with a DOI (Zenodo, journals, datase
 
 ## Website traffic
 
-Active users for the project **websites** — a different unit and scale from the DOI metrics above, so shown on its own. The y-axis is **logarithmic** so all four sites stay legible despite very different sizes.
+Traffic for the project **websites** — a different unit and scale from the DOI metrics above, so shown on its own. The y-axis is **logarithmic** so all four sites stay legible despite very different sizes. **2026 is inflated 28–75× by automated/AI-crawler traffic** and is excluded from the impact scores above; from 2027 the harvest records GA4 *engaged sessions*, which filter most bot traffic, instead of active users.
 
 ```js
 const web = metrics.filter((d) => d.metric_family === "web" && d.lifetime_count != null);
@@ -324,7 +349,7 @@ const webLatestYear = d3.max(web, (d) => d.year);
       subtitle: "Log scale — each line is one site",
       marginLeft: 64,
       x: { label: "Year", tickFormat: "d", domain: d3.extent(web, (d) => d.year) },
-      y: { label: "Active users (log)", grid: true, type: "log" },
+      y: { label: "Web traffic (log)", grid: true, type: "log" },
       color: { legend: true },
       marks: [
         Plot.line(web, { x: "year", y: "lifetime_count", stroke: "project", strokeWidth: 2 }),
@@ -334,7 +359,7 @@ const webLatestYear = d3.max(web, (d) => d.year);
           fill: "project",
           r: 4,
           tip: true,
-          title: (d) => `${d.output_name}\n${fmt(d.lifetime_count)} active users in ${d.year}`,
+          title: (d) => `${d.output_name}\n${fmt(d.lifetime_count)} ${(d.metric_type || "active users").toLowerCase()} in ${d.year}`,
         }),
       ],
     })
@@ -347,10 +372,11 @@ Inputs.table(
     Site: d.output_name,
     Project: d.project,
     Year: d.year,
-    "Active users": d.lifetime_count,
+    Metric: d.metric_type,
+    Traffic: d.lifetime_count,
     "YoY gain": d.yearly_delta,
   })),
-  { rows: 12, sort: "Active users", reverse: true }
+  { rows: 12, sort: "Traffic", reverse: true }
 )
 ```
 
