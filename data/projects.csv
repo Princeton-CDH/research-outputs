@@ -2,7 +2,7 @@ project,status,start_date,end_date,notes,community,cdh_built,cdh_slug
 MuSE (Multilingual Semantic Embeddings),Active,8/25/2025,,,Faculty,,
 Remarx,Active,9/2/2024,,,Faculty,yes,citing-marx
 Simulating Risks,Active,6/5/2023,,,"Faculty,Staff",yes,simulating-risk
-Princeton Prosody Archive,Active,5/14/2025,,,Faculty,yes,princeton-prosody-archive
+Princeton Prosody Archive,Active,2017,,,Faculty,yes,princeton-prosody-archive
 Princeton Open HTR Initiative,Active,6/17/2024,,,"Faculty,Postdoc",yes,bringing-htr-to-the-hpc
 Shakespeare and Company,Active,2014,,,"Faculty,Staff",yes,shakespeare-and-company-project
 Princeton Geniza Lab,Active,2020,,,"Faculty,Staff",yes,princeton-geniza-project
@@ -12,7 +12,7 @@ Lunaapahkiing Princeton Timetree,Completed,2022,2023,,Staff,yes,lenape-timetree
 bitKlavier,Completed,2016,2018,,Faculty,,bitklavier
 DH Tech,Active,,,,Staff,,
 Data Beyond Vision,Completed,2018,2020,,Staff,,
-Digital Humanities Processes and Practices,Active,,,,Staff,,
+Digital Humanities Processes and Practices,Active,2012,,,Staff,,
 Undate,Active,2022,,,Staff,,undate
 Exercises in Literary Style,Supported,2024,,,"Faculty,Postdoc",,exercises-in-literary-style
 Staff Projects,Active,,,,Staff,,
