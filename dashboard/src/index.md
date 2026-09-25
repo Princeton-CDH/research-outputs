@@ -110,7 +110,7 @@ const project = view(
     Plot.plot({
       width,
       title: "Outputs by publication year",
-      subtitle: `Each dot is one published output, placed at its publication date and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted 3×, as of ${maxYear}). Click a dot to open it.`,
+      subtitle: `Each dot is one published output, placed at its publication date and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted 5×, as of ${maxYear}). Click a dot to open it.`,
       marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
@@ -178,7 +178,7 @@ const projIndex = new Map(projectOrder.map((p, i) => [p, i]));
 
 // Impact score: every realized, dated, LINKED output gets a baseline of 1;
 // lifetime downloads and citations (as of the latest harvest) add on a log
-// scale, with citations weighted triple. Unlinked outputs are hidden.
+// scale, with citations weighted 5x. Unlinked outputs are hidden.
 const lifetimeOf = (type) =>
   new Map(
     metrics
@@ -207,7 +207,7 @@ const byPubYear = outputs
       pub_year: +o.completed_date.slice(0, 4),
       downloads,
       citations,
-      score: 1 + Math.log10(1 + downloads) + 3 * Math.log10(1 + citations),
+      score: 1 + Math.log10(1 + downloads) + 5 * Math.log10(1 + citations),
     };
   });
 // Dots sit at their exact publication date, so same-year outputs spread out
