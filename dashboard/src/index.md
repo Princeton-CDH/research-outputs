@@ -81,7 +81,7 @@ const downloadsGain = sumAt("Downloads", maxYear, "yearly_delta");
   </div>
 </div>
 
-Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so every chart reflects the **one metric** you select. Website analytics are kept separate — see [Website traffic](#website-traffic) below.
+The chart below shows **all published outputs**, sized by an impact score. Pick a metric for the ranked charts further down (the metric types aren't comparable); the project filter applies to everything. Website analytics are kept separate — see [Website traffic](#website-traffic) below.
 
 ```js
 const pubMetricTypes = Array.from(
@@ -110,7 +110,7 @@ const project = view(
     Plot.plot({
       width,
       title: "Outputs by publication year",
-      subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by output type. Click a dot to open its DOI.`,
+      subtitle: `Each dot is one published output, placed at its publication year and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted double, as of ${maxYear}). Click a dot to open it.`,
       marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
@@ -122,13 +122,13 @@ const project = view(
         tickFormat: (i) => projectLabel(projectOrder[i]),
         grid: true,
       },
-      r: { range: [3, 16], label: `Lifetime ${metricType}` },
+      r: { range: [3, 16], label: "Impact score" },
       color: typeColor,
       marks: [
         Plot.dot(byPubYear, {
           x: "pub_year",
           y: "yj",
-          r: "lifetime_count",
+          r: "score",
           fill: "type",
           fillOpacity: 0.7,
           stroke: "var(--theme-background)",
@@ -137,9 +137,9 @@ const project = view(
           target: "_blank",
           tip: true,
           title: (d) =>
-            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year} · ${fmt(
-              d.lifetime_count
-            )} ${metricType}${d.link ? "\n↗ open DOI" : ""}`,
+            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year}\nImpact ${d.score.toFixed(1)} · ${fmt(d.downloads)} downloads · ${fmt(
+              d.citations
+            )} citations\n↗ open`,
         }),
       ],
     })
@@ -175,12 +175,44 @@ const projectOrder = d3.groupSort(
   (d) => d.project
 );
 const projIndex = new Map(projectOrder.map((p, i) => [p, i]));
-// One dot per output for the selected metric that has a pub year and a row.
-const byPubYear = latest.filter((d) => d.pub_year != null && projIndex.has(d.project));
+
+// Impact score: every realized, dated, LINKED output gets a baseline of 1;
+// lifetime downloads and citations (as of the latest harvest) add on a log
+// scale, with citations weighted double. Unlinked outputs are hidden.
+const lifetimeOf = (type) =>
+  new Map(
+    metrics
+      .filter((d) => d.metric_type === type && d.year === maxYear && d.lifetime_count != null)
+      .map((d) => [d.output_id, d.lifetime_count])
+  );
+const dlByOutput = lifetimeOf("Downloads");
+const citeByOutput = lifetimeOf("Citation Count");
+// One dot per linked output with a pub year (project filter respected).
+const byPubYear = outputs
+  .filter(
+    (o) =>
+      o.realized &&
+      o.completed_date &&
+      o.has_link &&
+      projIndex.has(o.project) &&
+      (project === "All projects" || o.project === project)
+  )
+  .map((o) => {
+    const downloads = dlByOutput.get(o.output_id) ?? 0;
+    const citations = citeByOutput.get(o.output_id) ?? 0;
+    return {
+      ...o,
+      type: o.type[0] ?? "Uncategorized",
+      pub_year: +o.completed_date.slice(0, 4),
+      downloads,
+      citations,
+      score: 1 + Math.log10(1 + downloads) + 2 * Math.log10(1 + citations),
+    };
+  });
 // Fan out dots that share a (project, year) cell so none hides inside another.
 // Each dot gets a numeric y (row index ± a deterministic offset).
 for (const [, pts] of d3.groups(byPubYear, (d) => `${d.project}|${d.pub_year}`)) {
-  const sorted = d3.sort(pts, (d) => -(d.lifetime_count ?? 0)); // largest first
+  const sorted = d3.sort(pts, (d) => -d.score); // largest first
   const n = sorted.length;
   sorted.forEach((d, i) => {
     d.yj = projIndex.get(d.project) + (n === 1 ? 0 : (i - (n - 1) / 2) * 0.3);
