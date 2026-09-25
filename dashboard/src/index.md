@@ -54,6 +54,33 @@ const citationsLatest = sumAt("Citation Count", maxYear);
 const downloadsGain = sumAt("Downloads", maxYear, "yearly_delta");
 ```
 
+<div class="grid grid-cols-4">
+  <div class="card">
+    <h2>Projects with outputs</h2>
+    <span class="big">${fmt(projectsWithOutputs)}</span>
+    <span class="muted">tracked in the metrics below</span>
+  </div>
+  <div class="card">
+    <h2>Realized outputs</h2>
+    <span class="big">${fmt(realizedCount)}</span>
+    <span class="muted">${fmt(linkedCount)} with a DOI / link</span>
+  </div>
+  <div class="card">
+    <h2>Lifetime downloads · ${maxYear}</h2>
+    <span class="big">${fmt(downloadsLatest)}</span>
+  </div>
+  <div class="card">
+    <h2>Lifetime views · ${maxYear}</h2>
+    <span class="big">${fmt(viewsLatest)}</span>
+    <span class="muted">${fmt(citationsLatest)} citations</span>
+  </div>
+  <div class="card">
+    <h2>Downloads gained in ${maxYear}</h2>
+    <span class="big">${signed(downloadsGain)}</span>
+    <span class="muted">year-over-year</span>
+  </div>
+</div>
+
 Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so every chart reflects the **one metric** you select. Website analytics are kept separate — see [Website traffic](#website-traffic) below.
 
 ```js
@@ -118,33 +145,6 @@ const project = view(
     })
   )
 }</div>
-
-<div class="grid grid-cols-4">
-  <div class="card">
-    <h2>Projects with outputs</h2>
-    <span class="big">${fmt(projectsWithOutputs)}</span>
-    <span class="muted">tracked in the metrics below</span>
-  </div>
-  <div class="card">
-    <h2>Realized outputs</h2>
-    <span class="big">${fmt(realizedCount)}</span>
-    <span class="muted">${fmt(linkedCount)} with a DOI / link</span>
-  </div>
-  <div class="card">
-    <h2>Lifetime downloads · ${maxYear}</h2>
-    <span class="big">${fmt(downloadsLatest)}</span>
-  </div>
-  <div class="card">
-    <h2>Lifetime views · ${maxYear}</h2>
-    <span class="big">${fmt(viewsLatest)}</span>
-    <span class="muted">${fmt(citationsLatest)} citations</span>
-  </div>
-  <div class="card">
-    <h2>Downloads gained in ${maxYear}</h2>
-    <span class="big">${signed(downloadsGain)}</span>
-    <span class="muted">year-over-year</span>
-  </div>
-</div>
 
 ```js
 // Rows for the selected metric (and project, if narrowed).
