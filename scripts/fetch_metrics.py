@@ -8,10 +8,26 @@ prefix, and fetches its lifetime view/download counts:
   DataCommons  -> HTML scrape (#pageviews / #downloads spans)
   CulturalAnalytics / MITPress / PubPub -> emitted as ``manual`` (metrics sit
       behind Cloudflare / JavaScript) for hand entry into the snapshot.
-  Website outputs -> one ``manual`` "Engaged Sessions" row per site, hand-filled
-      from GA4 (engagedSessions is far more bot-resistant than activeUsers,
-      which the 2026 AI-crawler wave inflated 28-75x). Earlier snapshots hold
-      hand-seeded "Active Users" rows; both count as web metrics downstream.
+  Website outputs -> GA4 Data API "Engaged Sessions" (year to date) when
+      ``.ga4-config.json`` provides credentials (see below); otherwise one
+      ``manual`` row per site for hand entry. engagedSessions is far more
+      bot-resistant than activeUsers, which the 2026 AI-crawler wave inflated
+      28-75x. Earlier snapshots hold hand-seeded "Active Users" rows; both
+      count as web metrics downstream.
+
+GA4 setup (one-time): create a Google Cloud service account, enable the
+"Google Analytics Data API", download its JSON key OUTSIDE the repo, and grant
+the service account's email Viewer access on each site's GA4 property
+(GA4 Admin -> Property access management). Then write ``.ga4-config.json``
+(gitignored) at the repo root:
+
+    {
+      "key_file": "~/keys/cdh-ga4-sa.json",
+      "properties": {"o045": "123456789", "o034": "...", "o046": "...", "o041": "..."}
+    }
+
+where properties maps output_id -> numeric GA4 property id, and install the
+auth dependency: pip install google-auth.
 
 Writes a dated snapshot ``snapshots/metrics-<today>.csv`` (one Views row and one
 Downloads row per output with a link). Re-runnable: run again on a later date to
@@ -23,6 +39,7 @@ Run:  python3 scripts/fetch_metrics.py
 
 import csv
 import datetime
+import json
 import os
 import re
 import sys
@@ -35,6 +52,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUTPUTS = os.path.join(ROOT, "data", "outputs.csv")
 SNAP = os.path.join(ROOT, "snapshots")
+GA4_CONFIG = os.path.join(ROOT, ".ga4-config.json")
 
 SNAPSHOT_COLS = ["output_id", "link", "output_name", "project", "type",
                  "metric_type", "count", "retrieved_date", "status"]
@@ -153,6 +171,48 @@ def fetch_datacommons(link: str) -> dict:
 FETCHERS = {"Zenodo": fetch_zenodo, "DataCommons": fetch_datacommons}
 
 
+def load_ga4():
+    """(properties dict, bearer token) from .ga4-config.json, or (None, None).
+
+    Missing config, missing google-auth, or an auth failure all degrade to
+    manual hand-entry rows — a broken GA4 setup must not break the harvest.
+    """
+    if not os.path.exists(GA4_CONFIG):
+        return None, None
+    try:
+        with open(GA4_CONFIG, encoding="utf-8") as f:
+            cfg = json.load(f)
+        key_file = os.path.expanduser(cfg["key_file"])
+        from google.oauth2 import service_account  # optional dep: google-auth
+        from google.auth.transport.requests import Request as GARequest
+
+        creds = service_account.Credentials.from_service_account_file(
+            key_file, scopes=["https://www.googleapis.com/auth/analytics.readonly"]
+        )
+        creds.refresh(GARequest())
+        return cfg.get("properties", {}), creds.token
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ! GA4 config unusable ({exc}); website rows fall back to manual",
+              file=sys.stderr)
+        return None, None
+
+
+def fetch_ga4_engaged_sessions(property_id: str, token: str) -> int:
+    """Year-to-date engaged sessions for one GA4 property."""
+    resp = requests.post(
+        f"https://analyticsdata.googleapis.com/v1beta/properties/{property_id}:runReport",
+        headers={"Authorization": f"Bearer {token}"},
+        json={
+            "dateRanges": [{"startDate": f"{TODAY[:4]}-01-01", "endDate": "today"}],
+            "metrics": [{"name": "engagedSessions"}],
+        },
+        timeout=TIMEOUT,
+    )
+    resp.raise_for_status()
+    rows = resp.json().get("rows", [])
+    return int(rows[0]["metricValues"][0]["value"]) if rows else 0
+
+
 def main() -> None:
     if not os.path.exists(OUTPUTS):
         sys.exit("Missing data/outputs.csv — run migrate_from_airtable.py first.")
@@ -181,14 +241,29 @@ def main() -> None:
             "status": status,
         })
 
+    ga4_props, ga4_token = load_ga4()
+
     for o in outputs:
         link = (o.get("link") or "").strip()
 
-        # Project websites have no DOI provider; their metric is hand-filled
-        # from GA4 each harvest. Record engaged sessions, not active users.
+        # Project websites have no DOI provider; engaged sessions come from the
+        # GA4 API when configured, otherwise hand entry. Not active users.
         if "Website" in (o.get("type") or ""):
-            emit(o, "Engaged Sessions", None, "manual")
-            bump("manual")
+            oid = (o.get("output_id") or "").strip()
+            prop = (ga4_props or {}).get(oid)
+            if prop and ga4_token:
+                try:
+                    count = fetch_ga4_engaged_sessions(prop, ga4_token)
+                    emit(o, "Engaged Sessions", count, "ok")
+                    bump("ok")
+                    time.sleep(SLEEP_BETWEEN)
+                except Exception as exc:  # noqa: BLE001
+                    emit(o, "Engaged Sessions", None, f"error:{type(exc).__name__}")
+                    bump("error")
+                    print(f"  ! GA4 {oid} property {prop}: {exc}", file=sys.stderr)
+            else:
+                emit(o, "Engaged Sessions", None, "manual")
+                bump("manual")
             continue
 
         provider = classify(link)

@@ -30,3 +30,6 @@ data/incoming/
 
 # Generated fiscal-year export CSVs (scripts/export_added_items.py).
 exports/
+
+# GA4 service-account config (holds a key path — never commit)
+.ga4-config.json
