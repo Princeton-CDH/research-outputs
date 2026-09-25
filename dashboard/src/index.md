@@ -143,8 +143,16 @@ const typeColor = {
   legend: true,
 };
 const byProject = d3
-  .rollups(latest, (v) => d3.sum(v, (d) => d.lifetime_count), (d) => d.project)
-  .map(([project, total]) => ({ project, total }));
+  .rollups(
+    latest,
+    (v) => d3.sum(v, (d) => d.lifetime_count),
+    (d) => d.project,
+    (d) => d.type
+  )
+  .flatMap(([project, types]) => types.map(([type, total]) => ({ project, type, total })));
+// Projects ordered by their grand total, for the stacked chart's y-axis.
+const byProjectOrder = d3
+  .groupSort(byProject, (v) => -d3.sum(v, (d) => d.total), (d) => d.project);
 ```
 
 <div class="card">${
@@ -230,14 +238,17 @@ const byProject = d3
       title: `Lifetime ${metricType} by project (as of ${maxYear})`,
       marginLeft: 320,
       x: { label: `Lifetime ${metricType}`, grid: true },
-      y: { label: null, tickFormat: (s) => truncate(s, 52) },
+      y: { label: null, domain: byProjectOrder, tickFormat: (s) => truncate(s, 52) },
+      color: typeColor,
       marks: [
         Plot.barX(byProject, {
           x: "total",
           y: "project",
-          sort: { y: "x", reverse: true },
-          fill: "var(--theme-foreground-focus)",
+          fill: "type",
+          stroke: "var(--theme-background)",
+          strokeWidth: 0.75,
           tip: true,
+          title: (d) => `${d.project}\n${d.type}: ${fmt(d.total)} ${metricType}`,
         }),
         Plot.ruleX([0]),
       ],
