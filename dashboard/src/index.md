@@ -10,6 +10,7 @@ How the CDH portfolio's published outputs are being viewed, downloaded, cited, a
 ```js
 const metrics = await FileAttachment("data/metrics.json").json();
 const outputs = await FileAttachment("data/outputs.json").json();
+const projects = await FileAttachment("data/projects.json").json();
 ```
 
 ```js
@@ -21,6 +22,17 @@ const signed = d3.format("+,");
 // Shorten long output names for labels; the full name stays in the tooltip.
 // Kept long enough to read the opening words of each title.
 const truncate = (s, n = 50) => (s && s.length > n ? s.slice(0, n - 1) + "…" : s);
+
+// Project axis labels carry the project's date span (years) where known,
+// e.g. "Remarx · 2024–2026"; projects without dates show the bare name.
+const projectDates = new Map(projects.map((p) => [p.project, [p.start_date, p.end_date]]));
+const projectLabel = (name, n = 44) => {
+  const [s, e] = projectDates.get(name) ?? [];
+  const ys = s ? s.slice(0, 4) : "";
+  const ye = e ? e.slice(0, 4) : "";
+  const span = ys || ye ? (ys === ye ? ` · ${ys}` : ` · ${ys}–${ye}`) : "";
+  return truncate(name, n) + span;
+};
 
 const realizedCount = outputs.filter((o) => o.realized).length;
 const linkedCount = outputs.filter((o) => o.has_link).length;
@@ -169,7 +181,7 @@ const byProjectOrder = d3
         label: null,
         domain: [projectOrder.length - 0.5, -0.5], // row 0 (earliest) on top
         ticks: projectOrder.map((_, i) => i),
-        tickFormat: (i) => truncate(projectOrder[i], 52),
+        tickFormat: (i) => projectLabel(projectOrder[i]),
         grid: true,
       },
       r: { range: [3, 16], label: `Lifetime ${metricType}` },
@@ -238,7 +250,7 @@ const byProjectOrder = d3
       title: `Lifetime ${metricType} by project (as of ${maxYear})`,
       marginLeft: 320,
       x: { label: `Lifetime ${metricType}`, grid: true },
-      y: { label: null, domain: byProjectOrder, tickFormat: (s) => truncate(s, 52) },
+      y: { label: null, domain: byProjectOrder, tickFormat: (s) => projectLabel(s) },
       color: typeColor,
       marks: [
         Plot.barX(byProject, {
