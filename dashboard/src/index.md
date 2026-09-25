@@ -54,6 +54,71 @@ const citationsLatest = sumAt("Citation Count", maxYear);
 const downloadsGain = sumAt("Downloads", maxYear, "yearly_delta");
 ```
 
+Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so every chart reflects the **one metric** you select. Website analytics are kept separate — see [Website traffic](#website-traffic) below.
+
+```js
+const pubMetricTypes = Array.from(
+  new Set(metrics.filter((d) => d.metric_family === "publication").map((d) => d.metric_type))
+);
+const metricOrder = ["Downloads", "Views", "Citation Count"];
+pubMetricTypes.sort((a, b) => metricOrder.indexOf(a) - metricOrder.indexOf(b));
+
+const projectNames = Array.from(
+  new Set(metrics.filter((d) => d.metric_family === "publication").map((d) => d.project))
+).sort();
+
+const metricType = view(
+  Inputs.select(pubMetricTypes, { label: "Metric", value: "Downloads" })
+);
+const project = view(
+  Inputs.select(["All projects", ...projectNames], {
+    label: "Project",
+    value: "All projects",
+  })
+);
+```
+
+<div class="card">${
+  resize((width) =>
+    Plot.plot({
+      width,
+      title: "Outputs by publication year",
+      subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by output type. Click a dot to open its DOI.`,
+      marginLeft: 320,
+      marginRight: 24,
+      height: Math.max(240, 34 * projectOrder.length + 90),
+      x: { label: "Publication year", tickFormat: "d", grid: true, nice: true },
+      y: {
+        label: null,
+        domain: [projectOrder.length - 0.5, -0.5], // row 0 (most recent) on top
+        ticks: projectOrder.map((_, i) => i),
+        tickFormat: (i) => projectLabel(projectOrder[i]),
+        grid: true,
+      },
+      r: { range: [3, 16], label: `Lifetime ${metricType}` },
+      color: typeColor,
+      marks: [
+        Plot.dot(byPubYear, {
+          x: "pub_year",
+          y: "yj",
+          r: "lifetime_count",
+          fill: "type",
+          fillOpacity: 0.7,
+          stroke: "var(--theme-background)",
+          strokeWidth: 0.75,
+          href: (d) => d.link,
+          target: "_blank",
+          tip: true,
+          title: (d) =>
+            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year} · ${fmt(
+              d.lifetime_count
+            )} ${metricType}${d.link ? "\n↗ open DOI" : ""}`,
+        }),
+      ],
+    })
+  )
+}</div>
+
 <div class="grid grid-cols-4">
   <div class="card">
     <h2>Projects with outputs</h2>
@@ -81,32 +146,6 @@ const downloadsGain = sumAt("Downloads", maxYear, "yearly_delta");
   </div>
 </div>
 
-## Published outputs (DOIs)
-
-Downloads, views, and citations for outputs with a DOI (Zenodo, journals, datasets). Website analytics are kept separate — see [Website traffic](#website-traffic) below. Pick a metric and (optionally) narrow to one project; the metric types aren't comparable, so everything here reflects the **one metric** you select.
-
-```js
-const pubMetricTypes = Array.from(
-  new Set(metrics.filter((d) => d.metric_family === "publication").map((d) => d.metric_type))
-);
-const metricOrder = ["Downloads", "Views", "Citation Count"];
-pubMetricTypes.sort((a, b) => metricOrder.indexOf(a) - metricOrder.indexOf(b));
-
-const projectNames = Array.from(
-  new Set(metrics.filter((d) => d.metric_family === "publication").map((d) => d.project))
-).sort();
-
-const metricType = view(
-  Inputs.select(pubMetricTypes, { label: "Metric", value: "Downloads" })
-);
-const project = view(
-  Inputs.select(["All projects", ...projectNames], {
-    label: "Project",
-    value: "All projects",
-  })
-);
-```
-
 ```js
 // Rows for the selected metric (and project, if narrowed).
 const selected = metrics.filter(
@@ -128,9 +167,10 @@ const axisProjects = outputs
       (project === "All projects" || o.project === project)
   )
   .map((o) => ({ project: o.project, pub_year: +o.completed_date.slice(0, 4) }));
+// Projects sorted current-to-past: most recent output year first (row 0 = top).
 const projectOrder = d3.groupSort(
   axisProjects,
-  (v) => d3.min(v, (d) => d.pub_year),
+  (v) => -d3.max(v, (d) => d.pub_year),
   (d) => d.project
 );
 const projIndex = new Map(projectOrder.map((p, i) => [p, i]));
@@ -167,46 +207,9 @@ const byProjectOrder = d3
   .groupSort(byProject, (v) => -d3.sum(v, (d) => d.total), (d) => d.project);
 ```
 
-<div class="card">${
-  resize((width) =>
-    Plot.plot({
-      width,
-      title: "Outputs by publication year",
-      subtitle: `Each dot is one output, placed at its publication year, sized by lifetime ${metricType} (as of ${maxYear}) and colored by output type. Click a dot to open its DOI.`,
-      marginLeft: 320,
-      marginRight: 24,
-      height: Math.max(240, 34 * projectOrder.length + 90),
-      x: { label: "Publication year", tickFormat: "d", grid: true, nice: true },
-      y: {
-        label: null,
-        domain: [projectOrder.length - 0.5, -0.5], // row 0 (earliest) on top
-        ticks: projectOrder.map((_, i) => i),
-        tickFormat: (i) => projectLabel(projectOrder[i]),
-        grid: true,
-      },
-      r: { range: [3, 16], label: `Lifetime ${metricType}` },
-      color: typeColor,
-      marks: [
-        Plot.dot(byPubYear, {
-          x: "pub_year",
-          y: "yj",
-          r: "lifetime_count",
-          fill: "type",
-          fillOpacity: 0.7,
-          stroke: "var(--theme-background)",
-          strokeWidth: 0.75,
-          href: (d) => d.link,
-          target: "_blank",
-          tip: true,
-          title: (d) =>
-            `${d.output_name}\n${d.type}\nLead: ${d.lead ?? "—"} (${d.lead_role})\nPublished ${d.pub_year} · ${fmt(
-              d.lifetime_count
-            )} ${metricType}${d.link ? "\n↗ open DOI" : ""}`,
-        }),
-      ],
-    })
-  )
-}</div>
+## Published outputs (DOIs)
+
+Downloads, views, and citations for outputs with a DOI (Zenodo, journals, datasets), reflecting the metric and project selected above.
 
 <div class="card">${
   resize((width) =>
