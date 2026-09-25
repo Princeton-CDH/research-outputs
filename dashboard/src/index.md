@@ -90,7 +90,7 @@ const project = view(
       x: { label: "Publication year", tickFormat: "d", grid: true, nice: true },
       y: {
         label: null,
-        domain: [projectOrder.length - 0.5, -0.5], // row 0 (most recent) on top
+        domain: [projectOrder.length - 0.5, -0.5], // row 0 (earliest first output) on top
         ticks: projectOrder.map((_, i) => i),
         tickFormat: (i) => projectLabel(projectOrder[i]),
         grid: true,
@@ -166,11 +166,12 @@ const axisProjects = outputs
       o.completed_date &&
       (project === "All projects" || o.project === project)
   )
-  .map((o) => ({ project: o.project, pub_year: +o.completed_date.slice(0, 4) }));
-// Projects sorted current-to-past: most recent output year first (row 0 = top).
+  .map((o) => ({ project: o.project, pub_year: +o.completed_date.slice(0, 4), date: o.completed_date }));
+// Projects sorted by the date of their first output, earliest at the top
+// (full ISO dates, so same-year projects order by day too).
 const projectOrder = d3.groupSort(
   axisProjects,
-  (v) => -d3.max(v, (d) => d.pub_year),
+  (v) => d3.min(v, (d) => d.date),
   (d) => d.project
 );
 const projIndex = new Map(projectOrder.map((p, i) => [p, i]));
