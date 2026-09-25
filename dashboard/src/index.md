@@ -114,12 +114,14 @@ const zoomFrom = view(
   Inputs.select(d3.range(pubYearExtent[0], pubYearExtent[1] + 1), {
     label: "From year",
     value: pubYearExtent[0],
+    format: (y) => String(y), // years, not "2,026"
   })
 );
 const zoomTo = view(
   Inputs.select(d3.range(pubYearExtent[0], pubYearExtent[1] + 1), {
     label: "To year",
     value: pubYearExtent[1],
+    format: (y) => String(y),
   })
 );
 ```
