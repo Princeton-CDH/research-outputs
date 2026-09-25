@@ -110,11 +110,11 @@ const project = view(
     Plot.plot({
       width,
       title: "Outputs by publication year",
-      subtitle: `Each dot is one published output, placed at its publication year and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted double, as of ${maxYear}). Click a dot to open it.`,
+      subtitle: `Each dot is one published output, placed at its publication date and colored by type. Size is an impact score: a baseline for every work, plus its downloads and citations (log-scaled, citations weighted 3×, as of ${maxYear}). Click a dot to open it.`,
       marginLeft: 320,
       marginRight: 24,
       height: Math.max(240, 34 * projectOrder.length + 90),
-      x: { label: "Publication year", tickFormat: "d", grid: true, nice: true },
+      x: { label: "Publication date", grid: true, nice: true },
       y: {
         label: null,
         domain: [projectOrder.length - 0.5, -0.5], // row 0 (earliest first output) on top
@@ -122,11 +122,11 @@ const project = view(
         tickFormat: (i) => projectLabel(projectOrder[i]),
         grid: true,
       },
-      r: { range: [3, 16], label: "Impact score" },
+      r: { range: [2.5, 18], label: "Impact score" },
       color: typeColor,
       marks: [
         Plot.dot(byPubYear, {
-          x: "pub_year",
+          x: "pub_date",
           y: "yj",
           r: "score",
           fill: "type",
@@ -178,7 +178,7 @@ const projIndex = new Map(projectOrder.map((p, i) => [p, i]));
 
 // Impact score: every realized, dated, LINKED output gets a baseline of 1;
 // lifetime downloads and citations (as of the latest harvest) add on a log
-// scale, with citations weighted double. Unlinked outputs are hidden.
+// scale, with citations weighted triple. Unlinked outputs are hidden.
 const lifetimeOf = (type) =>
   new Map(
     metrics
@@ -203,15 +203,16 @@ const byPubYear = outputs
     return {
       ...o,
       type: o.type[0] ?? "Uncategorized",
+      pub_date: new Date(o.completed_date),
       pub_year: +o.completed_date.slice(0, 4),
       downloads,
       citations,
-      score: 1 + Math.log10(1 + downloads) + 2 * Math.log10(1 + citations),
+      score: 1 + Math.log10(1 + downloads) + 3 * Math.log10(1 + citations),
     };
   });
-// Fan out dots that share a (project, year) cell so none hides inside another.
-// Each dot gets a numeric y (row index ± a deterministic offset).
-for (const [, pts] of d3.groups(byPubYear, (d) => `${d.project}|${d.pub_year}`)) {
+// Dots sit at their exact publication date, so same-year outputs spread out
+// across the year; fan out only those sharing a (project, exact date) cell.
+for (const [, pts] of d3.groups(byPubYear, (d) => `${d.project}|${d.completed_date}`)) {
   const sorted = d3.sort(pts, (d) => -d.score); // largest first
   const n = sorted.length;
   sorted.forEach((d, i) => {
