@@ -103,6 +103,25 @@ const project = view(
     value: "All projects",
   })
 );
+
+// Zoom: restrict the publication-year chart to a year window. Projects with
+// no outputs in the window drop off the axis, so zooming also declutters.
+const pubYearExtent = d3.extent(
+  outputs.filter((o) => o.realized && o.completed_date),
+  (o) => +o.completed_date.slice(0, 4)
+);
+const zoomFrom = view(
+  Inputs.select(d3.range(pubYearExtent[0], pubYearExtent[1] + 1), {
+    label: "From year",
+    value: pubYearExtent[0],
+  })
+);
+const zoomTo = view(
+  Inputs.select(d3.range(pubYearExtent[0], pubYearExtent[1] + 1), {
+    label: "To year",
+    value: pubYearExtent[1],
+  })
+);
 ```
 
 <div class="card">${
@@ -159,13 +178,19 @@ const selected = metrics.filter(
 const latest = selected.filter((d) => d.year === maxYear && d.lifetime_count != null);
 
 // Y-axis rows come from EVERY realized, dated output (respecting the project
-// filter) — so the axis shows the current project list even for projects whose
-// outputs have no data yet for the selected metric.
+// filter and the zoom window) — so the axis shows the current project list
+// even for projects whose outputs have no data yet for the selected metric.
+const [zoomLo, zoomHi] = d3.extent([zoomFrom, zoomTo]); // tolerate swapped ends
+const inZoom = (iso) => {
+  const y = +iso.slice(0, 4);
+  return y >= zoomLo && y <= zoomHi;
+};
 const axisProjects = outputs
   .filter(
     (o) =>
       o.realized &&
       o.completed_date &&
+      inZoom(o.completed_date) &&
       (project === "All projects" || o.project === project)
   )
   .map((o) => ({ project: o.project, pub_year: +o.completed_date.slice(0, 4), date: o.completed_date }));
@@ -213,6 +238,7 @@ const byPubYear = outputs
       o.realized &&
       o.completed_date &&
       o.has_link &&
+      inZoom(o.completed_date) &&
       projIndex.has(o.project) &&
       (project === "All projects" || o.project === project)
   )
