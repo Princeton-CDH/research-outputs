@@ -8,5 +8,9 @@ export default {
     { name: "Impact", path: "/index" },
     { name: "Portfolio", path: "/portfolio" },
   ],
+  // Exported embed module: external sites (e.g. the CDH Wagtail site) can
+  // `import {Chart} from ".../research-outputs/pub-year-chart.js"` to render
+  // the publication-year chart. GitHub Pages sends Access-Control-Allow-Origin: *.
+  dynamicPaths: ["/pub-year-chart.js"],
   cleanUrls: true,
 };
