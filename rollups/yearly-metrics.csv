@@ -12,28 +12,41 @@ o063,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Proj
 o063,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset""","""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Views,2025,1359,
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Downloads,2025,830,
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"""Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project""",Views,2025,1262,
-o101,Computational Approaches to Nigerian Literature: Analyzing Texts in Yoruba and Efik,African Language Technologies Lab,Downloads,2026,334,
+o216,AfriSUD: A Dependency Treebank Collection for Evaluating Models on African Languages,African Language Technologies Lab,Downloads,2026,,
+o216,AfriSUD: A Dependency Treebank Collection for Evaluating Models on African Languages,African Language Technologies Lab,Views,2026,,
+o101,Computational Approaches to Nigerian Literature: Analyzing Texts in Yoruba and Efik,African Language Technologies Lab,Downloads,2026,342,
 o101,Computational Approaches to Nigerian Literature: Analyzing Texts in Yoruba and Efik,African Language Technologies Lab,Views,2026,150,
+o217,Dependency Parsing Across the Resource Spectrum: Evaluating Architectures on High and Low-Resource Languages,African Language Technologies Lab,Downloads,2026,,
+o217,Dependency Parsing Across the Resource Spectrum: Evaluating Architectures on High and Low-Resource Languages,African Language Technologies Lab,Views,2026,,
+o215,Evaluating the Effect of Linguistic Relatedness on Cross-Lingual Transfer in Large Multilingual Automatic Speech Recognition,African Language Technologies Lab,Downloads,2026,,
+o215,Evaluating the Effect of Linguistic Relatedness on Cross-Lingual Transfer in Large Multilingual Automatic Speech Recognition,African Language Technologies Lab,Views,2026,,
+o214,INJONGO: A Multicultural Intent Detection and Slot-filling Dataset for 16 African Languages,African Language Technologies Lab,Downloads,2026,,
+o214,INJONGO: A Multicultural Intent Detection and Slot-filling Dataset for 16 African Languages,African Language Technologies Lab,Views,2026,,
+o213,IrokoBench: A New Benchmark for African Languages in the Age of Large Language Models,African Language Technologies Lab,Citation Count,2026,3,
+o213,IrokoBench: A New Benchmark for African Languages in the Age of Large Language Models,African Language Technologies Lab,Downloads,2026,,
+o213,IrokoBench: A New Benchmark for African Languages in the Age of Large Language Models,African Language Technologies Lab,Views,2026,,
+o218,Lugha-Llama: Adapting Large Language Models for African Languages,African Language Technologies Lab,Downloads,2026,,
+o218,Lugha-Llama: Adapting Large Language Models for African Languages,African Language Technologies Lab,Views,2026,,
 o209,Code review in digital humanities,DH Tech,Citation Count,2026,3,
 o209,Code review in digital humanities,DH Tech,Downloads,2026,,
 o209,Code review in digital humanities,DH Tech,Views,2026,,
-o086,Community Code Review in the Digital Humanities,DH Tech,Downloads,2026,164,
-o086,Community Code Review in the Digital Humanities,DH Tech,Views,2026,254,
+o086,Community Code Review in the Digital Humanities,DH Tech,Downloads,2026,165,
+o086,Community Code Review in the Digital Humanities,DH Tech,Views,2026,255,
 o106,Proceedings of Digital Humanities Tech Symposium 2025: Introduction,DH Tech,Downloads,2026,,
 o106,Proceedings of Digital Humanities Tech Symposium 2025: Introduction,DH Tech,Views,2026,,
-o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Downloads,2026,280,
-o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Views,2026,468,
+o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Downloads,2026,281,
+o096,Surveying the Digital Humanities Research Software Engineering Landscape,DH Tech,Views,2026,470,
 o061,Data Beyond Vision,Data Beyond Vision,Citation Count,2026,2,1
 o061,Data Beyond Vision,Data Beyond Vision,Downloads,2026,1037,340
-o072,Data Beyond Vision,Data Beyond Vision,Downloads,2026,293,
-o061,Data Beyond Vision,Data Beyond Vision,Views,2026,590,87
+o072,Data Beyond Vision,Data Beyond Vision,Downloads,2026,294,
+o061,Data Beyond Vision,Data Beyond Vision,Views,2026,593,90
 o072,Data Beyond Vision,Data Beyond Vision,Views,2026,508,
 o139,Print a Model of the Shakespeare and Company Lending Library Membership,Data Beyond Vision,Downloads,2026,,
 o139,Print a Model of the Shakespeare and Company Lending Library Membership,Data Beyond Vision,Views,2026,,
 o069,What If You Could Touch Data?,Data Beyond Vision,Downloads,2026,,
 o069,What If You Could Touch Data?,Data Beyond Vision,Views,2026,,
-o039,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Downloads,2026,431,95
-o039,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Views,2026,722,162
+o039,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Downloads,2026,435,99
+o039,CDH Project Charter – Derrida's Margins 2016-17,Derrida's Margins,Views,2026,725,165
 o168,Derrida's Margins datasets,Derrida's Margins,Downloads,2026,10,
 o168,Derrida's Margins datasets,Derrida's Margins,Views,2026,101,
 o023,Derrida's Margins datasets: v1.1,Derrida's Margins,Downloads,2026,0,
@@ -43,44 +56,44 @@ o022,Derrida's Margins web archive,Derrida's Margins,Views,2026,98,31
 o041,Derrida's Margins website,Derrida's Margins,Downloads,2026,,
 o041,Derrida's Margins website,Derrida's Margins,Engaged Sessions,2026,,
 o041,Derrida's Margins website,Derrida's Margins,Views,2026,,
-o201,derrida-django,Derrida's Margins,Downloads,2026,73,
-o201,derrida-django,Derrida's Margins,Views,2026,449,
-o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Downloads,2026,181,62
-o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Views,2026,340,95
+o201,derrida-django,Derrida's Margins,Downloads,2026,74,
+o201,derrida-django,Derrida's Margins,Views,2026,450,
+o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Downloads,2026,183,64
+o042,"""Built by CDH"" Long Term Software Agreement",Digital Humanities Processes and Practices,Views,2026,343,98
 o170,"""Built by CDH"" Software Warranty",Digital Humanities Processes and Practices,Downloads,2026,149,
 o170,"""Built by CDH"" Software Warranty",Digital Humanities Processes and Practices,Views,2026,266,
-o206,A proposal for a Digital Humanities Initiative at Princeton University,Digital Humanities Processes and Practices,Downloads,2026,0,
-o206,A proposal for a Digital Humanities Initiative at Princeton University,Digital Humanities Processes and Practices,Views,2026,5,
-o103,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Downloads,2026,663,
-o103,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Views,2026,971,
+o206,A proposal for a Digital Humanities Initiative at Princeton University,Digital Humanities Processes and Practices,Downloads,2026,2,
+o206,A proposal for a Digital Humanities Initiative at Princeton University,Digital Humanities Processes and Practices,Views,2026,6,
+o103,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Downloads,2026,665,
+o103,Annual Report 2018-2019: Cultivating Princeton's Data Landscape,Digital Humanities Processes and Practices,Views,2026,974,
 o142,Best Practices?,Digital Humanities Processes and Practices,Downloads,2026,,
 o142,Best Practices?,Digital Humanities Processes and Practices,Views,2026,,
 o200,Bridging Digital Humanities Internal and Open Source Software Projects through Reusable Building Blocks,Digital Humanities Processes and Practices,Downloads,2026,,
 o200,Bridging Digital Humanities Internal and Open Source Software Projects through Reusable Building Blocks,Digital Humanities Processes and Practices,Views,2026,,
 o090,CDH Project Management Tools and Templates,Digital Humanities Processes and Practices,Downloads,2026,6,
-o090,CDH Project Management Tools and Templates,Digital Humanities Processes and Practices,Views,2026,24,
+o090,CDH Project Management Tools and Templates,Digital Humanities Processes and Practices,Views,2026,25,
 o163,Design for Interdisciplinary Collaboration,Digital Humanities Processes and Practices,Downloads,2026,,
 o163,Design for Interdisciplinary Collaboration,Digital Humanities Processes and Practices,Views,2026,,
-o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Downloads,2026,591,
-o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Views,2026,159,
+o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Downloads,2026,593,
+o088,"Everything, All at Once, Yesterday: Creating Research Software with Humanities Faculty",Digital Humanities Processes and Practices,Views,2026,160,
 o055,Modeling Project Management through Charters,Digital Humanities Processes and Practices,Downloads,2026,669,591
 o055,Modeling Project Management through Charters,Digital Humanities Processes and Practices,Views,2026,132,92
 o143,On a Path to Transparent Collaborations: Weave User Experience Magazine,Digital Humanities Processes and Practices,Downloads,2026,,
 o143,On a Path to Transparent Collaborations: Weave User Experience Magazine,Digital Humanities Processes and Practices,Views,2026,,
 o047,Project Management 101,Digital Humanities Processes and Practices,Downloads,2026,649,591
 o047,Project Management 101,Digital Humanities Processes and Practices,Views,2026,231,178
-o205,Proposal for a Digital Humanities Center at Princeton University,Digital Humanities Processes and Practices,Downloads,2026,0,
-o205,Proposal for a Digital Humanities Center at Princeton University,Digital Humanities Processes and Practices,Views,2026,3,
-o203,Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Downloads,2026,0,
-o203,Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Views,2026,3,
-o202,Short Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Downloads,2026,0,
-o202,Short Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Views,2026,3,
-o204,The Center for Digital Humanities: The First Three Years 2014-2017,Digital Humanities Processes and Practices,Downloads,2026,0,
-o204,The Center for Digital Humanities: The First Three Years 2014-2017,Digital Humanities Processes and Practices,Views,2026,4,
+o205,Proposal for a Digital Humanities Center at Princeton University,Digital Humanities Processes and Practices,Downloads,2026,2,
+o205,Proposal for a Digital Humanities Center at Princeton University,Digital Humanities Processes and Practices,Views,2026,5,
+o203,Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Downloads,2026,1,
+o203,Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Views,2026,4,
+o202,Short Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Downloads,2026,1,
+o202,Short Proposal: Data and Culture Initiative,Digital Humanities Processes and Practices,Views,2026,5,
+o204,The Center for Digital Humanities: The First Three Years 2014-2017,Digital Humanities Processes and Practices,Downloads,2026,13,
+o204,The Center for Digital Humanities: The First Three Years 2014-2017,Digital Humanities Processes and Practices,Views,2026,5,
 o126,“Graduate Students and Project Management” in “Digital Futures of Graduate Study in the Humanities”,Digital Humanities Processes and Practices,Downloads,2026,,
 o126,“Graduate Students and Project Management” in “Digital Futures of Graduate Study in the Humanities”,Digital Humanities Processes and Practices,Views,2026,,
-o097,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Downloads,2026,2886,
-o097,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Views,2026,212,
+o097,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Downloads,2026,2890,
+o097,Attribution Bias in Literary Style Evaluation: Comparing Human and AI Perceptions of Authorship,Exercises in Literary Style,Views,2026,216,
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Downloads,2025,119,
 o042,"""""""Built by CDH"""" Long Term Software Agreement""",Internal Projects / PM and Process,Views,2025,245,
 o061,Data Beyond Vision,Internal Projects / PM and Process,Citation Count,2024,1,
@@ -97,12 +110,12 @@ o018,djiffy,Internal Projects / PM and Process,Downloads,2025,16,
 o018,djiffy,Internal Projects / PM and Process,Views,2025,78,
 o054,piffle,Internal Projects / PM and Process,Downloads,2025,11,
 o054,piffle,Internal Projects / PM and Process,Views,2025,38,
-o058,lenape-timetree,Lunaapahkiing Princeton Timetree,Downloads,2026,18,
+o058,lenape-timetree,Lunaapahkiing Princeton Timetree,Downloads,2026,19,
 o058,lenape-timetree,Lunaapahkiing Princeton Timetree,Views,2026,127,
 o001,Citing Marx Project Charter,Marxism’s Marx,Downloads,2025,64,
 o001,Citing Marx Project Charter,Marxism’s Marx,Views,2025,72,
-o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Downloads,2026,102,
-o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Views,2026,161,
+o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Downloads,2026,105,
+o092,CDH Project Charter - Multilingual Semantic Embeddings (MuSE) 2024-2026,MuSE (Multilingual Semantic Embeddings),Views,2026,167,
 o136,Bridging the Gap Between Digital Humanities and Natural Language Processing: A Pedagogical Imperative for Humanistic NLP,New Languages for NLP,Downloads,2026,,
 o136,Bridging the Gap Between Digital Humanities and Natural Language Processing: A Pedagogical Imperative for Humanistic NLP,New Languages for NLP,Views,2026,,
 o198,A Committee of the Whole,Post-Doc Projects,Downloads,2026,,
@@ -121,108 +134,110 @@ o119,Steps towards mining manuscript images for untranscribed texts: A case stud
 o116,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Post-Doc Projects,Citation Count,2026,1,
 o116,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Post-Doc Projects,Downloads,2026,,
 o116,The Elementary Particles: A Computational Stylometric Inquiry into the Mediaeval Greek-Latin Aristotle,Post-Doc Projects,Views,2026,,
-o207,"The Multiplicity of Medieval Editions: Digital Approaches to the ""Middle Books"" of Astronomy",Post-Doc Projects,Downloads,2026,46,
-o207,"The Multiplicity of Medieval Editions: Digital Approaches to the ""Middle Books"" of Astronomy",Post-Doc Projects,Views,2026,61,
+o207,"The Multiplicity of Medieval Editions: Digital Approaches to the ""Middle Books"" of Astronomy",Post-Doc Projects,Downloads,2026,50,
+o207,"The Multiplicity of Medieval Editions: Digital Approaches to the ""Middle Books"" of Astronomy",Post-Doc Projects,Views,2026,64,
 o115,When Humans and Machines Translate Char: Computational Insights into Feuillets d'Hypnos Across Languages,Post-Doc Projects,Downloads,2026,,
 o115,When Humans and Machines Translate Char: Computational Insights into Feuillets d'Hypnos Across Languages,Post-Doc Projects,Views,2026,,
-o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Downloads,2026,1007,177
+o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Downloads,2026,1010,180
 o064,CDH Project Charter – Princeton Ethiopian Miracles of Mary 2019-20,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Views,2026,1608,346
-o063,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Downloads,2026,2144,1295
-o063,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Views,2026,1021,-338
+o063,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Downloads,2026,2147,1298
+o063,"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project Dataset","Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Views,2026,1027,-332
 o044,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Citation Count,2026,2,0
-o044,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Downloads,2026,711,152
-o044,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Views,2026,868,206
+o044,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Downloads,2026,715,156
+o044,CDH Project Charter – Princeton Geniza Project 2020-2021,Princeton Geniza Lab,Views,2026,873,211
 o043,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Citation Count,2026,1,
 o043,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Downloads,2026,227,114
-o043,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Views,2026,301,141
+o043,"CDH Project Charter – Princeton Geniza Project Year 2, 2021-2022",Princeton Geniza Lab,Views,2026,303,143
 o052,Geniza Datasets,Princeton Geniza Lab,Citation Count,2026,1,0
-o052,Geniza Datasets,Princeton Geniza Lab,Downloads,2026,2,
-o052,Geniza Datasets,Princeton Geniza Lab,Views,2026,27,
+o052,Geniza Datasets,Princeton Geniza Lab,Downloads,2026,3,
+o052,Geniza Datasets,Princeton Geniza Lab,Views,2026,32,
 o167,Princeton Geniza Project Dataset,Princeton Geniza Lab,Citation Count,2026,2,
-o167,Princeton Geniza Project Dataset,Princeton Geniza Lab,Downloads,2026,62,
-o167,Princeton Geniza Project Dataset,Princeton Geniza Lab,Views,2026,916,
+o167,Princeton Geniza Project Dataset,Princeton Geniza Lab,Downloads,2026,63,
+o167,Princeton Geniza Project Dataset,Princeton Geniza Lab,Views,2026,937,
 o109,Princeton Geniza Project datasets,Princeton Geniza Lab,Downloads,2026,,
 o109,Princeton Geniza Project datasets,Princeton Geniza Lab,Views,2026,,
 o046,Princeton Geniza Website,Princeton Geniza Lab,Downloads,2026,,
 o046,Princeton Geniza Website,Princeton Geniza Lab,Engaged Sessions,2026,,
 o046,Princeton Geniza Website,Princeton Geniza Lab,Views,2026,,
 o020,annotorious-tahqiq,Princeton Geniza Lab,Downloads,2026,16,-42
-o020,annotorious-tahqiq,Princeton Geniza Lab,Views,2026,103,-83
-o019,geniza,Princeton Geniza Lab,Downloads,2026,3,-38
-o019,geniza,Princeton Geniza Lab,Views,2026,23,-190
+o020,annotorious-tahqiq,Princeton Geniza Lab,Views,2026,105,-81
+o019,geniza,Princeton Geniza Lab,Downloads,2026,4,-37
+o019,geniza,Princeton Geniza Lab,Views,2026,29,-184
 o100,Evaluating Augmented Training Data for Complex Document Layouts: the Case of Arabic Scientific Manuscripts,Princeton Open HTR Initiative,Downloads,2026,45,
 o100,Evaluating Augmented Training Data for Complex Document Layouts: the Case of Arabic Scientific Manuscripts,Princeton Open HTR Initiative,Views,2026,81,
-o166,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,Downloads,2026,545,
-o166,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,Views,2026,489,
+o166,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,Downloads,2026,565,
+o166,"HTR Winter School 2024 - Syriac, ÖNB Cod. Syr. 1",Princeton Open HTR Initiative,Views,2026,498,
 o029,HTR2HPC Project Charter,Princeton Open HTR Initiative,Downloads,2026,59,
-o029,HTR2HPC Project Charter,Princeton Open HTR Initiative,Views,2026,88,
+o029,HTR2HPC Project Charter,Princeton Open HTR Initiative,Views,2026,93,
 o113,Integrating ATR Software with University HPC Infrastructure,Princeton Open HTR Initiative,Downloads,2026,,
 o113,Integrating ATR Software with University HPC Infrastructure,Princeton Open HTR Initiative,Views,2026,,
-o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Downloads,2026,248,
-o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Views,2026,204,
+o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Downloads,2026,249,
+o033,Integrating ATR Software with University HPC Infrastructure: balancing diverse compute needs,Princeton Open HTR Initiative,Views,2026,209,
 o171,htr2hpc,Princeton Open HTR Initiative,Downloads,2026,,
 o171,htr2hpc,Princeton Open HTR Initiative,Views,2026,,
 o196,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Citation Count,2026,64,
 o196,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Downloads,2026,,
 o196,"""Imperfectly Civilized"": Ballads, Nations, and Histories of Form",Princeton Prosody Archive,Views,2026,,
 o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,Princeton Prosody Archive,Downloads,2026,210,157
-o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,Princeton Prosody Archive,Views,2026,275,160
+o036,Beyond the Walled Gardens: Reinventing the Digital Research Landscape with the Princeton Prosody Archive,Princeton Prosody Archive,Views,2026,276,161
 o066,CDH Project Charter — Princeton Prosody Archive 2017-18,Princeton Prosody Archive,Downloads,2026,492,123
-o066,CDH Project Charter — Princeton Prosody Archive 2017-18,Princeton Prosody Archive,Views,2026,867,181
-o208,Chadwyck-Healey Poetry Database Metadata (Wikidata-enriched),Princeton Prosody Archive,Downloads,2026,13,
-o208,Chadwyck-Healey Poetry Database Metadata (Wikidata-enriched),Princeton Prosody Archive,Views,2026,32,
-o102,Charting the Evolution of Topics and Ideas in the Princeton Prosody Archive,Princeton Prosody Archive,Downloads,2026,131,
+o066,CDH Project Charter — Princeton Prosody Archive 2017-18,Princeton Prosody Archive,Views,2026,868,182
+o208,Chadwyck-Healey Poetry Database Metadata (Wikidata-enriched),Princeton Prosody Archive,Downloads,2026,14,
+o208,Chadwyck-Healey Poetry Database Metadata (Wikidata-enriched),Princeton Prosody Archive,Views,2026,35,
+o102,Charting the Evolution of Topics and Ideas in the Princeton Prosody Archive,Princeton Prosody Archive,Downloads,2026,132,
 o102,Charting the Evolution of Topics and Ideas in the Princeton Prosody Archive,Princeton Prosody Archive,Views,2026,120,
-o060,Coventry Patmore and the Problem of Excerpts,Princeton Prosody Archive,Downloads,2026,137,76
+o060,Coventry Patmore and the Problem of Excerpts,Princeton Prosody Archive,Downloads,2026,139,78
 o060,Coventry Patmore and the Problem of Excerpts,Princeton Prosody Archive,Views,2026,151,88
 o038,Elizabeth Barrett Browning's Pathways through the PPA,Princeton Prosody Archive,Downloads,2026,219,139
-o038,Elizabeth Barrett Browning's Pathways through the PPA,Princeton Prosody Archive,Views,2026,132,82
-o074,PPA Found Poems Dataset,Princeton Prosody Archive,Downloads,2026,142,
-o074,PPA Found Poems Dataset,Princeton Prosody Archive,Views,2026,160,
+o038,Elizabeth Barrett Browning's Pathways through the PPA,Princeton Prosody Archive,Views,2026,133,83
+o074,PPA Found Poems Dataset,Princeton Prosody Archive,Downloads,2026,145,
+o074,PPA Found Poems Dataset,Princeton Prosody Archive,Views,2026,167,
 o075,Poetry's Data,Princeton Prosody Archive,Citation Count,2026,1,0
 o117,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Citation Count,2026,8,
 o117,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Downloads,2026,,
 o117,Post-OCR Correction with OpenAI's GPT Models on Challenging English Prosody Texts,Princeton Prosody Archive,Views,2026,,
-o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Downloads,2026,409,202
-o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Views,2026,836,224
-o091,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Downloads,2026,142,
-o091,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Views,2026,160,
+o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Downloads,2026,418,211
+o032,Princeton Prosody Archive Dataset Generated from T. V. F. Brogan's Original Bibliography,Princeton Prosody Archive,Views,2026,839,227
+o091,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Downloads,2026,145,
+o091,Princeton Prosody Archive Found Poems Dataset,Princeton Prosody Archive,Views,2026,167,
 o034,Princeton Prosody Archive Website,Princeton Prosody Archive,Downloads,2026,,
 o034,Princeton Prosody Archive Website,Princeton Prosody Archive,Engaged Sessions,2026,,
 o034,Princeton Prosody Archive Website,Princeton Prosody Archive,Views,2026,,
-o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Downloads,2026,636,
-o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Views,2026,276,
+o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Downloads,2026,638,
+o085,Princeton Prosody Archive: Rebuilding the Collection and User Interface,Princeton Prosody Archive,Views,2026,278,
 o130,Prodigy Handbook - PPA,Princeton Prosody Archive,Downloads,2026,,
 o130,Prodigy Handbook - PPA,Princeton Prosody Archive,Views,2026,,
-o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Downloads,2026,267,
-o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Views,2026,79,
+o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Downloads,2026,268,
+o094,"Replication datasets for 'Canon Dynamics in the Princeton Prosody Archive, 1559–1929'",Princeton Prosody Archive,Views,2026,81,
 o197,"Response: Women's Poetry, Women's Vision, Women's Power",Princeton Prosody Archive,Downloads,2026,,
 o197,"Response: Women's Poetry, Women's Vision, Women's Power",Princeton Prosody Archive,Views,2026,,
 o211,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Princeton Prosody Archive,Downloads,2026,,
 o211,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Princeton Prosody Archive,Views,2026,,
 o089,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),Princeton Prosody Archive,Downloads,2026,159,
-o089,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),Princeton Prosody Archive,Views,2026,266,
+o089,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library (poster),Princeton Prosody Archive,Views,2026,268,
 o037,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,Princeton Prosody Archive,Downloads,2026,226,166
 o037,Working around Walled Gardens: The Princeton Prosody Archive as Workflow,Princeton Prosody Archive,Views,2026,252,147
 o011,corppa,Princeton Prosody Archive,Downloads,2026,21,9
-o011,corppa,Princeton Prosody Archive,Views,2026,49,37
+o011,corppa,Princeton Prosody Archive,Views,2026,51,39
 o035,ppa-django,Princeton Prosody Archive,Downloads,2026,19,-35
 o035,ppa-django,Princeton Prosody Archive,Views,2026,34,-321
 o040,undate,R&D,Citation Count,2024,0,
 o040,undate,R&D,Citation Count,2025,1,1
 o040,undate,R&D,Downloads,2025,28,
 o040,undate,R&D,Views,2025,107,
-o001,Citing Marx Project Charter,Remarx,Downloads,2026,263,199
-o001,Citing Marx Project Charter,Remarx,Views,2026,352,280
+o001,Citing Marx Project Charter,Remarx,Downloads,2026,265,201
+o001,Citing Marx Project Charter,Remarx,Views,2026,355,283
+o219,Embed and Seek: Tracking Citations Across Sources,Remarx,Downloads,2026,0,
+o219,Embed and Seek: Tracking Citations Across Sources,Remarx,Views,2026,1,
 o057,django-pucas,Research Software,Downloads,2026,6,1
-o057,django-pucas,Research Software,Views,2026,45,26
+o057,django-pucas,Research Software,Views,2026,46,27
 o018,djiffy,Research Software,Downloads,2026,19,3
 o018,djiffy,Research Software,Views,2026,96,18
 o054,piffle,Research Software,Downloads,2026,9,-2
-o054,piffle,Research Software,Views,2026,77,39
+o054,piffle,Research Software,Views,2026,79,41
 o067,A Counterfactual Canon,Shakespeare and Company,Citation Count,2026,2,1
-o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Downloads,2026,229,55
-o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Views,2026,341,126
+o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Downloads,2026,230,56
+o071,Documents to Data: the evolution of approaches to a library archive,Shakespeare and Company,Views,2026,343,128
 o049,"Missing Data, Speculative Reading",Shakespeare and Company,Citation Count,2026,6,2
 o140,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Downloads,2026,,
 o140,Reading English-Language Literature in Interwar Paris: A Conversation with Joshua Kotin and Rebecca Sutton Koeser About the Shakespeare and Company Project,Shakespeare and Company,Views,2026,,
@@ -244,7 +259,7 @@ o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,Shak
 o025,Shakespeare and Company Project Dataset: Lending Library Members: v1.0,Shakespeare and Company,Views,2026,61,-10
 o021,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Citation Count,2026,2,0
 o021,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Downloads,2026,24,18
-o021,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Views,2026,648,457
+o021,Shakespeare and Company Project Datasets: v2.0,Shakespeare and Company,Views,2026,652,461
 o045,Shakespeare and Company Website,Shakespeare and Company,Downloads,2026,,
 o045,Shakespeare and Company Website,Shakespeare and Company,Engaged Sessions,2026,,
 o045,Shakespeare and Company Website,Shakespeare and Company,Views,2026,,
@@ -261,7 +276,7 @@ o009,Simulating Risk Project Charter,Simulating Risks,Downloads,2026,348,112
 o009,Simulating Risk Project Charter,Simulating Risks,Views,2025,306,
 o009,Simulating Risk Project Charter,Simulating Risks,Views,2026,459,153
 o017,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Downloads,2025,42,
-o017,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Downloads,2026,231,189
+o017,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Downloads,2026,234,192
 o017,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Views,2025,50,
 o017,Simulating risk attitudes and rationality using agent-based modeling,Simulating Risks,Views,2026,127,77
 o056,Theorizing risk attitudes and rationality using agent based modeling,Simulating Risks,Downloads,2025,116,
@@ -285,7 +300,7 @@ o165,Periodical Studies: Why and How to Re-read East European Journals,Staff Pro
 o165,Periodical Studies: Why and How to Re-read East European Journals,Staff Projects,Views,2026,,
 o118,Proceedings of the Computational Humanities Research Conference 2024,Staff Projects,Downloads,2026,,
 o118,Proceedings of the Computational Humanities Research Conference 2024,Staff Projects,Views,2026,,
-o098,"Teaching Critical AI Literacy through ""Lab""-Based Learning",Staff Projects,Downloads,2026,108,
+o098,"Teaching Critical AI Literacy through ""Lab""-Based Learning",Staff Projects,Downloads,2026,110,
 o098,"Teaching Critical AI Literacy through ""Lab""-Based Learning",Staff Projects,Views,2026,155,
 o129,Time Horizons of Futuristic Fiction,Staff Projects,Citation Count,2026,4,
 o129,Time Horizons of Futuristic Fiction,Staff Projects,Downloads,2026,,
@@ -294,27 +309,27 @@ o099,Time Horizons of Futuristic Fiction [poster],Staff Projects,Downloads,2026,
 o099,Time Horizons of Futuristic Fiction [poster],Staff Projects,Views,2026,130,
 o107,Undate in Action,Staff Projects,Downloads,2026,,
 o107,Undate in Action,Staff Projects,Views,2026,,
-o127,Versions and Values: Exploring DH Coding Communities and Practices on GitHub,Staff Projects,Downloads,2026,178,
+o127,Versions and Values: Exploring DH Coding Communities and Practices on GitHub,Staff Projects,Downloads,2026,179,
 o127,Versions and Values: Exploring DH Coding Communities and Practices on GitHub,Staff Projects,Views,2026,226,
 o121,What Is Space Opera in the 2020s?,Staff Projects,Downloads,2026,,
 o121,What Is Space Opera in the 2020s?,Staff Projects,Views,2026,,
 o028,Undate Software Paper,Undate,Citation Count,2026,2,
 o028,Undate Software Paper,Undate,Downloads,2026,,
 o028,Undate Software Paper,Undate,Views,2026,,
-o087,Undate: computing with uncertain and partially-unknown dates,Undate,Downloads,2026,186,
+o087,Undate: computing with uncertain and partially-unknown dates,Undate,Downloads,2026,188,
 o087,Undate: computing with uncertain and partially-unknown dates,Undate,Views,2026,256,
 o124,Undate: humanistic dates for computation,Undate,Citation Count,2026,2,
 o124,Undate: humanistic dates for computation,Undate,Downloads,2026,,
 o124,Undate: humanistic dates for computation,Undate,Views,2026,,
 o110,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Undate,Downloads,2026,159,
-o110,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Undate,Views,2026,266,
+o110,Unstable Data and the Unusual Case of the Prosody Excerpt in the Digital Library,Undate,Views,2026,268,
 o040,undate,Undate,Citation Count,2026,1,0
 o040,undate,Undate,Downloads,2026,14,-14
-o040,undate,Undate,Views,2026,39,-68
+o040,undate,Undate,Views,2026,40,-67
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Downloads,2025,197,
-o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Downloads,2026,269,72
+o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Downloads,2026,270,73
 o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Views,2025,396,
-o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Views,2026,522,126
+o065,CDH Project Charter — bitKlavier 2017-18,bitKlavier,Views,2026,523,127
 o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2024,4,
 o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2025,5,1
 o068,Preparing the Digital Piano: Introducing bitKlavier,bitKlavier,Citation Count,2026,6,1
@@ -330,7 +345,7 @@ o070,Tuning Playfully: Composed and Adaptive Tunings in bitKlavier,bitKlavier,Vi
 o059,bitKlavier,bitKlavier,Downloads,2025,46,
 o059,bitKlavier,bitKlavier,Downloads,2026,30,-16
 o059,bitKlavier,bitKlavier,Views,2025,348,
-o059,bitKlavier,bitKlavier,Views,2026,252,-96
+o059,bitKlavier,bitKlavier,Views,2026,254,-94
 o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Downloads,2025,336,
 o039,CDH Project Charter – Derrida's Margins 2016-17,🌐Derrida’s Margins,Views,2025,560,
 o023,Derrida's Margins datasets: v1.1,🌐Derrida’s Margins,Views,2025,8,
