@@ -36,6 +36,10 @@ def main():
     records = []
     with PROJECTS_CSV.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
+            # Only include projects flagged for display (display == 'y',
+            # case-insensitive); blank or 'n' is excluded from all stats/charts.
+            if (row.get("display") or "").strip().lower() != "y":
+                continue
             records.append(
                 {
                     "project": (row.get("project") or "").strip(),

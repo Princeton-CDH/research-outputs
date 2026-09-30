@@ -34,7 +34,7 @@ ORDER = ["Faculty", "Postdoc", "Graduate Student", "Staff", "External Collaborat
 # projects led *solely* by these are skipped; the label is stripped from mixed leads.
 EXCLUDE_COMMUNITIES = {"Graduate Student"}
 CARD_RE = re.compile(r'class="tile__link"\s+href="/projects/([a-z0-9-]+)/"\s*>\s*<h3>\s*(.*?)\s*</h3>', re.S)
-REVIEW_COLS = ["decision", "confidence", "why", "project", "status", "community", "cdh_built", "cdh_slug"]
+REVIEW_COLS = ["decision", "confidence", "why", "project", "display", "status", "community", "cdh_built", "cdh_slug"]
 
 # CDH slug -> our existing project name, where names differ.
 ALIAS = {
@@ -135,7 +135,8 @@ def main():
             decision, conf, why = "keep", "new", "CDH catalog project"
         proposals.append({
             "decision": decision, "confidence": conf, "why": why,
-            "project": name, "status": "", "community": community_str(slug),
+            # New catalog projects default to shown; set to 'n' here to hide.
+            "project": name, "display": "y", "status": "", "community": community_str(slug),
             "cdh_built": "yes" if slug in built else "", "cdh_slug": slug,
         })
 

@@ -96,14 +96,30 @@ def load_project_communities():
     return comm
 
 
+def load_display_projects():
+    """Set of project names flagged for display (display == 'y'); see outputs.json.py."""
+    shown = set()
+    if PROJECTS_CSV.exists():
+        with PROJECTS_CSV.open(newline="", encoding="utf-8") as fh:
+            for row in csv.DictReader(fh):
+                p = (row.get("project") or "").strip()
+                if p and (row.get("display") or "").strip().lower() == "y":
+                    shown.add(p)
+    return shown
+
+
 def load_output_index():
     roles = load_roles()
     communities = load_project_communities()
+    displayed = load_display_projects()
     index = {}
     with OUTPUTS_CSV.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             oid = (row.get("output_id") or "").strip()
             if not oid:
+                continue
+            # Only index outputs whose project is flagged for display.
+            if (row.get("project") or "").strip() not in displayed:
                 continue
             status = (row.get("status") or "").strip()
             assignees = [a.strip() for a in (row.get("assignee") or "").split(",") if a.strip()]
@@ -130,7 +146,11 @@ def main():
     with METRICS_CSV.open(newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
             oid = (row.get("output_id") or "").strip()
-            meta = outputs.get(oid, {})
+            meta = outputs.get(oid)
+            # The index holds only display-flagged outputs; drop metric rows for
+            # hidden projects and orphan rows with no matching output.
+            if not meta:
+                continue
             metric_type = (row.get("metric_type") or "").strip()
             # Prefer the canonical project name from outputs.csv (via output_id);
             # the rollup's project string can be stale after a project rename.

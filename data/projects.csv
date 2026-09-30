@@ -1,27 +1,27 @@
-project,status,start_date,end_date,notes,community,cdh_built,cdh_slug
-MuSE (Multilingual Semantic Embeddings),Active,8/25/2025,,,Faculty,,
-Remarx,Active,9/2/2024,,,Faculty,yes,citing-marx
-Simulating Risks,Active,6/5/2023,,,"Faculty,Staff",yes,simulating-risk
-Princeton Prosody Archive,Active,2017,,,Faculty,yes,princeton-prosody-archive
-Princeton Open HTR Initiative,Active,6/17/2024,,,"Faculty,Postdoc",yes,bringing-htr-to-the-hpc
-Shakespeare and Company,Active,2014,,,"Faculty,Staff",yes,shakespeare-and-company-project
-Princeton Geniza Lab,Active,2020,,,"Faculty,Staff",yes,princeton-geniza-project
-Derrida's Margins,Completed,2016,2017,,Faculty,yes,derridas-margins
-Lunaapahkiing Princeton Timetree,Completed,2022,2023,,Staff,yes,lenape-timetree
-"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",Completed,2018,2020,,Faculty,,princeton-ethiopian-miracles-mary-project
-bitKlavier,Completed,2016,2018,,Faculty,,bitklavier
-DH Tech,Active,,,,Staff,,
-Data Beyond Vision,Completed,2018,2020,,Staff,,
-Digital Humanities Processes and Practices,Active,2012,,,Staff,,
-Undate,Active,2022,,,Staff,,undate
-Exercises in Literary Style,Supported,2024,,,"Faculty,Postdoc",,exercises-in-literary-style
-Staff Projects,Active,,,,Staff,,
-African Language Technologies Lab,Supported,2023,,,Faculty,,
-ABC Books,Active,2014,2016,,Faculty,,abc-books
-davila.js,Completed,2018,2019,,Staff,,davilajs
-New Languages for NLP,Completed,2020,2024,,"Staff,External Collaborator",,new-languages-nlp-building-linguistic-diversity-digital-humanities
-Segmenting Paratextual Material in Arabic Scientific Manuscripts,Supported,2023,,,Postdoc,,segmenting-paratextual-material-in-arabic-scientific-manuscripts
-Startwords,Completed,2019,2025,,Staff,yes,startwords
-The Ends of Prosody,Active,2023,,,Faculty,yes,the-ends-of-prosody
-Research Software,Active,,,,,,
-Post-Doc Projects,Active,2014,,,Postdoc,,
+project,display,status,start_date,end_date,notes,community,cdh_built,cdh_slug
+MuSE (Multilingual Semantic Embeddings),y,Active,8/25/2025,,,Faculty,,
+Remarx,y,Active,9/2/2024,,,Faculty,yes,citing-marx
+Simulating Risks,y,Active,6/5/2023,,,"Faculty,Staff",yes,simulating-risk
+Princeton Prosody Archive,y,Active,2017,,,Faculty,yes,princeton-prosody-archive
+Princeton Open HTR Initiative,y,Active,6/17/2024,,,"Faculty,Postdoc",yes,bringing-htr-to-the-hpc
+Shakespeare and Company,y,Active,2014,,,"Faculty,Staff",yes,shakespeare-and-company-project
+Princeton Geniza Lab,y,Active,2020,,,"Faculty,Staff",yes,princeton-geniza-project
+Derrida's Margins,y,Completed,2016,2017,,Faculty,yes,derridas-margins
+"Princeton Ethiopian, Eritrean, and Egyptian Miracles of Mary (PEMM) Project",y,Completed,2018,2020,,Faculty,,princeton-ethiopian-miracles-mary-project
+bitKlavier,y,Completed,2016,2018,,Faculty,,bitklavier
+Digital Humanities Processes and Practices,y,Active,2012,,,Staff,,
+Exercises in Literary Style,y,Supported,2024,,,"Faculty,Postdoc",,exercises-in-literary-style
+African Language Technologies Lab,y,Supported,2023,,,Faculty,,
+ABC Books,y,Active,2014,2016,,Faculty,,abc-books
+New Languages for NLP,y,Completed,2020,2024,,"Staff,External Collaborator",,new-languages-nlp-building-linguistic-diversity-digital-humanities
+The Ends of Prosody,y,Active,2023,,,Faculty,yes,the-ends-of-prosody
+Lunaapahkiing Princeton Timetree,n,Completed,2022,2023,,Staff,yes,lenape-timetree
+DH Tech,n,Active,,,,Staff,,
+Data Beyond Vision,n,Completed,2018,2020,,Staff,,
+Undate,n,Active,2022,,,"Staff",,undate
+Staff Projects,n,Active,,,,Staff,,
+davila.js,n,Completed,2018,2019,,"Staff",,davilajs
+Segmenting Paratextual Material in Arabic Scientific Manuscripts,n,Supported,2023,,,Postdoc,,segmenting-paratextual-material-in-arabic-scientific-manuscripts
+Startwords,n,Completed,2019,2025,,Staff,yes,startwords
+Research Software,n,Active,,,,,,
+Post-Doc Projects,n,Active,2014,,,Postdoc,,

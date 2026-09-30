@@ -45,6 +45,8 @@ def main():
             new = {c: "" for c in fields}
             new.update({
                 "project": rev.get("project", ""),
+                # Preserve the display flag; default to shown when the review omits it.
+                "display": (rev.get("display") or "y").strip() or "y",
                 "status": rev.get("status", ""),
                 "community": rev.get("community", ""),
                 "cdh_built": rev.get("cdh_built", ""),
